@@ -6,23 +6,23 @@ export const About = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI/ML Expertise",
-      description: "Deep learning, neural networks, and intelligent automation solutions"
+      title: "Prompt Engineering",
+      description: "AI model interaction logs, query rewriting, and user intent capture with evidence-based rationale"
     },
     {
       icon: Code,
-      title: "Full-Stack Development",
-      description: "Modern web applications with React, Node.js, and cloud technologies"
+      title: "Search Query Evaluation",
+      description: "Tool invocation review, search relevance testing, and rubric-based evaluation systems"
     },
     {
       icon: Zap,
-      title: "Performance Optimization",
-      description: "High-performance applications with cutting-edge optimization techniques"
+      title: "Data Annotation & Analysis",
+      description: "Annotation & labeling with computational statistics and information retrieval expertise"
     },
     {
       icon: Users,
-      title: "Collaborative Innovation",
-      description: "Leading teams to deliver innovative solutions and technical excellence"
+      title: "Quality Assurance",
+      description: "Inter-rater agreement, edge case handling, and content safety review with attention to detail"
     }
   ];
 
@@ -53,20 +53,20 @@ export const About = () => {
 
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a passionate AI/ML engineer and full-stack developer with a deep fascination 
-              for creating intelligent systems that solve real-world problems. My journey spans 
-              across machine learning research, neural network architectures, and building 
-              scalable web applications.
+              I'm a dedicated AI Design Researcher and Prompt Engineer specializing in search query evaluation, 
+              tool invocation review, and AI model interaction analysis. With exceptional attention to detail 
+              and clear written communication, I excel at user intent capture and query rewriting for 
+              optimal AI system performance.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              With expertise in Python, TensorFlow, React, and cloud platforms, I bridge the 
-              gap between cutting-edge AI research and practical, user-friendly applications. 
-              I believe in the power of technology to transform industries and improve lives.
+              My expertise spans Python, SQL, computational statistics, and data annotation tools. 
+              I provide evidence-based rationale through rubric-based evaluation, ensuring calibration & consistency 
+              in independent work environments while maintaining the highest standards in content safety review.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
-              {["Python", "TensorFlow", "React", "Node.js", "AWS", "Docker"].map((tech) => (
+              {["Python", "SQL", "Prompt Engineering", "Data Annotation Tools", "Information Retrieval", "AI/ML Integration"].map((tech) => (
                 <span 
                   key={tech}
                   className="px-4 py-2 bg-space-grey border border-primary/20 rounded-full text-sm font-medium text-primary"

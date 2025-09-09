@@ -6,37 +6,37 @@ import projectShowcase from "@/assets/project-showcase.jpg";
 export const Projects = () => {
   const projects = [
     {
-      title: "Neural Network Visualizer",
-      description: "Interactive web application for visualizing and understanding neural network architectures in real-time. Built with TensorFlow.js and React.",
+      title: "AI Search Query Evaluation Platform",
+      description: "Comprehensive tool for search query evaluation with rubric-based evaluation, user intent capture, and inter-rater agreement analysis. Features advanced query rewriting capabilities.",
       image: projectShowcase,
-      technologies: ["React", "TensorFlow.js", "D3.js", "Python"],
+      technologies: ["Python", "SQL", "Data Annotation Tools", "Information Retrieval"],
       liveUrl: "#",
       githubUrl: "#",
       featured: true
     },
     {
-      title: "AI-Powered Code Assistant",
-      description: "VS Code extension that uses machine learning to provide intelligent code suggestions and automated refactoring capabilities.",
+      title: "Prompt Engineering Optimization Suite",
+      description: "Advanced platform for AI model interaction logs analysis, tool invocation review, and edge case handling with evidence-based rationale generation.",
       image: projectShowcase,
-      technologies: ["TypeScript", "OpenAI API", "VS Code API", "Node.js"],
+      technologies: ["Python", "AI/ML Integration", "Computational Statistics", "Content Safety"],
       liveUrl: "#",
       githubUrl: "#",
       featured: true
     },
     {
-      title: "Predictive Analytics Dashboard",
-      description: "Full-stack dashboard for real-time data analysis and predictive modeling using advanced machine learning algorithms.",
+      title: "Boolean Query Operator Framework",
+      description: "Enterprise-grade search relevance testing system with AND/OR operators, filters, and calibration & consistency metrics for independent work environments.",
       image: projectShowcase,
-      technologies: ["Python", "FastAPI", "React", "PostgreSQL", "Docker"],
+      technologies: ["Python", "SQL", "Information Retrieval", "Statistical Analysis"],
       liveUrl: "#",
       githubUrl: "#",
       featured: false
     },
     {
-      title: "Computer Vision API",
-      description: "RESTful API for image recognition and object detection, deployed on AWS with auto-scaling capabilities.",
+      title: "Annotation & Labeling Quality System",
+      description: "Scalable annotation platform with attention to detail verification, clear written communication tools, and content safety review automation.",
       image: projectShowcase,
-      technologies: ["Python", "PyTorch", "FastAPI", "AWS", "Docker"],
+      technologies: ["Python", "Data Annotation Tools", "Quality Assurance", "ML Integration"],
       liveUrl: "#",
       githubUrl: "#",
       featured: false

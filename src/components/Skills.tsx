@@ -3,47 +3,47 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 
 export const Skills = () => {
-  const [activeCategory, setActiveCategory] = useState("AI/ML");
+  const [activeCategory, setActiveCategory] = useState("Core Expertise");
 
   const skillCategories = {
-    "AI/ML": [
-      { skill: "TensorFlow/PyTorch", level: 95 },
-      { skill: "Deep Learning", level: 90 },
-      { skill: "Computer Vision", level: 85 },
-      { skill: "Natural Language Processing", level: 80 },
-      { skill: "MLOps", level: 85 },
-      { skill: "Model Deployment", level: 88 }
+    "Core Expertise": [
+      { skill: "Prompt Engineering", level: 95 },
+      { skill: "Search Query Evaluation", level: 92 },
+      { skill: "Tool Invocation Review", level: 90 },
+      { skill: "AI Model Interaction Logs", level: 88 },
+      { skill: "Query Rewriting", level: 90 },
+      { skill: "User Intent Capture", level: 93 }
     ],
-    "Frontend": [
-      { skill: "React/Next.js", level: 95 },
-      { skill: "TypeScript", level: 90 },
-      { skill: "Tailwind CSS", level: 88 },
-      { skill: "Three.js", level: 75 },
-      { skill: "Web Performance", level: 85 },
-      { skill: "Mobile Responsive", level: 92 }
-    ],
-    "Backend": [
+    "Technical Skills": [
       { skill: "Python", level: 95 },
-      { skill: "Node.js", level: 85 },
-      { skill: "FastAPI/Django", level: 90 },
-      { skill: "PostgreSQL/MongoDB", level: 85 },
-      { skill: "GraphQL", level: 80 },
-      { skill: "Microservices", level: 88 }
+      { skill: "SQL", level: 90 },
+      { skill: "Computational Statistics", level: 88 },
+      { skill: "Information Retrieval", level: 85 },
+      { skill: "Data Annotation Tools", level: 90 },
+      { skill: "AI/ML Integration", level: 87 }
     ],
-    "DevOps": [
-      { skill: "Docker/Kubernetes", level: 85 },
-      { skill: "AWS/GCP", level: 88 },
-      { skill: "CI/CD", level: 90 },
-      { skill: "Terraform", level: 75 },
-      { skill: "Monitoring", level: 80 },
-      { skill: "Security", level: 82 }
+    "Evaluation & Quality": [
+      { skill: "Annotation & Labeling", level: 93 },
+      { skill: "Rubric-Based Evaluation", level: 90 },
+      { skill: "Edge Case Handling", level: 88 },
+      { skill: "Inter-Rater Agreement", level: 85 },
+      { skill: "Search Relevance Testing", level: 87 },
+      { skill: "Content Safety Review", level: 92 }
+    ],
+    "Soft Skills": [
+      { skill: "Attention to Detail", level: 98 },
+      { skill: "Clear Written Communication", level: 95 },
+      { skill: "Evidence-Based Rationale", level: 93 },
+      { skill: "Independent Work", level: 90 },
+      { skill: "Calibration & Consistency", level: 92 },
+      { skill: "Boolean Query Operators", level: 88 }
     ]
   };
 
   const tools = [
-    "Python", "JavaScript", "TypeScript", "React", "TensorFlow", "PyTorch", 
-    "AWS", "Docker", "Kubernetes", "PostgreSQL", "Redis", "GraphQL",
-    "FastAPI", "Node.js", "Next.js", "Tailwind", "Git", "Linux"
+    "Python", "SQL", "Data Annotation Tools", "Information Retrieval Systems", "AI/ML Integration", 
+    "Query Operators (AND/OR)", "Boolean Filters", "Search Relevance Testing", "Prompt Engineering Tools",
+    "Content Safety Platforms", "Statistical Analysis", "Evidence-Based Evaluation", "User Intent Analysis"
   ];
 
   return (
