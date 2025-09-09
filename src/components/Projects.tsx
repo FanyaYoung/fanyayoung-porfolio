@@ -10,7 +10,7 @@ export const Projects = () => {
       description: "Revolutionary AI-powered beauty and styling application featuring advanced prompt engineering for personalized makeup recommendations, user intent capture for style preferences, and comprehensive content safety review for beauty standards.",
       image: projectShowcase,
       technologies: ["React", "TypeScript", "Supabase", "Google Cloud Storage", "SQL", "Python", "Java", "AI/ML Integration", "Prompt Engineering", "User Intent Capture"],
-      liveUrl: "https://makeupai.lovable.app",
+      liveUrl: "https://demo.makemeup.app/",
       githubUrl: "#",
       featured: true
     },
@@ -90,11 +90,22 @@ export const Projects = () => {
                   </div>
 
                   <div className="flex gap-3 pt-2">
-                    <Button size="sm" className="btn-cyber">
+                    <Button 
+                      size="sm" 
+                      className="btn-cyber"
+                      onClick={() => window.open(project.liveUrl, '_blank')}
+                      disabled={project.liveUrl === '#'}
+                    >
                       <Play size={16} className="mr-2" />
                       Live Demo
                     </Button>
-                    <Button variant="outline" size="sm" className="hover:border-primary hover:text-primary">
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="hover:border-primary hover:text-primary"
+                      onClick={() => window.open(project.githubUrl, '_blank')}
+                      disabled={project.githubUrl === '#'}
+                    >
                       <Github size={16} className="mr-2" />
                       Code
                     </Button>
@@ -112,10 +123,22 @@ export const Projects = () => {
                   <CardTitle className="text-lg text-gradient flex items-center justify-between">
                     {project.title}
                     <div className="flex gap-2">
-                      <Button variant="ghost" size="icon" className="opacity-0 group-hover:opacity-100 transition-opacity">
+                      <Button 
+                        variant="ghost" 
+                        size="icon" 
+                        className="opacity-0 group-hover:opacity-100 transition-opacity"
+                        onClick={() => window.open(project.liveUrl, '_blank')}
+                        disabled={project.liveUrl === '#'}
+                      >
                         <ExternalLink size={16} />
                       </Button>
-                      <Button variant="ghost" size="icon" className="opacity-0 group-hover:opacity-100 transition-opacity">
+                      <Button 
+                        variant="ghost" 
+                        size="icon" 
+                        className="opacity-0 group-hover:opacity-100 transition-opacity"
+                        onClick={() => window.open(project.githubUrl, '_blank')}
+                        disabled={project.githubUrl === '#'}
+                      >
                         <Github size={16} />
                       </Button>
                     </div>
