@@ -65,13 +65,7 @@ const LGProject = () => {
         <Button 
           variant="ghost" 
           size="sm" 
-          onClick={() => {
-            if (window.history.length > 1) {
-              navigate(-1);
-            } else {
-              navigate('/');
-            }
-          }}
+          onClick={() => navigate('/')}
           className="text-white/80 hover:text-white hover:bg-white/10"
         >
           <ArrowLeft size={16} className="mr-2" />
