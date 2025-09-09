@@ -1,6 +1,5 @@
 import { Code, Brain, Zap, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import profileAvatar from "@/assets/profile-avatar.jpg";
 
 export const About = () => {
   const features = [
@@ -43,7 +42,7 @@ export const About = () => {
           <div className="space-y-6">
             <div className="relative">
               <img 
-                src={profileAvatar} 
+                src="/lovable-uploads/b13249bc-c597-4230-9ceb-bb26f93daf79.png" 
                 alt="Fanya Young" 
                 className="w-full max-w-md mx-auto rounded-2xl shadow-cyber"
               />
