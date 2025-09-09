@@ -1,9 +1,12 @@
 import { ExternalLink, Github, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 import projectShowcase from "@/assets/project-showcase.jpg";
 
 export const Projects = () => {
+  const navigate = useNavigate();
+  
   const projects = [
     {
       title: "Make Me Up - AI Beauty & Styling Platform",
@@ -20,6 +23,15 @@ export const Projects = () => {
       image: projectShowcase,
       technologies: ["React", "TypeScript", "Supabase", "Google Cloud Storage", "SQL", "Python", "Java", "Query Rewriting", "Rubric-Based Evaluation", "Content Safety"],
       liveUrl: "https://4us.lovable.app",
+      githubUrl: "#",
+      featured: true
+    },
+    {
+      title: "LG - Advanced Analytics Platform",
+      description: "Enterprise-grade analytics and business intelligence platform featuring real-time data processing, interactive dashboards, and machine learning-powered insights for data-driven decision making.",
+      image: projectShowcase,
+      technologies: ["React", "TypeScript", "Supabase", "Google Cloud Storage", "SQL", "Python", "Java", "Machine Learning", "Data Analytics", "Business Intelligence"],
+      liveUrl: "/projects/lg",
       githubUrl: "#",
       featured: true
     },
@@ -93,11 +105,17 @@ export const Projects = () => {
                     <Button 
                       size="sm" 
                       className="btn-cyber"
-                      onClick={() => window.open(project.liveUrl, '_blank')}
+                      onClick={() => {
+                        if (project.liveUrl.startsWith('/')) {
+                          navigate(project.liveUrl);
+                        } else {
+                          window.open(project.liveUrl, '_blank');
+                        }
+                      }}
                       disabled={project.liveUrl === '#'}
                     >
                       <Play size={16} className="mr-2" />
-                      Live Demo
+                      {project.liveUrl.startsWith('/') ? 'View Project' : 'Live Demo'}
                     </Button>
                     <Button 
                       variant="outline" 
@@ -127,7 +145,13 @@ export const Projects = () => {
                         variant="ghost" 
                         size="icon" 
                         className="opacity-0 group-hover:opacity-100 transition-opacity"
-                        onClick={() => window.open(project.liveUrl, '_blank')}
+                        onClick={() => {
+                          if (project.liveUrl.startsWith('/')) {
+                            navigate(project.liveUrl);
+                          } else {
+                            window.open(project.liveUrl, '_blank');
+                          }
+                        }}
                         disabled={project.liveUrl === '#'}
                       >
                         <ExternalLink size={16} />
