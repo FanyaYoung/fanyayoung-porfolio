@@ -6,26 +6,26 @@ import projectShowcase from "@/assets/project-showcase.jpg";
 export const Projects = () => {
   const projects = [
     {
-      title: "AI Search Query Evaluation Platform",
-      description: "Comprehensive tool for search query evaluation with rubric-based evaluation, user intent capture, and inter-rater agreement analysis. Features advanced query rewriting capabilities.",
+      title: "Make Me Up - AI Beauty & Styling Platform",
+      description: "Revolutionary AI-powered beauty and styling application featuring advanced prompt engineering for personalized makeup recommendations, user intent capture for style preferences, and comprehensive content safety review for beauty standards.",
       image: projectShowcase,
-      technologies: ["Python", "SQL", "Data Annotation Tools", "Information Retrieval"],
-      liveUrl: "#",
+      technologies: ["React", "TypeScript", "AI/ML Integration", "Prompt Engineering", "User Intent Capture"],
+      liveUrl: "https://makeupai.lovable.app",
       githubUrl: "#",
       featured: true
     },
     {
-      title: "Prompt Engineering Optimization Suite",
-      description: "Advanced platform for AI model interaction logs analysis, tool invocation review, and edge case handling with evidence-based rationale generation.",
+      title: "4Us - Community Connection Platform",
+      description: "Intelligent community platform utilizing advanced query rewriting algorithms, rubric-based evaluation for content quality, and edge case handling for diverse user interactions with evidence-based rationale systems.",
       image: projectShowcase,
-      technologies: ["Python", "AI/ML Integration", "Computational Statistics", "Content Safety"],
-      liveUrl: "#",
+      technologies: ["React", "TypeScript", "Query Rewriting", "Rubric-Based Evaluation", "Content Safety"],
+      liveUrl: "https://4us.lovable.app",
       githubUrl: "#",
       featured: true
     },
     {
-      title: "Boolean Query Operator Framework",
-      description: "Enterprise-grade search relevance testing system with AND/OR operators, filters, and calibration & consistency metrics for independent work environments.",
+      title: "Search Query Evaluation Framework",
+      description: "Enterprise-grade search relevance testing system with Boolean query operators, inter-rater agreement analysis, and calibration & consistency metrics for annotation & labeling quality assurance.",
       image: projectShowcase,
       technologies: ["Python", "SQL", "Information Retrieval", "Statistical Analysis"],
       liveUrl: "#",
@@ -33,10 +33,10 @@ export const Projects = () => {
       featured: false
     },
     {
-      title: "Annotation & Labeling Quality System",
-      description: "Scalable annotation platform with attention to detail verification, clear written communication tools, and content safety review automation.",
+      title: "AI Tool Invocation Review System",
+      description: "Comprehensive platform for AI model interaction logs analysis, tool invocation review workflows, and automated content safety review with attention to detail verification protocols.",
       image: projectShowcase,
-      technologies: ["Python", "Data Annotation Tools", "Quality Assurance", "ML Integration"],
+      technologies: ["Python", "Data Annotation Tools", "AI Model Integration", "Tool Review"],
       liveUrl: "#",
       githubUrl: "#",
       featured: false

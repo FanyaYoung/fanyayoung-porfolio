@@ -90,7 +90,7 @@ export const Skills = () => {
                 <CardTitle className="text-gradient">{activeCategory} Skills</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                {skillCategories[activeCategory as keyof typeof skillCategories].map((item, index) => (
+                {skillCategories[activeCategory as keyof typeof skillCategories]?.map((item, index) => (
                   <div key={index} className="space-y-2">
                     <div className="flex justify-between items-center">
                       <span className="text-foreground font-medium">{item.skill}</span>
