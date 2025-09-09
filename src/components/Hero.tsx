@@ -5,7 +5,7 @@ import neuralHeroBg from "@/assets/neural-hero-bg.jpg";
 
 export const Hero = () => {
   const [displayText, setDisplayText] = useState("");
-  const fullText = "AI/ML Engineer & Full-Stack Developer";
+  const fullText = "AI Design Researcher & Prompt Engineer";
 
   useEffect(() => {
     let index = 0;
