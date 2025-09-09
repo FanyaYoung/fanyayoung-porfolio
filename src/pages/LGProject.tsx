@@ -9,27 +9,27 @@ const LGProject = () => {
   const navigate = useNavigate();
 
   const projectDetails = {
-    title: "LG - Advanced Analytics Platform",
-    description: "Enterprise-grade analytics and business intelligence platform featuring real-time data processing, interactive dashboards, and machine learning-powered insights for data-driven decision making.",
-    fullDescription: "A comprehensive analytics platform built for enterprise clients, featuring advanced data visualization, real-time processing capabilities, and AI-powered insights. The platform integrates multiple data sources and provides intuitive dashboards for business intelligence and strategic decision making.",
+    title: "LG - Human Computing Interaction Research",
+    description: "Customer-centered design research platform focused on bringing customers to the forefront of product, engineering, and design through shared experiences and physical space exploration.",
+    fullDescription: "The goal was simple: bring customers to the forefront of product, engineering, and design. I wanted to help the team develop an understanding of the customer experience. Through a shared experience of exploring the physical space of our users, we would identify pain points, think of new ways to address the problem, and create a solution to delight our users.",
     image: projectShowcase,
-    technologies: ["React", "TypeScript", "Supabase", "Google Cloud Storage", "SQL", "Python", "Java", "Machine Learning", "Data Analytics", "Business Intelligence"],
+    technologies: ["React", "TypeScript", "Supabase", "Google Cloud Storage", "SQL", "Python", "Java", "Human-Computer Interaction", "User Experience Research", "Customer Journey Mapping"],
     features: [
-      "Real-time data processing and visualization",
-      "Interactive business intelligence dashboards", 
-      "Machine learning-powered predictive analytics",
-      "Multi-source data integration",
-      "Advanced reporting and export capabilities",
-      "Role-based access control and security",
-      "Scalable cloud infrastructure",
-      "API integration and data pipeline management"
+      "Customer-centered design methodology implementation",
+      "Physical space exploration and mapping tools", 
+      "Pain point identification and analysis systems",
+      "Cross-functional team collaboration platform",
+      "User experience journey visualization",
+      "Customer feedback integration workflows",
+      "Design thinking workshop facilitation tools",
+      "Iterative solution development tracking"
     ],
     techStack: {
       frontend: ["React", "TypeScript", "Tailwind CSS"],
       backend: ["Python", "Java", "SQL"],
       database: ["Supabase", "PostgreSQL"],
       cloud: ["Google Cloud Storage", "Cloud Functions"],
-      analytics: ["Machine Learning", "Data Science Libraries"]
+      research: ["User Experience Research", "Human-Computer Interaction"]
     },
     liveUrl: "#",
     githubUrl: "#"

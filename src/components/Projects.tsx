@@ -27,10 +27,10 @@ export const Projects = () => {
       featured: true
     },
     {
-      title: "LG - Advanced Analytics Platform",
-      description: "Enterprise-grade analytics and business intelligence platform featuring real-time data processing, interactive dashboards, and machine learning-powered insights for data-driven decision making.",
+      title: "LG - Human Computing Interaction Research",
+      description: "Customer-centered design research platform focused on bringing customers to the forefront of product, engineering, and design through shared experiences and physical space exploration.",
       image: projectShowcase,
-      technologies: ["React", "TypeScript", "Supabase", "Google Cloud Storage", "SQL", "Python", "Java", "Machine Learning", "Data Analytics", "Business Intelligence"],
+      technologies: ["React", "TypeScript", "Supabase", "Google Cloud Storage", "SQL", "Python", "Java", "Human-Computer Interaction", "User Experience Research", "Customer Journey Mapping"],
       liveUrl: "/projects/lg",
       githubUrl: "#",
       featured: true
