@@ -27,6 +27,15 @@ export const Projects = () => {
       featured: true
     },
     {
+      title: "MGM - Guest Experience Analytics Platform",
+      description: "Advanced hospitality analytics platform leveraging machine learning for guest behavior prediction, personalized experience optimization, and real-time operational insights for luxury resort management.",
+      image: projectShowcase,
+      technologies: ["React", "TypeScript", "Azure Cloud", "Power BI", "SQL Server", "Python", "Machine Learning", "Guest Analytics", "Hospitality Tech", "Predictive Modeling"],
+      liveUrl: "/projects/mgm",
+      githubUrl: "#",
+      featured: true
+    },
+    {
       title: "LG - Human Computing Interaction Research",
       description: "Customer-centered design research platform focused on bringing customers to the forefront of product, engineering, and design through shared experiences and physical space exploration.",
       image: projectShowcase,
