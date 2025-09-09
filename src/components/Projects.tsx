@@ -9,7 +9,7 @@ export const Projects = () => {
       title: "Make Me Up - AI Beauty & Styling Platform",
       description: "Revolutionary AI-powered beauty and styling application featuring advanced prompt engineering for personalized makeup recommendations, user intent capture for style preferences, and comprehensive content safety review for beauty standards.",
       image: projectShowcase,
-      technologies: ["React", "TypeScript", "AI/ML Integration", "Prompt Engineering", "User Intent Capture"],
+      technologies: ["React", "TypeScript", "Supabase", "Google Cloud Storage", "SQL", "Python", "Java", "AI/ML Integration", "Prompt Engineering", "User Intent Capture"],
       liveUrl: "https://makeupai.lovable.app",
       githubUrl: "#",
       featured: true
@@ -18,7 +18,7 @@ export const Projects = () => {
       title: "4Us - Community Connection Platform",
       description: "Intelligent community platform utilizing advanced query rewriting algorithms, rubric-based evaluation for content quality, and edge case handling for diverse user interactions with evidence-based rationale systems.",
       image: projectShowcase,
-      technologies: ["React", "TypeScript", "Query Rewriting", "Rubric-Based Evaluation", "Content Safety"],
+      technologies: ["React", "TypeScript", "Supabase", "Google Cloud Storage", "SQL", "Python", "Java", "Query Rewriting", "Rubric-Based Evaluation", "Content Safety"],
       liveUrl: "https://4us.lovable.app",
       githubUrl: "#",
       featured: true
