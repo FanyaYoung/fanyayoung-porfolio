@@ -24,17 +24,17 @@ const GRADIENTS = {
 };
 
 const STORY_IMAGES = [
-  { caption: "Workshop team — shared context", src: "/placeholder.svg" },
-  { caption: "In-situ research — observing store flows", src: "/placeholder.svg" },
-  { caption: "Field notes & synthesis in progress (1)", src: "/placeholder.svg" },
-  { caption: "Field notes & synthesis in progress (2)", src: "/placeholder.svg" },
-  { caption: "Field notes & synthesis in progress (3)", src: "/placeholder.svg" },
+  { caption: "Workshop team — shared context", src: "/lovable-uploads/b51ca83a-ba20-47f5-9f68-ad9f62393918.png" },
+  { caption: "In-situ research — observing store flows", src: "/lovable-uploads/d2dea265-762a-4ee9-b8a0-c33dfabab111.png" },
+  { caption: "Field notes & synthesis in progress (1)", src: "/lovable-uploads/568e8f8a-2fa9-498e-ad88-d7c5f1d70731.png" },
+  { caption: "Field notes & synthesis in progress (2)", src: "/lovable-uploads/8932de04-cfce-4125-a046-7724dfc4fc44.png" },
+  { caption: "Field notes & synthesis in progress (3)", src: "/lovable-uploads/ee0ffbe7-0ab9-4550-8d0d-7fc70c13e93b.png" },
 ];
 
 const EMPATHY_IMAGES = [
-  { caption: "Persona center — sensory inventory", src: "/placeholder.svg" },
-  { caption: "Empathy map — before alignment", src: "/placeholder.svg" },
-  { caption: "Empathy map — after alignment", src: "/placeholder.svg" },
+  { caption: "Persona center — sensory inventory", src: "/lovable-uploads/91433eda-1226-4bb8-bad0-a845cca8c7ec.png" },
+  { caption: "Empathy map — before alignment", src: "/lovable-uploads/022a54e2-01db-464f-93b5-3052edb9449b.png" },
+  { caption: "Empathy map — after alignment", src: "/lovable-uploads/a7dc820c-dc60-43d3-be31-e5104095685d.png" },
 ];
 
 const Pill = ({ children }) => (
