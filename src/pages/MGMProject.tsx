@@ -109,10 +109,10 @@ const MGMProject = () => {
         <div className="max-w-6xl mx-auto px-6 -mt-10">
           <Glass className="p-6 md:p-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <Metric value="5" label="Strategic areas researched" />
-              <Metric value="12+" label="MGM properties visited" />
-              <Metric value="50+" label="Staff interviews conducted" />
-              <Metric value="100%" label="Stakeholder buy-in achieved" />
+              <Metric value="40+" label="Interviews & Field Observations" />
+              <Metric value="8" label="Product Teams Engaged" />
+              <Metric value="4" label="Hotel Tiers Compared" />
+              <Metric value="100+" label="Insights Generated" />
             </div>
           </Glass>
         </div>
