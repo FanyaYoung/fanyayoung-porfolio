@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Download, ExternalLink, Mail, Sparkles, Images, FlaskConical, Target, BarChart3, Presentation, ArrowLeft, Gauge, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { useNavigate } from "react-router-dom";
 
 /**
@@ -126,10 +127,26 @@ const MGMProject = () => {
         </p>
         <div className="grid md:grid-cols-3 gap-6">
           {STORY_IMAGES.map((g, i) => (
-            <motion.figure key={i} whileHover={{ scale: 1.02 }} className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur">
-              <img src={g.src} alt={g.caption} className="w-full h-56 object-cover transition duration-500 group-hover:scale-[1.03]" />
-              <figcaption className="p-3 text-sm text-white/80">{g.caption}</figcaption>
-            </motion.figure>
+            <Dialog key={i}>
+              <DialogTrigger asChild>
+                <motion.figure 
+                  whileHover={{ scale: 1.02 }} 
+                  className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur cursor-pointer"
+                >
+                  <img src={g.src} alt={g.caption} className="w-full h-56 object-cover transition duration-500 group-hover:scale-[1.03]" />
+                  <figcaption className="p-3 text-sm text-white/80">{g.caption}</figcaption>
+                </motion.figure>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl w-full h-[90vh] p-0 bg-black/90 border-white/20">
+                <div className="flex items-center justify-center h-full p-4">
+                  <img 
+                    src={g.src} 
+                    alt={g.caption} 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              </DialogContent>
+            </Dialog>
           ))}
         </div>
       </section>
@@ -140,10 +157,26 @@ const MGMProject = () => {
         <p className="text-white/70 mb-6 text-sm">Research proposal presentations and field study findings from Las Vegas properties.</p>
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5">
           {GALLERY.map((g, i) => (
-            <motion.figure key={i} whileHover={{ scale: 1.02 }} className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur">
-              <img src={g.src} alt={g.caption} className="w-full h-56 object-cover transition duration-500 group-hover:scale-[1.03]" />
-              <figcaption className="p-3 text-sm text-white/80">{g.caption}</figcaption>
-            </motion.figure>
+            <Dialog key={i}>
+              <DialogTrigger asChild>
+                <motion.figure 
+                  whileHover={{ scale: 1.02 }} 
+                  className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur cursor-pointer"
+                >
+                  <img src={g.src} alt={g.caption} className="w-full h-56 object-cover transition duration-500 group-hover:scale-[1.03]" />
+                  <figcaption className="p-3 text-sm text-white/80">{g.caption}</figcaption>
+                </motion.figure>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl w-full h-[90vh] p-0 bg-black/90 border-white/20">
+                <div className="flex items-center justify-center h-full p-4">
+                  <img 
+                    src={g.src} 
+                    alt={g.caption} 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              </DialogContent>
+            </Dialog>
           ))}
         </div>
       </section>
