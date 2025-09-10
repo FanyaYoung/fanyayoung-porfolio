@@ -235,6 +235,55 @@ const MGMProject = () => {
         </div>
       </section>
 
+      {/* RESEARCH FINDINGS AND INSIGHTS */}
+      <section id="findings" className="max-w-6xl mx-auto px-6 py-10">
+        <div className="flex items-center gap-2 mb-4 text-sky-200"><Target className="w-5 h-5" /> <h2 className="text-2xl md:text-3xl font-bold">Research Findings and Insights</h2></div>
+        <p className="text-white/70 mb-6 text-sm">Key discoveries and recommendations from field research across MGM properties.</p>
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <Dialog>
+            <DialogTrigger asChild>
+              <motion.figure 
+                whileHover={{ scale: 1.02 }} 
+                className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur cursor-pointer"
+              >
+                <img src="/lovable-uploads/ac947f18-cfce-4a28-a590-03854755f3ab.png" alt="Spa products recommendations and retail opportunities" className="w-full h-56 object-cover transition duration-500 group-hover:scale-[1.03]" />
+                <figcaption className="p-3 text-sm text-white/80">Spa products recommendations and retail opportunities</figcaption>
+              </motion.figure>
+            </DialogTrigger>
+            <DialogContent className="max-w-4xl w-full h-[90vh] p-0 bg-black/90 border-white/20">
+              <div className="flex items-center justify-center h-full p-4">
+                <img 
+                  src="/lovable-uploads/ac947f18-cfce-4a28-a590-03854755f3ab.png" 
+                  alt="Spa products recommendations and retail opportunities" 
+                  className="max-w-full max-h-full object-contain"
+                />
+              </div>
+            </DialogContent>
+          </Dialog>
+          
+          <Dialog>
+            <DialogTrigger asChild>
+              <motion.figure 
+                whileHover={{ scale: 1.02 }} 
+                className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur cursor-pointer"
+              >
+                <img src="/lovable-uploads/749b0279-47b1-451f-918b-9db23dc6279e.png" alt="Wellness scalable opportunities and detailed findings" className="w-full h-56 object-cover transition duration-500 group-hover:scale-[1.03]" />
+                <figcaption className="p-3 text-sm text-white/80">Wellness scalable opportunities and detailed findings</figcaption>
+              </motion.figure>
+            </DialogTrigger>
+            <DialogContent className="max-w-4xl w-full h-[90vh] p-0 bg-black/90 border-white/20">
+              <div className="flex items-center justify-center h-full p-4">
+                <img 
+                  src="/lovable-uploads/749b0279-47b1-451f-918b-9db23dc6279e.png" 
+                  alt="Wellness scalable opportunities and detailed findings" 
+                  className="max-w-full max-h-full object-contain"
+                />
+              </div>
+            </DialogContent>
+          </Dialog>
+        </div>
+      </section>
+
       {/* RESEARCH METHODOLOGY */}
       <section id="methodology" className="max-w-6xl mx-auto px-6 py-12">
         <h2 className="text-2xl md:text-3xl font-bold flex items-center gap-2 mb-6 text-sky-200"><Gauge className="w-5 h-5" /> Research Methodology</h2>
