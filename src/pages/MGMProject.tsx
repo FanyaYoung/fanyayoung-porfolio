@@ -125,9 +125,6 @@ const MGMProject = () => {
           <strong>Social Impact & Sustainability (SI&S)</strong><br/>
           MGM Resorts, Inc. owns 60% of the "Vegas Strip." MGM wanted to support SI&S efforts by managing resources and promoting diversity and inclusion.
         </p>
-        <p className="text-white/70 mb-6">
-          Thus, the SI&S Program Manager (PM) came to me with the request to launch a research initiative that would identify opportunities to promote MGM's efforts within the app and website.
-        </p>
         <div className="grid md:grid-cols-3 gap-6">
           {STORY_IMAGES.map((g, i) => (
             <Dialog key={i}>
@@ -161,6 +158,9 @@ const MGMProject = () => {
 
       {/* GALLERY */}
       <section id="gallery" className="max-w-6xl mx-auto px-6 py-10">
+        <p className="text-white/70 mb-6">
+          Thus, the SI&S Program Manager (PM) came to me with the request to launch a research initiative that would identify opportunities to promote MGM's efforts within the app and website.
+        </p>
         <div className="flex items-center gap-2 mb-4 text-sky-200"><Images className="w-5 h-5" /> <h2 className="text-2xl md:text-3xl font-bold">Research Proposal & Findings</h2></div>
         <p className="text-white/70 mb-6 text-sm">Research proposal presentations and field study findings from Las Vegas properties.</p>
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5">
