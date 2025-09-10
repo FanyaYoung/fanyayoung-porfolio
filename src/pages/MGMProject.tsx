@@ -25,8 +25,8 @@ const GRADIENTS = {
 // Real STORY images from uploads
 const STORY_IMAGES = [
   { caption: "Research planning and brainstorming", src: "/lovable-uploads/mgm-research-planning.jpg" },
-  { caption: "Project roadmap development", src: "/lovable-uploads/mgm-roadmap-2.jpg" },
   { caption: "Strategic planning framework", src: "/lovable-uploads/mgm-roadmap-1.jpg" },
+  { caption: "Project roadmap development", src: "/lovable-uploads/mgm-roadmap-2.jpg" },
 ];
 
 // Research artifact gallery
