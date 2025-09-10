@@ -207,7 +207,7 @@ const MGMProject = () => {
 
       {/* GALLERY */}
       <section id="gallery" className="max-w-6xl mx-auto px-6 py-10">
-        <div className="flex items-center gap-2 mb-4 text-sky-200"><Images className="w-5 h-5" /> <h2 className="text-2xl md:text-3xl font-bold">Research Proposal & Findings</h2></div>
+        <div className="flex items-center gap-2 mb-4 text-sky-200"><Images className="w-5 h-5" /> <h2 className="text-2xl md:text-3xl font-bold">Research Proposal</h2></div>
         <p className="text-white/70 mb-6 text-sm">Research proposal presentations and field study findings from Las Vegas properties.</p>
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5">
           {GALLERY.map((g, i) => (
