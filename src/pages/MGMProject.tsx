@@ -122,8 +122,11 @@ const MGMProject = () => {
       <section id="story" className="max-w-6xl mx-auto px-6 py-12">
         <h2 className="text-2xl md:text-3xl font-bold flex items-center gap-2 mb-6 text-sky-200"><FlaskConical className="w-5 h-5" /> Research Planning & Roadmaps</h2>
         <p className="text-white/70 mb-6">
-          I brainstormed and developed a comprehensive field study methodology to interview managers, staff, and stakeholders 
-          across different tiers of MGM hotels to ensure SI&S initiatives could be evaluated for feasibility across all properties.
+          <strong>Social Impact & Sustainability (SI&S)</strong><br/>
+          MGM Resorts, Inc. owns 60% of the "Vegas Strip." MGM wanted to support SI&S efforts by managing resources and promoting diversity and inclusion.
+        </p>
+        <p className="text-white/70 mb-6">
+          Thus, the SI&S Program Manager (PM) came to me with the request to launch a research initiative that would identify opportunities to promote MGM's efforts within the app and website.
         </p>
         <div className="grid md:grid-cols-3 gap-6">
           {STORY_IMAGES.map((g, i) => (
@@ -149,6 +152,11 @@ const MGMProject = () => {
             </Dialog>
           ))}
         </div>
+        
+        <p className="text-white/70 mt-8 mb-6">
+          I brainstormed and developed a comprehensive field study methodology to interview managers, staff, and stakeholders 
+          across different tiers of MGM hotels to ensure SI&S initiatives could be evaluated for feasibility across all properties.
+        </p>
       </section>
 
       {/* GALLERY */}
