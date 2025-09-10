@@ -153,38 +153,60 @@ const MGMProject = () => {
           across different tiers of MGM hotels to ensure SI&S initiatives could be evaluated for feasibility across all properties.
         </p>
         
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <Dialog>
+            <DialogTrigger asChild>
+              <motion.figure 
+                whileHover={{ scale: 1.02 }} 
+                className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur cursor-pointer"
+              >
+                <img src={STORY_IMAGES[1].src} alt={STORY_IMAGES[1].caption} className="w-full h-56 object-cover transition duration-500 group-hover:scale-[1.03]" />
+                <figcaption className="p-3 text-sm text-white/80">{STORY_IMAGES[1].caption}</figcaption>
+              </motion.figure>
+            </DialogTrigger>
+            <DialogContent className="max-w-4xl w-full h-[90vh] p-0 bg-black/90 border-white/20">
+              <div className="flex items-center justify-center h-full p-4">
+                <img 
+                  src={STORY_IMAGES[1].src} 
+                  alt={STORY_IMAGES[1].caption} 
+                  className="max-w-full max-h-full object-contain"
+                />
+              </div>
+            </DialogContent>
+          </Dialog>
+        </div>
+        
+        <p className="text-white/70 my-8">
+          Thus, the SI&S Program Manager (PM) came to me with the request to launch a research initiative that would identify opportunities to promote MGM's efforts within the app and website.
+        </p>
+        
         <div className="grid md:grid-cols-2 gap-6">
-          {STORY_IMAGES.slice(1).map((g, i) => (
-            <Dialog key={i + 1}>
-              <DialogTrigger asChild>
-                <motion.figure 
-                  whileHover={{ scale: 1.02 }} 
-                  className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur cursor-pointer"
-                >
-                  <img src={g.src} alt={g.caption} className="w-full h-56 object-cover transition duration-500 group-hover:scale-[1.03]" />
-                  <figcaption className="p-3 text-sm text-white/80">{g.caption}</figcaption>
-                </motion.figure>
-              </DialogTrigger>
-              <DialogContent className="max-w-4xl w-full h-[90vh] p-0 bg-black/90 border-white/20">
-                <div className="flex items-center justify-center h-full p-4">
-                  <img 
-                    src={g.src} 
-                    alt={g.caption} 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-              </DialogContent>
-            </Dialog>
-          ))}
+          <Dialog>
+            <DialogTrigger asChild>
+              <motion.figure 
+                whileHover={{ scale: 1.02 }} 
+                className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur cursor-pointer"
+              >
+                <img src={STORY_IMAGES[2].src} alt={STORY_IMAGES[2].caption} className="w-full h-56 object-cover transition duration-500 group-hover:scale-[1.03]" />
+                <figcaption className="p-3 text-sm text-white/80">{STORY_IMAGES[2].caption}</figcaption>
+              </motion.figure>
+            </DialogTrigger>
+            <DialogContent className="max-w-4xl w-full h-[90vh] p-0 bg-black/90 border-white/20">
+              <div className="flex items-center justify-center h-full p-4">
+                <img 
+                  src={STORY_IMAGES[2].src} 
+                  alt={STORY_IMAGES[2].caption} 
+                  className="max-w-full max-h-full object-contain"
+                />
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
         
       </section>
 
       {/* GALLERY */}
       <section id="gallery" className="max-w-6xl mx-auto px-6 py-10">
-        <p className="text-white/70 mb-6">
-          Thus, the SI&S Program Manager (PM) came to me with the request to launch a research initiative that would identify opportunities to promote MGM's efforts within the app and website.
-        </p>
         <div className="flex items-center gap-2 mb-4 text-sky-200"><Images className="w-5 h-5" /> <h2 className="text-2xl md:text-3xl font-bold">Research Proposal & Findings</h2></div>
         <p className="text-white/70 mb-6 text-sm">Research proposal presentations and field study findings from Las Vegas properties.</p>
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5">
