@@ -126,8 +126,36 @@ const MGMProject = () => {
           MGM Resorts, Inc. owns 60% of the "Vegas Strip." MGM wanted to support SI&S efforts by managing resources and promoting diversity and inclusion.
         </p>
         <div className="grid md:grid-cols-3 gap-6">
-          {STORY_IMAGES.map((g, i) => (
-            <Dialog key={i}>
+          <Dialog>
+            <DialogTrigger asChild>
+              <motion.figure 
+                whileHover={{ scale: 1.02 }} 
+                className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur cursor-pointer"
+              >
+                <img src={STORY_IMAGES[0].src} alt={STORY_IMAGES[0].caption} className="w-full h-56 object-cover transition duration-500 group-hover:scale-[1.03]" />
+                <figcaption className="p-3 text-sm text-white/80">{STORY_IMAGES[0].caption}</figcaption>
+              </motion.figure>
+            </DialogTrigger>
+            <DialogContent className="max-w-4xl w-full h-[90vh] p-0 bg-black/90 border-white/20">
+              <div className="flex items-center justify-center h-full p-4">
+                <img 
+                  src={STORY_IMAGES[0].src} 
+                  alt={STORY_IMAGES[0].caption} 
+                  className="max-w-full max-h-full object-contain"
+                />
+              </div>
+            </DialogContent>
+          </Dialog>
+        </div>
+        
+        <p className="text-white/70 my-8">
+          I brainstormed and developed a comprehensive field study methodology to interview managers, staff, and stakeholders 
+          across different tiers of MGM hotels to ensure SI&S initiatives could be evaluated for feasibility across all properties.
+        </p>
+        
+        <div className="grid md:grid-cols-2 gap-6">
+          {STORY_IMAGES.slice(1).map((g, i) => (
+            <Dialog key={i + 1}>
               <DialogTrigger asChild>
                 <motion.figure 
                   whileHover={{ scale: 1.02 }} 
@@ -150,10 +178,6 @@ const MGMProject = () => {
           ))}
         </div>
         
-        <p className="text-white/70 mt-8 mb-6">
-          I brainstormed and developed a comprehensive field study methodology to interview managers, staff, and stakeholders 
-          across different tiers of MGM hotels to ensure SI&S initiatives could be evaluated for feasibility across all properties.
-        </p>
       </section>
 
       {/* GALLERY */}
