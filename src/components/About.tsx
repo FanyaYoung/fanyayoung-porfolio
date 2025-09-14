@@ -1,5 +1,6 @@
 import { Code, Brain, Zap, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 export const About = () => {
   const features = [
@@ -91,6 +92,36 @@ export const About = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Navigation Options */}
+        <div className="mt-16 text-center">
+          <h3 className="text-2xl font-semibold mb-8 text-gradient">Explore My Expertise</h3>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <Card className="group hover:border-primary/50 transition-colors cursor-pointer">
+              <CardContent className="p-8">
+                <Link to="/ai-strategy" className="block">
+                  <Brain className="w-16 h-16 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <h4 className="text-xl font-semibold mb-3">AI Strategy & Innovation</h4>
+                  <p className="text-muted-foreground">
+                    Dive deep into my AI expertise, strategic frameworks, and innovative solutions that transform businesses through intelligent technology implementation.
+                  </p>
+                </Link>
+              </CardContent>
+            </Card>
+            
+            <Card className="group hover:border-primary/50 transition-colors cursor-pointer">
+              <CardContent className="p-8">
+                <Link to="/evangelist-jobs" className="block">
+                  <Users className="w-16 h-16 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <h4 className="text-xl font-semibold mb-3">Product Evangelism</h4>
+                  <p className="text-muted-foreground">
+                    Learn about my approach to product evangelism, driving adoption across global teams, and building cultures that embrace technology innovation.
+                  </p>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </section>

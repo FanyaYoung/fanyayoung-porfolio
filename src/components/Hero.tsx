@@ -58,7 +58,7 @@ export const Hero = () => {
           machine learning, and cutting-edge web technologies. Building the future, one algorithm at a time.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
           <Button 
             className="btn-cyber text-lg px-8 py-4"
             onClick={() => scrollToNext()}

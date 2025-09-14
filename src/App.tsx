@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import LGProject from "./pages/LGProject";
 import MGMProject from "./pages/MGMProject";
 import EvangelistJobs from "./pages/EvangelistJobs";
+import AIPage from "./pages/AIPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/projects/lg" element={<LGProject />} />
           <Route path="/projects/mgm" element={<MGMProject />} />
           <Route path="/evangelist-jobs" element={<EvangelistJobs />} />
+          <Route path="/ai-strategy" element={<AIPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
