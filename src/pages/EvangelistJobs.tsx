@@ -46,11 +46,37 @@ const EvangelistJobs = () => {
               />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-4">
-              Product Evangelist & Program Leader
+              AI Advocate | Product Evangelist & Program Leader
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Drive adoption of AI-powered products across global teams through strategic storytelling, relationship building, and culture transformation
             </p>
+            
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <Card className="group hover:border-primary/50 transition-colors cursor-pointer">
+                <CardContent className="pt-6">
+                  <div className="text-center">
+                    <MessageCircle className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                    <h3 className="text-xl font-semibold mb-3">AI Advocacy</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Explore strategic advocacy approaches for AI adoption, culture transformation, and building organizational confidence in AI technologies.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="group hover:border-primary/50 transition-colors cursor-pointer">
+                <CardContent className="pt-6">
+                  <div className="text-center">
+                    <Briefcase className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                    <h3 className="text-xl font-semibold mb-3">Product Evangelist & Program Leader</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Dive into the specific role requirements, responsibilities, and qualifications for leading product evangelism at scale.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
 
