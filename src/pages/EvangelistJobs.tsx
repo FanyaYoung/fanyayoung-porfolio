@@ -38,13 +38,6 @@ const EvangelistJobs = () => {
           </Link>
           
           <div className="text-center mb-12">
-            <div className="mb-6">
-              <img 
-                src={profileAvatar} 
-                alt="Fanya Young - AI Design Researcher & Product Evangelist"
-                className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-primary/20"
-              />
-            </div>
             <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-4">
               AI Advocate | Product Evangelist & Program Leader
             </h1>
