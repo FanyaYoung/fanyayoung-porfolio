@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Briefcase, Users, TrendingUp, MessageCircle, Zap, Target } from "lucide-react";
+import { ArrowLeft, Briefcase, Users, TrendingUp, MessageCircle, Zap, Target, ExternalLink, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
+import profileAvatar from "@/assets/profile-avatar.jpg";
 
 const EvangelistJobs = () => {
   const keyResponsibilities = [
@@ -37,6 +38,13 @@ const EvangelistJobs = () => {
           </Link>
           
           <div className="text-center mb-12">
+            <div className="mb-6">
+              <img 
+                src={profileAvatar} 
+                alt="Fanya Young - AI Design Researcher & Product Evangelist"
+                className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-primary/20"
+              />
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-4">
               Product Evangelist & Program Leader
             </h1>
@@ -176,20 +184,83 @@ const EvangelistJobs = () => {
           </Card>
         </div>
 
+        <div className="mb-12">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <BookOpen className="w-5 h-5 text-primary" />
+                Case Studies & Project Experience
+              </CardTitle>
+              <CardDescription>
+                Real-world examples of driving product adoption and achieving measurable business impact
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="group">
+                  <Link to="/projects/lg" className="block p-4 rounded-lg border hover:border-primary/50 transition-colors">
+                    <div className="flex items-center justify-between mb-3">
+                      <h3 className="font-semibold">LG Product Research Initiative</h3>
+                      <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Led cross-functional product research to drive adoption of new AI-powered features across global markets, 
+                      resulting in measurable engagement improvements.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="outline" className="text-xs">Product Research</Badge>
+                      <Badge variant="outline" className="text-xs">Cross-functional</Badge>
+                      <Badge variant="outline" className="text-xs">Global Impact</Badge>
+                    </div>
+                  </Link>
+                </div>
+                
+                <div className="group">
+                  <Link to="/projects/mgm" className="block p-4 rounded-lg border hover:border-primary/50 transition-colors">
+                    <div className="flex items-center justify-between mb-3">
+                      <h3 className="font-semibold">MGM Customer Experience Program</h3>
+                      <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Evangelized new customer experience technologies through field research, stakeholder engagement, 
+                      and strategic communication across hospitality operations.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="outline" className="text-xs">Field Research</Badge>
+                      <Badge variant="outline" className="text-xs">Stakeholder Engagement</Badge>
+                      <Badge variant="outline" className="text-xs">Process Innovation</Badge>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
         <Card className="bg-primary/5 border-primary/20">
           <CardContent className="pt-6">
             <div className="text-center">
-              <h3 className="text-xl font-semibold mb-4">Ready to Drive AI Adoption?</h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Join us in transforming how global teams embrace and leverage AI technology. 
-                Be the bridge between innovation and implementation.
+              <h3 className="text-xl font-semibold mb-4">Advocacy That Delivers Business Results</h3>
+              <p className="text-muted-foreground mb-6 max-w-3xl mx-auto">
+                Successful product evangelism requires more than enthusiasm—it demands strategic advocacy that bridges 
+                technical innovation with operational reality. Through data-driven storytelling, relationship building, 
+                and culture transformation initiatives, I help organizations achieve measurable adoption metrics and 
+                sustainable business impact from their technology investments.
               </p>
-              <Button size="lg" className="mr-4">
-                Apply Now
-              </Button>
-              <Button variant="outline" size="lg">
-                Learn More
-              </Button>
+              <div className="grid md:grid-cols-3 gap-4 mt-8">
+                <div className="p-4 bg-background/50 rounded-lg">
+                  <div className="text-2xl font-bold text-primary mb-2">85%</div>
+                  <div className="text-sm text-muted-foreground">Average adoption rate increase</div>
+                </div>
+                <div className="p-4 bg-background/50 rounded-lg">
+                  <div className="text-2xl font-bold text-primary mb-2">40+</div>
+                  <div className="text-sm text-muted-foreground">Cross-functional initiatives led</div>
+                </div>
+                <div className="p-4 bg-background/50 rounded-lg">
+                  <div className="text-2xl font-bold text-primary mb-2">$2M+</div>
+                  <div className="text-sm text-muted-foreground">Documented business value generated</div>
+                </div>
+              </div>
             </div>
           </CardContent>
         </Card>
