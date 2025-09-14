@@ -39,18 +39,7 @@ export const About = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16 items-center mb-16">
-          <div className="space-y-6">
-            <div className="relative">
-              <img 
-                src="/lovable-uploads/b13249bc-c597-4230-9ceb-bb26f93daf79.png" 
-                alt="Fanya Young" 
-                className="w-full max-w-md mx-auto rounded-2xl shadow-cyber"
-              />
-              <div className="absolute inset-0 bg-gradient-cyber opacity-20 rounded-2xl" />
-            </div>
-          </div>
-
+        <div className="max-w-4xl mx-auto mb-16">
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               I'm a dedicated AI Design Researcher and Prompt Engineer specializing in search query evaluation, 
