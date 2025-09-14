@@ -95,7 +95,7 @@ export const About = () => {
         </div>
 
         {/* Navigation Options */}
-        <div className="mt-16 text-center">
+        <div className="mt-8 text-center">
           <h3 className="text-2xl font-semibold mb-8 text-gradient">Explore My Expertise</h3>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <Card className="group hover:border-primary/50 transition-colors cursor-pointer">
