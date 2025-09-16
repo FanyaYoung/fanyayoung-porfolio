@@ -9,6 +9,15 @@ export const Projects = () => {
   
   const projects = [
     {
+      title: "Sam's Club — Club Pick Up (CPU) & Quick Pick",
+      description: "A two‑sided research program that aligned Member check‑in behavior with Associate operations to speed pickups and raise satisfaction, involving 1.3K survey recipients and field studies.",
+      image: "/lovable-uploads/samsclub-title-slide.jpg",
+      technologies: ["UX Research", "Service Design", "Usability Testing", "Journey Mapping"],
+      liveUrl: "/projects/samsclub",
+      githubUrl: null,
+      featured: true,
+    },
+    {
       title: "Walmart International: Multi‑Piece Shipping",
       description: "Research-led service and communications model for orders fulfilled across multiple boxes, improving customer experience and reducing support inquiries by 40%.",
       image: "/lovable-uploads/walmart-slide1.jpg",

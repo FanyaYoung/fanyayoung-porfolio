@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import LGProject from "./pages/LGProject";
 import MGMProject from "./pages/MGMProject";
 import WalmartProject from "./pages/WalmartProject";
+import SamsClubProject from "./pages/SamsClubProject";
 import EvangelistJobs from "./pages/EvangelistJobs";
 import AIPage from "./pages/AIPage";
 import NotFound from "./pages/NotFound";
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/projects/lg" element={<LGProject />} />
           <Route path="/projects/mgm" element={<MGMProject />} />
           <Route path="/projects/walmart" element={<WalmartProject />} />
+          <Route path="/projects/samsclub" element={<SamsClubProject />} />
           <Route path="/evangelist-jobs" element={<EvangelistJobs />} />
           <Route path="/ai-strategy" element={<AIPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
