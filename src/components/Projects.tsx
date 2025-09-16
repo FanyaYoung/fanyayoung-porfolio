@@ -11,7 +11,7 @@ export const Projects = () => {
     {
       title: "Walmart International: Multi‑Piece Shipping",
       description: "Research-led service and communications model for orders fulfilled across multiple boxes, improving customer experience and reducing support inquiries by 40%.",
-      image: "/lovable-uploads/walmart-slide6.jpg",
+      image: "/lovable-uploads/walmart-slide1.jpg",
       technologies: ["User Research", "Service Design", "Communications", "Customer Experience"],
       liveUrl: "/projects/walmart",
       githubUrl: null,
@@ -20,7 +20,7 @@ export const Projects = () => {
     {
       title: "Make Me Up - AI Beauty & Styling Platform",
       description: "Revolutionary AI-powered beauty and styling application featuring advanced prompt engineering for personalized makeup recommendations, user intent capture for style preferences, and comprehensive content safety review for beauty standards.",
-      image: projectShowcase,
+      image: "/lovable-uploads/makemeup-title-slide.jpg",
       technologies: ["React", "TypeScript", "Supabase", "Google Cloud Storage", "SQL", "Python", "Java", "AI/ML Integration", "Prompt Engineering", "User Intent Capture"],
       liveUrl: "https://demo.makemeup.app/",
       githubUrl: "#",
@@ -29,7 +29,7 @@ export const Projects = () => {
     {
       title: "4Us - Community Connection Platform",
       description: "Intelligent community platform utilizing advanced query rewriting algorithms, rubric-based evaluation for content quality, and edge case handling for diverse user interactions with evidence-based rationale systems.",
-      image: projectShowcase,
+      image: "/lovable-uploads/4us-title-slide.jpg",
       technologies: ["React", "TypeScript", "Supabase", "Google Cloud Storage", "SQL", "Python", "Java", "Query Rewriting", "Rubric-Based Evaluation", "Content Safety"],
       liveUrl: "https://4us.lovable.app",
       githubUrl: "#",
@@ -38,7 +38,7 @@ export const Projects = () => {
     {
       title: "MGM - Guest Experience Analytics Platform",
       description: "Advanced hospitality analytics platform leveraging machine learning for guest behavior prediction, personalized experience optimization, and real-time operational insights for luxury resort management.",
-      image: projectShowcase,
+      image: "/lovable-uploads/mgm-hero.png",
       technologies: ["React", "TypeScript", "Azure Cloud", "Power BI", "SQL Server", "Python", "Machine Learning", "Guest Analytics", "Hospitality Tech", "Predictive Modeling"],
       liveUrl: "/projects/mgm",
       githubUrl: "#",
@@ -47,7 +47,7 @@ export const Projects = () => {
     {
       title: "LG - Human Computing Interaction Research",
       description: "Customer-centered design research platform focused on bringing customers to the forefront of product, engineering, and design through shared experiences and physical space exploration.",
-      image: projectShowcase,
+      image: "/lovable-uploads/lg-title-slide.jpg",
       technologies: ["React", "TypeScript", "Supabase", "Google Cloud Storage", "SQL", "Python", "Java", "Human-Computer Interaction", "User Experience Research", "Customer Journey Mapping"],
       liveUrl: "/projects/lg",
       githubUrl: "#",
