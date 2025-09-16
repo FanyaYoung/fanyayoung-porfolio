@@ -38,7 +38,7 @@ export const Projects = () => {
     {
       title: "MGM - Social Impact & Sustainability Research",
       description: "Comprehensive research report analyzing MGM Resorts' social impact and sustainability initiatives. Strategic research framework for hospitality industry sustainability practices, community engagement, and environmental stewardship programs.",
-      image: "/lovable-uploads/mgm-title-slide.jpg",
+      image: "/lovable-uploads/mgm-hero.png",
       technologies: ["React", "TypeScript", "Azure Cloud", "Power BI", "SQL Server", "Python", "Machine Learning", "Sustainability Research", "Social Impact Analysis", "Hospitality Research"],
       liveUrl: "/projects/mgm",
       githubUrl: "#",
