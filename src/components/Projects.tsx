@@ -9,6 +9,15 @@ export const Projects = () => {
   
   const projects = [
     {
+      title: "Walmart International: Multi‑Piece Shipping",
+      description: "Research-led service and communications model for orders fulfilled across multiple boxes, improving customer experience and reducing support inquiries by 40%.",
+      image: "/lovable-uploads/walmart-slide6.jpg",
+      technologies: ["User Research", "Service Design", "Communications", "Customer Experience"],
+      liveUrl: "/projects/walmart",
+      githubUrl: null,
+      featured: true,
+    },
+    {
       title: "Make Me Up - AI Beauty & Styling Platform",
       description: "Revolutionary AI-powered beauty and styling application featuring advanced prompt engineering for personalized makeup recommendations, user intent capture for style preferences, and comprehensive content safety review for beauty standards.",
       image: projectShowcase,
