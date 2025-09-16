@@ -63,10 +63,10 @@ export const Projects = () => {
       featured: false
     },
     {
-      title: "AI Tool Invocation Review System",
-      description: "Comprehensive platform for AI model interaction logs analysis, tool invocation review workflows, and automated content safety review with attention to detail verification protocols.",
+      title: "AI Strategy & Implementation Consulting",
+      description: "Strategic AI consulting services for enterprise transformation, including AI readiness assessments, implementation roadmaps, model selection guidance, and organizational change management for successful AI adoption.",
       image: projectShowcase,
-      technologies: ["Python", "Data Annotation Tools", "AI Model Integration", "Tool Review"],
+      technologies: ["AI Strategy", "Machine Learning", "Enterprise Consulting", "Change Management", "AI Governance", "Implementation Planning"],
       liveUrl: "#",
       githubUrl: "#",
       featured: false
