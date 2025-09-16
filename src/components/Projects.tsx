@@ -28,7 +28,7 @@ export const Projects = () => {
     },
     {
       title: "4Us - Community Connection Platform",
-      description: "Intelligent community platform utilizing advanced query rewriting algorithms, rubric-based evaluation for content quality, and edge case handling for diverse user interactions with evidence-based rationale systems.",
+      description: "All your event photos & videos in one shared space. Create private digital spaces where guests can share memories live, with everything organized, downloadable, and yours to keep.",
       image: "/lovable-uploads/4us-title-slide.jpg",
       technologies: ["React", "TypeScript", "Supabase", "Google Cloud Storage", "SQL", "Python", "Java", "Query Rewriting", "Rubric-Based Evaluation", "Content Safety"],
       liveUrl: "https://4us.lovable.app",
@@ -36,17 +36,17 @@ export const Projects = () => {
       featured: true
     },
     {
-      title: "MGM - Guest Experience Analytics Platform",
-      description: "Advanced hospitality analytics platform leveraging machine learning for guest behavior prediction, personalized experience optimization, and real-time operational insights for luxury resort management.",
-      image: "/lovable-uploads/mgm-hero.png",
-      technologies: ["React", "TypeScript", "Azure Cloud", "Power BI", "SQL Server", "Python", "Machine Learning", "Guest Analytics", "Hospitality Tech", "Predictive Modeling"],
+      title: "MGM - Social Impact & Sustainability Research",
+      description: "Comprehensive research report analyzing MGM Resorts' social impact and sustainability initiatives. Strategic research framework for hospitality industry sustainability practices, community engagement, and environmental stewardship programs.",
+      image: "/lovable-uploads/mgm-title-slide.jpg",
+      technologies: ["React", "TypeScript", "Azure Cloud", "Power BI", "SQL Server", "Python", "Machine Learning", "Sustainability Research", "Social Impact Analysis", "Hospitality Research"],
       liveUrl: "/projects/mgm",
       githubUrl: "#",
       featured: true
     },
     {
-      title: "LG - Human Computing Interaction Research",
-      description: "Customer-centered design research platform focused on bringing customers to the forefront of product, engineering, and design through shared experiences and physical space exploration.",
+      title: "LG - Convenient Stores Market Research",
+      description: "Comprehensive market research study focusing on convenient stores and retail consumer behavior. Customer-centered design research bringing insights to product development and strategic positioning.",
       image: "/lovable-uploads/lg-title-slide.jpg",
       technologies: ["React", "TypeScript", "Supabase", "Google Cloud Storage", "SQL", "Python", "Java", "Human-Computer Interaction", "User Experience Research", "Customer Journey Mapping"],
       liveUrl: "/projects/lg",
