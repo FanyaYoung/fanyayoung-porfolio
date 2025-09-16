@@ -54,10 +54,10 @@ export const Projects = () => {
       featured: true
     },
     {
-      title: "Search Query Evaluation Framework",
-      description: "Enterprise-grade search relevance testing system with Boolean query operators, inter-rater agreement analysis, and calibration & consistency metrics for annotation & labeling quality assurance.",
+      title: "User Research & Design Strategy",
+      description: "Comprehensive user research methodology framework incorporating ethnographic studies, usability testing, survey design, and behavioral analysis to drive data-informed design decisions and product strategy.",
       image: projectShowcase,
-      technologies: ["Python", "SQL", "Information Retrieval", "Statistical Analysis"],
+      technologies: ["User Research", "Usability Testing", "Survey Design", "Behavioral Analysis", "Design Strategy", "Ethnographic Studies"],
       liveUrl: "#",
       githubUrl: "#",
       featured: false
