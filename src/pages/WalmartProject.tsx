@@ -135,7 +135,7 @@ export default function WalmartProject() {
               <Button variant="outline" size="lg" className="gap-2" asChild>
                 <a href={LINKS.email}>
                   <Mail className="w-4 h-4" />
-                  Contact Lead
+                  Get in touch
                 </a>
               </Button>
             </motion.div>
