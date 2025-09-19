@@ -67,14 +67,20 @@ export const Hero = () => {
           </Button>
           
           <div className="flex items-center gap-4">
-            <Button variant="ghost" size="icon" className="hover:text-primary transition-colors">
-              <Github size={24} />
+            <Button variant="ghost" size="icon" className="hover:text-primary transition-colors" asChild>
+              <a href="https://www.github.com/fanyayoung" target="_blank" rel="noopener noreferrer">
+                <Github size={24} />
+              </a>
             </Button>
-            <Button variant="ghost" size="icon" className="hover:text-primary transition-colors">
-              <Linkedin size={24} />
+            <Button variant="ghost" size="icon" className="hover:text-primary transition-colors" asChild>
+              <a href="https://www.linkedin.com/in/fanyayoung/" target="_blank" rel="noopener noreferrer">
+                <Linkedin size={24} />
+              </a>
             </Button>
-            <Button variant="ghost" size="icon" className="hover:text-primary transition-colors">
-              <Mail size={24} />
+            <Button variant="ghost" size="icon" className="hover:text-primary transition-colors" asChild>
+              <a href="mailto:e.fanya.young@gmail.com">
+                <Mail size={24} />
+              </a>
             </Button>
           </div>
         </div>
