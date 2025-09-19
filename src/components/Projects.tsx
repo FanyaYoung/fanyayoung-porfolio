@@ -28,7 +28,7 @@ export const Projects = () => {
       title: "Make Me Up - AI Beauty & Styling Platform",
       description: "Revolutionary AI-powered beauty and styling application featuring advanced prompt engineering for personalized makeup recommendations, user intent capture for style preferences, and comprehensive content safety review for beauty standards.",
       image: "/lovable-uploads/makemeup-title-slide.jpg",
-      technologies: ["React", "TypeScript", "Supabase", "Google Cloud Storage", "SQL", "Python", "Java", "AI/ML Integration", "Prompt Engineering", "User Intent Capture"],
+      technologies: ["AI/ML Integration", "Prompt Engineering", "User Intent Capture", "Natural Language Processing", "Computer Vision", "Machine Learning", "Personalization AI", "Beauty Tech Innovation"],
       liveUrl: "https://demo.makemeup.app/",
       featured: true
     },
@@ -36,7 +36,7 @@ export const Projects = () => {
       title: "4Us - Community Connection Platform",
       description: "All your event photos & videos in one shared space. Create private digital spaces where guests can share memories live, with everything organized, downloadable, and yours to keep.",
       image: "/lovable-uploads/4us-title-slide.jpg",
-      technologies: ["React", "TypeScript", "Supabase", "Google Cloud Storage", "SQL", "Python", "Java", "Query Rewriting", "Rubric-Based Evaluation", "Content Safety"],
+      technologies: ["AI Content Moderation", "Query Rewriting", "Rubric-Based Evaluation", "Content Safety", "Machine Learning", "Natural Language Processing", "Community AI", "Smart Filtering"],
       liveUrl: "https://4us.lovable.app",
       featured: true
     },
@@ -44,7 +44,7 @@ export const Projects = () => {
       title: "MGM - Social Impact & Sustainability Research",
       description: "Comprehensive research report analyzing MGM Resorts' social impact and sustainability initiatives. Strategic research framework for hospitality industry sustainability practices, community engagement, and environmental stewardship programs.",
       image: "/lovable-uploads/mgm-hero.png",
-      technologies: ["React", "TypeScript", "Azure Cloud", "Power BI", "SQL Server", "Python", "Machine Learning", "Sustainability Research", "Social Impact Analysis", "Hospitality Research"],
+      technologies: ["Sustainability Research", "Social Impact Analysis", "Hospitality Research", "Environmental Strategy", "Community Engagement", "ESG Framework"],
       liveUrl: "/projects/mgm",
       featured: true
     },
@@ -52,7 +52,7 @@ export const Projects = () => {
       title: "LG - Convenient Stores Market Research",
       description: "Comprehensive market research study focusing on convenient stores and retail consumer behavior. Customer-centered design research bringing insights to product development and strategic positioning.",
       image: "/lovable-uploads/lg-title-slide.jpg",
-      technologies: ["React", "TypeScript", "Supabase", "Google Cloud Storage", "SQL", "Python", "Java", "Human-Computer Interaction", "User Experience Research", "Customer Journey Mapping"],
+      technologies: ["Market Research", "Consumer Behavior Analysis", "User Experience Research", "Customer Journey Mapping", "Retail Strategy", "Ethnographic Studies"],
       liveUrl: "/projects/lg",
       featured: true
     },
