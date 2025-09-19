@@ -3,9 +3,25 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 
 export const Skills = () => {
-  const [activeCategory, setActiveCategory] = useState("Core Expertise");
+  const [activeCategory, setActiveCategory] = useState("AI & Machine Learning");
 
   const skillCategories = {
+    "AI & Machine Learning": [
+      { skill: "LLM-based Recommendation Engines", level: 92 },
+      { skill: "A/B Testing & Optimization", level: 90 },
+      { skill: "Shade Matching Algorithms", level: 88 },
+      { skill: "AI-Generated Media Agents", level: 85 },
+      { skill: "Virtual Try-on Technology", level: 87 },
+      { skill: "Sensor Data Integration", level: 83 }
+    ],
+    "User Research": [
+      { skill: "Interactive Prototyping", level: 93 },
+      { skill: "User Satisfaction Measurement", level: 90 },
+      { skill: "Conversion Optimization", level: 88 },
+      { skill: "Human Factors Principles", level: 92 },
+      { skill: "Survey Tracker Design", level: 89 },
+      { skill: "Information Architecture", level: 91 }
+    ],
     "Core Expertise": [
       { skill: "Prompt Engineering", level: 95 },
       { skill: "Search Query Evaluation", level: 92 },
@@ -41,6 +57,8 @@ export const Skills = () => {
   };
 
   const tools = [
+    "ChatGPT", "Windsurf", "Gemini", "OpenAI APIs", "Google Cloud", "Supabase", "Stripe", 
+    "Kaggle Datasets", "Statistica", "LLM Pipelines", "A/B Testing Tools", "Virtual Try-on SDK",
     "Python", "SQL", "Data Annotation Tools", "Information Retrieval Systems", "AI/ML Integration", 
     "Query Operators (AND/OR)", "Boolean Filters", "Search Relevance Testing", "Prompt Engineering Tools",
     "Content Safety Platforms", "Statistical Analysis", "Evidence-Based Evaluation", "User Intent Analysis"
