@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
+import { ChevronDown, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import neuralHeroBg from "@/assets/neural-hero-bg.jpg";
 
@@ -67,11 +67,6 @@ export const Hero = () => {
           </Button>
           
           <div className="flex items-center gap-4">
-            <Button variant="ghost" size="icon" className="hover:text-primary transition-colors" asChild>
-              <a href="https://www.github.com/fanyayoung" target="_blank" rel="noopener noreferrer">
-                <Github size={24} />
-              </a>
-            </Button>
             <Button variant="ghost" size="icon" className="hover:text-primary transition-colors" asChild>
               <a href="https://www.linkedin.com/in/fanyayoung/" target="_blank" rel="noopener noreferrer">
                 <Linkedin size={24} />

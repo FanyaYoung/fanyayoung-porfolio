@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Play } from "lucide-react";
+import { ExternalLink, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
@@ -14,7 +14,6 @@ export const Projects = () => {
       image: "/lovable-uploads/samsclub-title-slide.jpg",
       technologies: ["UX Research", "Service Design", "Usability Testing", "Journey Mapping"],
       liveUrl: "/projects/samsclub",
-      githubUrl: null,
       featured: true,
     },
     {
@@ -23,7 +22,6 @@ export const Projects = () => {
       image: "/lovable-uploads/walmart-slide1.jpg",
       technologies: ["User Research", "Service Design", "Communications", "Customer Experience"],
       liveUrl: "/projects/walmart",
-      githubUrl: null,
       featured: true,
     },
     {
@@ -32,7 +30,6 @@ export const Projects = () => {
       image: "/lovable-uploads/makemeup-title-slide.jpg",
       technologies: ["React", "TypeScript", "Supabase", "Google Cloud Storage", "SQL", "Python", "Java", "AI/ML Integration", "Prompt Engineering", "User Intent Capture"],
       liveUrl: "https://demo.makemeup.app/",
-      githubUrl: "#",
       featured: true
     },
     {
@@ -41,7 +38,6 @@ export const Projects = () => {
       image: "/lovable-uploads/4us-title-slide.jpg",
       technologies: ["React", "TypeScript", "Supabase", "Google Cloud Storage", "SQL", "Python", "Java", "Query Rewriting", "Rubric-Based Evaluation", "Content Safety"],
       liveUrl: "https://4us.lovable.app",
-      githubUrl: "#",
       featured: true
     },
     {
@@ -50,7 +46,6 @@ export const Projects = () => {
       image: "/lovable-uploads/mgm-hero.png",
       technologies: ["React", "TypeScript", "Azure Cloud", "Power BI", "SQL Server", "Python", "Machine Learning", "Sustainability Research", "Social Impact Analysis", "Hospitality Research"],
       liveUrl: "/projects/mgm",
-      githubUrl: "#",
       featured: true
     },
     {
@@ -59,7 +54,6 @@ export const Projects = () => {
       image: "/lovable-uploads/lg-title-slide.jpg",
       technologies: ["React", "TypeScript", "Supabase", "Google Cloud Storage", "SQL", "Python", "Java", "Human-Computer Interaction", "User Experience Research", "Customer Journey Mapping"],
       liveUrl: "/projects/lg",
-      githubUrl: "#",
       featured: true
     },
     {
@@ -68,7 +62,6 @@ export const Projects = () => {
       image: projectShowcase,
       technologies: ["User Research", "Usability Testing", "Survey Design", "Behavioral Analysis", "Design Strategy", "Ethnographic Studies"],
       liveUrl: "#",
-      githubUrl: "#",
       featured: false
     },
     {
@@ -77,7 +70,6 @@ export const Projects = () => {
       image: projectShowcase,
       technologies: ["AI Strategy", "Machine Learning", "Enterprise Consulting", "Change Management", "AI Governance", "Implementation Planning"],
       liveUrl: "#",
-      githubUrl: "#",
       featured: false
     }
   ];
@@ -144,16 +136,6 @@ export const Projects = () => {
                       <Play size={16} className="mr-2" />
                       {project.liveUrl.startsWith('/') ? 'View Project' : 'Live Demo'}
                     </Button>
-                    <Button 
-                      variant="outline" 
-                      size="sm" 
-                      className="hover:border-primary hover:text-primary"
-                      onClick={() => window.open(project.githubUrl, '_blank')}
-                      disabled={project.githubUrl === '#'}
-                    >
-                      <Github size={16} className="mr-2" />
-                      Code
-                    </Button>
                   </div>
                 </CardContent>
               </Card>
@@ -183,15 +165,6 @@ export const Projects = () => {
                       >
                         <ExternalLink size={16} />
                       </Button>
-                      <Button 
-                        variant="ghost" 
-                        size="icon" 
-                        className="opacity-0 group-hover:opacity-100 transition-opacity"
-                        onClick={() => window.open(project.githubUrl, '_blank')}
-                        disabled={project.githubUrl === '#'}
-                      >
-                        <Github size={16} />
-                      </Button>
                     </div>
                   </CardTitle>
                 </CardHeader>
@@ -216,12 +189,6 @@ export const Projects = () => {
           </div>
         </div>
 
-        <div className="text-center mt-12">
-          <Button className="btn-cyber">
-            <Github size={20} className="mr-2" />
-            View All Projects on GitHub
-          </Button>
-        </div>
       </div>
     </section>
   );
