@@ -50,7 +50,6 @@ export const Hero = () => {
               className="w-full h-auto rounded-2xl shadow-2xl border-2 border-primary/20"
               controls
               playsInline
-              poster="/lovable-uploads/749b0279-47b1-451f-918b-9db23dc6279e.png"
             >
               <source src="/intro-video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
