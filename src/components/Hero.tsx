@@ -43,6 +43,21 @@ export const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        {/* Video Intro */}
+        <div className="mb-8">
+          <div className="relative mx-auto mb-8 max-w-md">
+            <video 
+              className="w-full h-auto rounded-2xl shadow-2xl border-2 border-primary/20"
+              controls
+              playsInline
+              poster="/lovable-uploads/749b0279-47b1-451f-918b-9db23dc6279e.png"
+            >
+              <source src="/intro-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
         <div className="mb-8">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 glitch">
             <span className="text-gradient">Fanya Young</span>
