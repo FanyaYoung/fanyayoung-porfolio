@@ -42,16 +42,42 @@ export const About = () => {
         <div className="max-w-4xl mx-auto mb-16">
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a dedicated AI Design Researcher and Prompt Engineer specializing in search query evaluation, 
-              tool invocation review, and AI model interaction analysis. With exceptional attention to detail 
-              and clear written communication, I excel at user intent capture and query rewriting for 
-              optimal AI system performance.
+              Hi. I'm Fanya Young.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              My expertise spans Python, SQL, computational statistics, and data annotation tools. 
-              I provide evidence-based rationale through rubric-based evaluation, ensuring calibration & consistency 
-              in independent work environments while maintaining the highest standards in content safety review.
+              I'm a UX Research Lead and AI Consultant. 
+              With my 11+ years of UX Research and AI consulting, I guide
+              companies like Toyota, Walmart, Expedia, and ServiceNow
+              to translate complex AI and product challenges into clear,
+              user-driven strategies.
+            </p>
+            
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Right now, I'm also pursuing my eMBA at Quantic,
+              where I'm sharpening my skills in strategy, marketing, 
+              data analytics, probability, and statistics.
+            </p>
+            
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              What makes me different?
+              My deep expertise in human-computer interaction,
+              hands-on AI product building and transformation work,
+              and complex problem solving skills. Also, my work as a 
+              trial attorney honed my skills of 
+              creating engaging presentations, 
+              compelling narratives, and 
+              influencing stakeholders.
+            </p>
+            
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              My unique skills lets me bridge research, strategy,
+              and business execution—
+              so employers can accelerate AI adoption,
+              scale research across global teams,
+              and deliver measurable business impact.
+              If you're ready to unlock that advantage,
+              let's connect. Email me directly at e.fanya.young@gmail.com
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
