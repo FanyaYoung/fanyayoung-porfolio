@@ -21,8 +21,8 @@ export const About = () => {
     },
     {
       icon: Users,
-      title: "Quality Assurance",
-      description: "Inter-rater agreement, edge case handling, and content safety review with attention to detail"
+      title: "AI Transformation",
+      description: "AI adaptation, legacy implementation, AI optimization, redesign SaaS, and create digital experiences"
     }
   ];
 
