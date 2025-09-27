@@ -7,9 +7,13 @@ import { LGSlideshow } from "@/components/LGSlideshow";
 
 // Import workshop images
 import lgTeamPhoto from "@/assets/lg-team-photo.jpg";
+import lgWorkshopSetup from "@/assets/lg-workshop-setup.jpg";
 import lgTeamGroups from "@/assets/lg-team-groups.jpg";
 import lgTeamReturned from "@/assets/lg-team-returned.jpg";
 import lgEmpathyMap from "@/assets/lg-empathy-map.jpg";
+import lgBeforeHypothesis from "@/assets/lg-before-hypothesis.jpg";
+import lgTheUser from "@/assets/lg-the-user.jpg";
+import lgAfterValidation from "@/assets/lg-after-validation.jpg";
 
 const LGProject = () => {
   const navigate = useNavigate();
@@ -141,10 +145,13 @@ const LGProject = () => {
         </div>
       </section>
 
-      {/* WORKSHOP PROCESS */}
+      {/* PART ONE: WORKSHOP PROCESS */}
       <section className="py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
+            <div className="inline-block px-4 py-2 bg-fuchsia-500/20 text-fuchsia-300 rounded-full text-sm font-medium mb-6">
+              PART ONE: USER EXPERIENCE
+            </div>
             <h2 className="text-2xl lg:text-4xl font-bold mb-4 flex items-center justify-center gap-3">
               <FlaskConical size={32} className="text-fuchsia-400" />
               The Workshop Experience
@@ -155,7 +162,25 @@ const LGProject = () => {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
+            <motion.div 
+              whileHover={{ scale: 1.02 }}
+              className="group lg:col-span-3"
+            >
+              <div className="relative overflow-hidden rounded-3xl bg-white/10 backdrop-blur border border-white/20">
+                <div className="aspect-[16/9] overflow-hidden">
+                  <img 
+                    src={lgTeamPhoto} 
+                    alt="LG cross-functional team" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-4">
+                  <p className="text-sm text-white/80">Cross-functional team ready for field research</p>
+                </div>
+              </div>
+            </motion.div>
+
             <motion.div 
               whileHover={{ scale: 1.02 }}
               className="group"
@@ -163,13 +188,13 @@ const LGProject = () => {
               <div className="relative overflow-hidden rounded-3xl bg-white/10 backdrop-blur border border-white/20">
                 <div className="aspect-[4/3] overflow-hidden">
                   <img 
-                    src={lgTeamPhoto} 
-                    alt="LG team before workshop" 
+                    src={lgWorkshopSetup} 
+                    alt="Workshop setup and preparation" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-4">
-                  <p className="text-sm text-white/80">Cross-functional team ready for field research</p>
+                  <p className="text-sm text-white/80">Workshop setup and preparation</p>
                 </div>
               </div>
             </motion.div>
@@ -205,7 +230,56 @@ const LGProject = () => {
                   />
                 </div>
                 <div className="p-4">
-                  <p className="text-sm text-white/80">Groups returned after gathering data</p>
+                  <p className="text-sm text-white/80">Groups returned after gathering field data</p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              whileHover={{ scale: 1.02 }}
+              className="group lg:col-span-2"
+            >
+              <div className="relative overflow-hidden rounded-3xl bg-white/10 backdrop-blur border border-white/20">
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img 
+                    src={lgEmpathyMap} 
+                    alt="Empathy map with team insights" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-4">
+                  <p className="text-sm text-white/80">Team synthesis: Notes added to the empathy map</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Workshop Results */}
+          <div className="bg-white/10 backdrop-blur border border-white/20 rounded-3xl p-6 lg:p-8 mb-16">
+            <h3 className="text-xl lg:text-2xl font-bold text-white mb-4">Workshop Success</h3>
+            <p className="text-white/80 leading-relaxed">
+              The workshop was a success! The team was engaged and produced many notes from their field observations. 
+              We created an empathy map, analyzed the data, and reached alignment on the customer experience. 
+              After this process, the team had the tools to build a better product, one that customers would love.
+            </p>
+          </div>
+
+          {/* Before and After Insights */}
+          <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
+            <motion.div 
+              whileHover={{ scale: 1.02 }}
+              className="group"
+            >
+              <div className="relative overflow-hidden rounded-3xl bg-white/10 backdrop-blur border border-white/20">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src={lgBeforeHypothesis} 
+                    alt="Team hypotheses before field visits" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-4">
+                  <p className="text-sm text-white/80">BEFORE: Our hypotheses before the visit</p>
                 </div>
               </div>
             </motion.div>
@@ -217,13 +291,31 @@ const LGProject = () => {
               <div className="relative overflow-hidden rounded-3xl bg-white/10 backdrop-blur border border-white/20">
                 <div className="aspect-[4/3] overflow-hidden">
                   <img 
-                    src={lgEmpathyMap} 
-                    alt="Notes added to empathy map" 
+                    src={lgTheUser} 
+                    alt="Understanding the user" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-4">
-                  <p className="text-sm text-white/80">Notes added to the empathy map</p>
+                  <p className="text-sm text-white/80">Understanding the user in their environment</p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              whileHover={{ scale: 1.02 }}
+              className="group"
+            >
+              <div className="relative overflow-hidden rounded-3xl bg-white/10 backdrop-blur border border-white/20">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src={lgAfterValidation} 
+                    alt="Validated findings" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-4">
+                  <p className="text-sm text-white/80">AFTER: Validation of what to do/not do/might do</p>
                 </div>
               </div>
             </motion.div>
@@ -231,18 +323,42 @@ const LGProject = () => {
         </div>
       </section>
 
-      {/* RESEARCH FINDINGS SLIDESHOW */}
-      <section className="py-12 lg:py-20">
+      {/* PART TWO: MARKET RESEARCH */}
+      <section className="py-12 lg:py-20 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-2xl lg:text-4xl font-bold mb-4">Research Findings & Insights</h2>
+            <div className="inline-block px-4 py-2 bg-indigo-500/20 text-indigo-300 rounded-full text-sm font-medium mb-6">
+              PART TWO: MARKET RESEARCH
+            </div>
+            <h2 className="text-2xl lg:text-4xl font-bold mb-4">B2B Market Analysis for Point-of-Sale Solutions</h2>
             <p className="text-white/80 text-base lg:text-lg max-w-3xl mx-auto leading-relaxed">
-              After the workshop, I continued field research across convenience stores and gas stations. 
-              We validated some hypotheses and disproved others, gaining crucial insights about customer behavior and needs.
+              After the workshop, I conducted comprehensive market research to understand the convenience store industry 
+              and identify opportunities for B2B point-of-sale transaction solutions. This research informed business strategy 
+              about market share potential and competitive landscape.
             </p>
           </div>
           
           <LGSlideshow />
+          
+          <div className="mt-12 bg-white/10 backdrop-blur border border-white/20 rounded-3xl p-6 lg:p-8">
+            <h3 className="text-xl lg:text-2xl font-bold text-white mb-4">Research Methodology</h3>
+            <div className="grid md:grid-cols-2 gap-6 text-white/80">
+              <div>
+                <h4 className="font-semibold text-white mb-2">Field Research</h4>
+                <p className="text-sm leading-relaxed">
+                  Visited various convenience stores and gas stations with attached stores to observe customer behaviors, 
+                  transaction patterns, and pain points in real-world environments.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-white mb-2">Market Analysis</h4>
+                <p className="text-sm leading-relaxed">
+                  Analyzed market share potential, competitive landscape, and business opportunities for B2B 
+                  point-of-sale solutions in the convenience retail sector.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

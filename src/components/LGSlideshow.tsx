@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Maximize2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// Import all LG research slides
+// Import all LG research slides (removing template slide)
 import slide1 from "@/assets/lg-slide-1.jpg";
 import slide2 from "@/assets/lg-slide-2.jpg";
 import slide3 from "@/assets/lg-slide-3.jpg";
@@ -18,11 +18,11 @@ import slide11 from "@/assets/lg-slide-11.jpg";
 import slide12 from "@/assets/lg-slide-12.jpg";
 import slide13 from "@/assets/lg-slide-13.jpg";
 import slide14 from "@/assets/lg-slide-14.jpg";
-import slide15 from "@/assets/lg-slide-15.jpg";
+// slide15 removed as it appears to be a template slide
 
 const SLIDES = [
   slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8,
-  slide9, slide10, slide11, slide12, slide13, slide14, slide15
+  slide9, slide10, slide11, slide12, slide13, slide14
 ];
 
 export const LGSlideshow = () => {
