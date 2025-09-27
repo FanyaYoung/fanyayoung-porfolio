@@ -360,21 +360,7 @@ const MGMProject = () => {
         </Glass>
       </section>
 
-      {/* CTA */}
-      <section className="max-w-6xl mx-auto px-6 py-14">
-        <Glass className="p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div>
-            <div className="text-white/50 text-xs">Next Steps</div>
-            <h3 className="text-xl md:text-2xl font-bold text-sky-100">Explore Research Deep Dive</h3>
-            <p className="text-white/60 text-sm mt-1">Detailed methodology, interview transcripts, and comprehensive findings report.</p>
-          </div>
-          <div className="flex gap-3">
-            <a href={LINKS.email} className="inline-flex items-center gap-2 rounded-full px-5 py-3 bg-sky-400 text-slate-900 font-semibold"><Mail className="w-4 h-4" /> Email Fanya</a>
-            <a href={LINKS.pdf} className="inline-flex items-center gap-2 rounded-full px-5 py-3 border border-sky-300/40 bg-white/10 hover:bg-white/15 transition"><Download className="w-4 h-4" /> Download PDF</a>
-          </div>
-        </Glass>
-        <p className="text-xs text-white/40 mt-6">© {new Date().getFullYear()} Fanya Young · Lead UX Researcher · MGM Resorts International</p>
-      </section>
+    
     </div>
   );
 };
