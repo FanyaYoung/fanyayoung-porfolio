@@ -25,22 +25,6 @@ export const Projects = () => {
       featured: true,
     },
     {
-      title: "Make Me Up - AI Beauty & Styling Platform",
-      description: "Revolutionary AI-powered beauty and styling application featuring advanced prompt engineering for personalized makeup recommendations, user intent capture for style preferences, and comprehensive content safety review for beauty standards.",
-      image: "/lovable-uploads/makemeup-title-slide.jpg",
-      technologies: ["AI/ML Integration", "Prompt Engineering", "User Intent Capture", "Natural Language Processing", "Computer Vision", "Machine Learning", "Personalization AI", "Beauty Tech Innovation"],
-      liveUrl: "https://demo.makemeup.app/",
-      featured: true
-    },
-    {
-      title: "4Us - Community Connection Platform",
-      description: "All your event photos & videos in one shared space. Create private digital spaces where guests can share memories live, with everything organized, downloadable, and yours to keep.",
-      image: "/lovable-uploads/4us-title-slide.jpg",
-      technologies: ["AI Content Moderation", "Query Rewriting", "Rubric-Based Evaluation", "Content Safety", "Machine Learning", "Natural Language Processing", "Community AI", "Smart Filtering"],
-      liveUrl: "https://4us.lovable.app",
-      featured: true
-    },
-    {
       title: "MGM - Social Impact & Sustainability Research",
       description: "Comprehensive research report analyzing MGM Resorts' social impact and sustainability initiatives. Strategic research framework for hospitality industry sustainability practices, community engagement, and environmental stewardship programs.",
       image: "/lovable-uploads/mgm-hero.png",
