@@ -90,17 +90,6 @@ const MGMProject = () => {
             Leading a comprehensive field study to identify opportunities for promoting diversity, inclusion, and sustainability 
             efforts across MGM's resort portfolio. Researching initiatives across dining, accommodations, pools, spas, and entertainment.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href={LINKS.prototype} className="group inline-flex items-center gap-2 rounded-full px-5 py-3 bg-sky-400 text-slate-900 font-semibold hover:translate-y-[-1px] transition">
-              View Demo <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition" />
-            </a>
-            <a href={LINKS.pdf} className="inline-flex items-center gap-2 rounded-full px-5 py-3 border border-sky-300/40 bg-white/10 hover:bg-white/15 transition">
-              <Download className="w-4 h-4" /> Case Study PDF
-            </a>
-            <a href={LINKS.email} className="inline-flex items-center gap-2 rounded-full px-5 py-3 border border-sky-300/40 hover:bg-white/15 transition">
-              <Mail className="w-4 h-4" /> Contact
-            </a>
-          </div>
         </div>
       </section>
 
