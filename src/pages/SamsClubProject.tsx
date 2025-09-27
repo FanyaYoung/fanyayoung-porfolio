@@ -6,6 +6,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
+// Import images
+import heroImage from "@/assets/samsclub-hero.png";
+import checkinRequirement from "@/assets/samsclub-checkin-requirement.jpg";
+import outdoorKiosks from "@/assets/samsclub-outdoor-kiosks.jpg";
+import dedicatedParking from "@/assets/samsclub-dedicated-parking.jpg";
+import findings1 from "@/assets/samsclub-findings-1.jpg";
+import quickPickApp from "@/assets/samsclub-quickpick-app.jpg";
+import journeyMap from "@/assets/samsclub-journey-map.jpg";
+
 // Constants for styling and content
 const GRADIENTS = {
   primary: "bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700",
@@ -84,6 +93,14 @@ export default function SamsClubProject() {
       {/* Hero Section */}
       <section className={`${GRADIENTS.primary} relative overflow-hidden`}>
         <div className="absolute inset-0 bg-black/20" />
+        {/* Hero Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src={heroImage} 
+            alt="Sam's Club Club Pickup parking sign"
+            className="w-full h-full object-cover opacity-30"
+          />
+        </div>
         <div className="relative max-w-6xl mx-auto px-6 sm:px-8 py-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -157,13 +174,25 @@ export default function SamsClubProject() {
 
       {/* Problem */}
       <Section id="problem" title="Problem" kicker="Challenge">
-        <Card className="rounded-2xl">
-          <CardContent className="p-8">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Members complained that CPU orders weren't ready on arrival. Associates often didn't know when Members had arrived because check‑in wasn't happening (low awareness, unclear prompts, competing channels). Meanwhile, physical layouts (parking, entry points, freezer distance) created variability that the digital flow didn't account for.
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
+          <Card className="rounded-2xl">
+            <CardContent className="p-8">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Members complained that CPU orders weren't ready on arrival. Associates often didn't know when Members had arrived because check‑in wasn't happening (low awareness, unclear prompts, competing channels). Meanwhile, physical layouts (parking, entry points, freezer distance) created variability that the digital flow didn't account for.
+              </p>
+            </CardContent>
+          </Card>
+          <div className="rounded-2xl overflow-hidden">
+            <img 
+              src={checkinRequirement} 
+              alt="Sam's Club check-in requirement messaging"
+              className="w-full h-auto"
+            />
+            <p className="text-sm text-muted-foreground mt-2 text-center">
+              Sam's Club website showing check-in requirement
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       </Section>
 
       {/* Objectives */}
@@ -225,44 +254,81 @@ export default function SamsClubProject() {
               </div>
             </CardContent>
           </Card>
+          
+          {/* Research Environment Images */}
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="rounded-2xl overflow-hidden">
+              <img 
+                src={outdoorKiosks} 
+                alt="Sam's Club outdoor check-in kiosks"
+                className="w-full h-auto"
+              />
+              <p className="text-sm text-muted-foreground mt-2 text-center">
+                Outdoor kiosks for member check-in
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden">
+              <img 
+                src={dedicatedParking} 
+                alt="Sam's Club dedicated CPU parking area"
+                className="w-full h-auto"
+              />
+              <p className="text-sm text-muted-foreground mt-2 text-center">
+                Dedicated CPU parking spaces
+              </p>
+            </div>
+          </div>
         </div>
       </Section>
 
       {/* Key Findings */}
       <Section id="findings" title="Key Findings" kicker="Insights">
-        <div className="grid gap-6">
-          <Card className="rounded-2xl">
-            <CardContent className="p-8">
-              <h4 className="font-semibold text-lg mb-4">SMS Preference</h4>
-              <p className="text-muted-foreground">
-                Members want text message (SMS) prompts for order‑ready and check‑in; app/email alone underperformed.
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="rounded-2xl">
-            <CardContent className="p-8">
-              <h4 className="font-semibold text-lg mb-4">Check‑in as Linchpin</h4>
-              <p className="text-muted-foreground">
-                Check‑in is a linchpin event. When missed, handoffs stall; Members default to walking inside, creating queues and frustration.
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="rounded-2xl">
-            <CardContent className="p-8">
-              <h4 className="font-semibold text-lg mb-4">Infrastructure Impact</h4>
-              <p className="text-muted-foreground">
-                Store infrastructure matters. Dedicated CPU parking/entrances and freezer proximity strongly affect SLAs; variability penalized stores lacking these features.
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="rounded-2xl">
-            <CardContent className="p-8">
-              <h4 className="font-semibold text-lg mb-4">Workflow Simplification</h4>
-              <p className="text-muted-foreground">
-                Associate workflows needed simplification. Early versions of Quick Pick had divergent menus and pathways, leading to avoidable steps and slower staging.
-              </p>
-            </CardContent>
-          </Card>
+        <div className="space-y-8">
+          <div className="rounded-2xl overflow-hidden mb-8">
+            <img 
+              src={findings1} 
+              alt="Key research findings presentation slide"
+              className="w-full h-auto"
+            />
+            <p className="text-sm text-muted-foreground mt-2 text-center">
+              Research findings presentation to stakeholders
+            </p>
+          </div>
+          
+          <div className="grid gap-6">
+            <Card className="rounded-2xl">
+              <CardContent className="p-8">
+                <h4 className="font-semibold text-lg mb-4">SMS Preference</h4>
+                <p className="text-muted-foreground">
+                  Members want text message (SMS) prompts for order‑ready and check‑in; app/email alone underperformed.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="rounded-2xl">
+              <CardContent className="p-8">
+                <h4 className="font-semibold text-lg mb-4">Check‑in as Linchpin</h4>
+                <p className="text-muted-foreground">
+                  Check‑in is a linchpin event. When missed, handoffs stall; Members default to walking inside, creating queues and frustration.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="rounded-2xl">
+              <CardContent className="p-8">
+                <h4 className="font-semibold text-lg mb-4">Infrastructure Impact</h4>
+                <p className="text-muted-foreground">
+                  Store infrastructure matters. Dedicated CPU parking/entrances and freezer proximity strongly affect SLAs; variability penalized stores lacking these features.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="rounded-2xl">
+              <CardContent className="p-8">
+                <h4 className="font-semibold text-lg mb-4">Workflow Simplification</h4>
+                <p className="text-muted-foreground">
+                  Associate workflows needed simplification. Early versions of Quick Pick had divergent menus and pathways, leading to avoidable steps and slower staging.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </Section>
 
@@ -320,31 +386,57 @@ export default function SamsClubProject() {
 
       {/* Service Blueprint */}
       <Section id="blueprint" title="Service Blueprint (CPU ↔ Quick Pick)" kicker="System Design">
-        <div className="grid gap-6">
-          <Card className="rounded-2xl">
-            <CardContent className="p-8">
-              <h4 className="font-semibold text-lg mb-4">Triggers</h4>
-              <p className="text-muted-foreground">Order ready → SMS to Member; arrival check‑in → signal to Associates.</p>
-            </CardContent>
-          </Card>
-          <Card className="rounded-2xl">
-            <CardContent className="p-8">
-              <h4 className="font-semibold text-lg mb-4">Front Stage</h4>
-              <p className="text-muted-foreground">Member receives SMS → checks in → guided to dedicated area → status bar for staging/handoff.</p>
-            </CardContent>
-          </Card>
-          <Card className="rounded-2xl">
-            <CardContent className="p-8">
-              <h4 className="font-semibold text-lg mb-4">Back Stage</h4>
-              <p className="text-muted-foreground">Quick Pick prioritizes tasks; assigns runner + handoff; exceptions route to help.</p>
-            </CardContent>
-          </Card>
-          <Card className="rounded-2xl">
-            <CardContent className="p-8">
-              <h4 className="font-semibold text-lg mb-4">Support</h4>
-              <p className="text-muted-foreground">Layout, signage, freezer/ambient zones; staffing model; escalation playbook.</p>
-            </CardContent>
-          </Card>
+        <div className="space-y-8">
+          {/* Quick Pick App and Journey Map Images */}
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="rounded-2xl overflow-hidden">
+              <img 
+                src={quickPickApp} 
+                alt="Quick Pick Associate app interface"
+                className="w-full h-auto"
+              />
+              <p className="text-sm text-muted-foreground mt-2 text-center">
+                Quick Pick app for Associates
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden">
+              <img 
+                src={journeyMap} 
+                alt="Journey map for Quick Pick process"
+                className="w-full h-auto"
+              />
+              <p className="text-sm text-muted-foreground mt-2 text-center">
+                Journey map - First for Quick Pick
+              </p>
+            </div>
+          </div>
+          
+          <div className="grid gap-6">
+            <Card className="rounded-2xl">
+              <CardContent className="p-8">
+                <h4 className="font-semibold text-lg mb-4">Triggers</h4>
+                <p className="text-muted-foreground">Order ready → SMS to Member; arrival check‑in → signal to Associates.</p>
+              </CardContent>
+            </Card>
+            <Card className="rounded-2xl">
+              <CardContent className="p-8">
+                <h4 className="font-semibold text-lg mb-4">Front Stage</h4>
+                <p className="text-muted-foreground">Member receives SMS → checks in → guided to dedicated area → status bar for staging/handoff.</p>
+              </CardContent>
+            </Card>
+            <Card className="rounded-2xl">
+              <CardContent className="p-8">
+                <h4 className="font-semibold text-lg mb-4">Back Stage</h4>
+                <p className="text-muted-foreground">Quick Pick prioritizes tasks; assigns runner + handoff; exceptions route to help.</p>
+              </CardContent>
+            </Card>
+            <Card className="rounded-2xl">
+              <CardContent className="p-8">
+                <h4 className="font-semibold text-lg mb-4">Support</h4>
+                <p className="text-muted-foreground">Layout, signage, freezer/ambient zones; staffing model; escalation playbook.</p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </Section>
 
