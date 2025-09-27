@@ -57,13 +57,13 @@ export const LGSlideshow = () => {
       {/* Main Slideshow */}
       <div className="relative bg-slate-900/50 backdrop-blur rounded-3xl overflow-hidden border border-white/20">
         {/* Slide Display */}
-        <div className="relative aspect-[16/10] overflow-hidden">
+        <div className="relative aspect-[4/3] overflow-hidden bg-white/5">
           <AnimatePresence mode="wait">
             <motion.img
               key={currentSlide}
               src={SLIDES[currentSlide]}
               alt={`Research slide ${currentSlide + 1}`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
@@ -151,7 +151,7 @@ export const LGSlideshow = () => {
               <img
                 src={SLIDES[currentSlide]}
                 alt={`Research slide ${currentSlide + 1}`}
-                className="w-full h-full object-contain rounded-lg"
+                className="max-w-full max-h-full object-contain rounded-lg"
               />
               
               {/* Close Button */}
