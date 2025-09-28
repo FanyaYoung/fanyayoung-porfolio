@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -47,6 +47,22 @@ export const ResearchSlideshow: React.FC<ResearchSlideshowProps> = ({ className 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
+
+  // Add keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        prevSlide();
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        nextSlide();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   const slideVariants = {
     enter: {
