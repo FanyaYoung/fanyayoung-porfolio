@@ -222,21 +222,21 @@ export default function WalmartProject() {
             <p className="text-xl text-muted-foreground">Unmoderated user test with hybrid card sort and structured prompts</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
             {GALLERY_IMAGES.map((image, index) => (
               <Dialog key={index}>
                 <DialogTrigger asChild>
                   <Card className="cursor-pointer hover:shadow-lg transition-shadow duration-300 overflow-hidden group">
                     <CardContent className="p-0">
-                      <div className="aspect-square overflow-hidden">
+                      <div className="aspect-[4/3] overflow-hidden">
                         <img 
                           src={image.src} 
                           alt={image.caption}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                       </div>
-                      <div className="p-3">
-                        <p className="text-xs text-muted-foreground text-center">{image.caption}</p>
+                      <div className="p-2">
+                        <p className="text-xs text-muted-foreground text-center leading-tight">{image.caption}</p>
                       </div>
                     </CardContent>
                   </Card>
