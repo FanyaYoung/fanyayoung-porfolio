@@ -289,8 +289,8 @@ const MGMProject = () => {
         <h2 className="text-2xl md:text-3xl font-bold flex items-center gap-2 mb-6 text-sky-200"><BarChart3 className="w-5 h-5" /> Key Outcomes & Framework</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           <Metric value="100%" label="Executive approval" />
-          <Metric value="12+" label="Properties assessed" />
-          <Metric value="50+" label="Interviews conducted" />
+          <Metric value="4" label="Properties assessed" />
+          <Metric value="20" label="Interviews conducted" />
           <Metric value="5" label="Strategic areas covered" />
         </div>
         
