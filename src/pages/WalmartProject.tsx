@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink, Users, Clock, Target, Mail, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -63,6 +64,10 @@ const Metric = ({ value, label }: { value: string; label: string }) => (
 
 export default function WalmartProject() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-background/95 to-background">
