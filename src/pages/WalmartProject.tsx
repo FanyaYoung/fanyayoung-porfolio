@@ -103,7 +103,7 @@ export default function WalmartProject() {
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-6xl font-bold mb-6"
             >
-              <span className="bg-gradient-to-r from-primary via-primary/80 to-secondary bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 bg-clip-text text-transparent">
                 Walmart International
               </span>
               <br />
@@ -114,7 +114,7 @@ export default function WalmartProject() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-xl text-muted-foreground mb-8 leading-relaxed"
+              className="text-xl text-muted-foreground mb-4 leading-relaxed"
             >
               A research-led service and communications model for orders fulfilled across multiple boxes.
             </motion.p>
@@ -123,7 +123,7 @@ export default function WalmartProject() {
       </section>
 
       {/* Quick Stats */}
-      <section className="py-16 border-y border-border/50 bg-muted/30">
+      <section className="py-12 border-y border-border/50 bg-muted/30">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <Metric value="67%" label="Likely to Order" />
