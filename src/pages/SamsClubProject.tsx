@@ -17,8 +17,8 @@ import journeyMap from "@/assets/samsclub-journey-map.jpg";
 
 // Constants for styling and content
 const GRADIENTS = {
-  primary: "bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700",
-  accent: "bg-gradient-to-r from-blue-500 to-purple-500",
+  primary: "bg-gradient-to-br from-teal-600 via-teal-700 to-blue-800",
+  accent: "bg-gradient-to-r from-teal-500 to-blue-600",
   subtle: "bg-gradient-to-br from-gray-50 to-gray-100",
 };
 
@@ -61,7 +61,7 @@ const Section = ({
   <section id={id} className={`max-w-6xl mx-auto px-6 sm:px-8 py-16 ${className}`}>
     <div className="mb-12">
       {kicker && (
-        <div className="text-primary font-medium text-sm uppercase tracking-wider mb-3">
+        <div className="text-teal-600 font-medium text-sm uppercase tracking-wider mb-3">
           {kicker}
         </div>
       )}
@@ -82,7 +82,7 @@ export default function SamsClubProject() {
           <Button 
             variant="ghost" 
             onClick={() => navigate('/')}
-            className="hover:bg-accent/10"
+            className="hover:bg-teal-600/10"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Portfolio
@@ -200,28 +200,28 @@ export default function SamsClubProject() {
         <div className="grid md:grid-cols-2 gap-6">
           <Card className="rounded-2xl">
             <CardContent className="p-6">
-              <Target className="w-8 h-8 text-primary mb-4" />
+              <Target className="w-8 h-8 text-teal-600 mb-4" />
               <h4 className="font-semibold mb-3">Member Experience</h4>
               <p className="text-muted-foreground">Identify preferred channels and moments for Member check‑in and order‑ready notifications.</p>
             </CardContent>
           </Card>
           <Card className="rounded-2xl">
             <CardContent className="p-6">
-              <Users className="w-8 h-8 text-primary mb-4" />
+              <Users className="w-8 h-8 text-teal-600 mb-4" />
               <h4 className="font-semibold mb-3">Associate Operations</h4>
               <p className="text-muted-foreground">Understand store‑level constraints influencing Associate throughput.</p>
             </CardContent>
           </Card>
           <Card className="rounded-2xl">
             <CardContent className="p-6">
-              <ClipboardList className="w-8 h-8 text-primary mb-4" />
+              <ClipboardList className="w-8 h-8 text-teal-600 mb-4" />
               <h4 className="font-semibold mb-3">Quick Pick App</h4>
               <p className="text-muted-foreground">Evaluate and iterate the Quick Pick Associate app to streamline pick → stage → handoff.</p>
             </CardContent>
           </Card>
           <Card className="rounded-2xl">
             <CardContent className="p-6">
-              <MapPin className="w-8 h-8 text-primary mb-4" />
+              <MapPin className="w-8 h-8 text-teal-600 mb-4" />
               <h4 className="font-semibold mb-3">Service Blueprint</h4>
               <p className="text-muted-foreground">Produce an integrated service blueprint spanning Members, Associates, and store infrastructure.</p>
             </CardContent>
@@ -473,7 +473,7 @@ export default function SamsClubProject() {
               </div>
               <div>
                 <h5 className="font-medium mb-2">3. Continue usability cycles</h5>
-                <p className="text-sm text-muted-foregreen">On Quick Pick with real‑world store constraints.</p>
+                <p className="text-sm text-muted-foreground">On Quick Pick with real‑world store constraints.</p>
               </div>
             </div>
           </CardContent>
@@ -504,7 +504,7 @@ export default function SamsClubProject() {
           <div>
             <p className="text-sm text-muted-foreground">© 2024 Fanya Young. All rights reserved.</p>
           </div>
-          <Button asChild>
+          <Button asChild className="bg-teal-600 hover:bg-teal-700">
             <a href="mailto:e.fanya.young@gmail.com?subject=Sam's%20Club%20CPU%20Project">Get in touch</a>
           </Button>
         </div>
