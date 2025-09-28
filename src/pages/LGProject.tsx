@@ -156,9 +156,32 @@ const LGProject = () => {
               <FlaskConical size={32} className="text-fuchsia-400" />
               The Workshop Experience
             </h2>
+            
+            {/* Context about why the workshop was needed */}
+            <div className="max-w-4xl mx-auto mb-12 text-left">
+              <div className="bg-white/10 backdrop-blur border border-white/20 rounded-3xl p-6 lg:p-8">
+                <h3 className="text-xl lg:text-2xl font-bold text-white mb-6">The Challenge: Lack of Shared Understanding</h3>
+                <div className="space-y-6 text-white/80 text-base lg:text-lg leading-relaxed">
+                  <p>
+                    The engineering team was creating a prototype, but wasn't building with users in mind. During meetings, I realized that anecdotes one person would bring up in discussion were met with looks of confusion.
+                  </p>
+                  <p>
+                    This was a diverse team representing many countries around the world. The questions arising from these discussions: Were these hardware developers referring to different shopping experiences without any common reference point? Were we operating under the assumption that everyone shared a common understanding of convenience store shopping?
+                  </p>
+                  <p>
+                    Based on intense debate and lack of consensus, I suspected everyone had differing experiences with shopping. After conducting informal interviews with team members, it became apparent: <strong className="text-white">We needed a shared understanding of convenience store shopping based on our target market—the United States.</strong>
+                  </p>
+                  <div className="bg-fuchsia-500/20 border border-fuchsia-500/30 rounded-2xl p-4 lg:p-6 mt-6">
+                    <p className="text-fuchsia-200 italic">
+                      "Assumptions about convenience store shopping experience, the business (clerk experience), and customers varied wildly among the engineers. There was a lack of common understanding when referring to the business or users. We needed to level-set understanding so all team members could share the same knowledge of user problems, needs, and goals."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
             <p className="text-white/80 text-base lg:text-lg max-w-3xl mx-auto leading-relaxed">
-              I created a field research workshop for LG engineers, PMs, and designers. Teams divided into groups of 3 
-              and visited convenience stores, gas stations, and retail locations to observe real customer behaviors.
+              I approached senior management and proposed conducting in-field observation research with the engineering team. Teams divided into groups of 3 and visited convenience stores, gas stations, and retail locations to observe real customer behaviors.
             </p>
           </div>
 
@@ -194,7 +217,7 @@ const LGProject = () => {
                   />
                 </div>
                 <div className="p-4">
-                  <p className="text-sm text-white/80">Workshop setup and preparation</p>
+                  <p className="text-sm text-white/80">Workshop preparation and setup</p>
                 </div>
               </div>
             </motion.div>
@@ -297,7 +320,7 @@ const LGProject = () => {
                   />
                 </div>
                 <div className="p-4">
-                  <p className="text-sm text-white/80">Understanding the user in their environment</p>
+                  <p className="text-sm text-white/80">Understanding the environment and user context</p>
                 </div>
               </div>
             </motion.div>
