@@ -71,8 +71,8 @@ export const Hero = () => {
                 <Linkedin size={24} />
               </a>
             </Button>
-            <Button variant="ghost" size="icon" className="hover:text-primary transition-colors" asChild>
-              <a href="mailto:e.fanya.young@gmail.com">
+            <Button variant="ghost" size="icon" className="hover:text-primary transition-colors">
+              <a href="mailto:e.fanya.young@gmail.com" className="flex items-center justify-center w-full h-full">
                 <Mail size={24} />
               </a>
             </Button>
