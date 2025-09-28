@@ -5,7 +5,7 @@ import neuralHeroBg from "@/assets/neural-hero-bg.jpg";
 
 export const Hero = () => {
   const [displayText, setDisplayText] = useState("");
-  const fullText = "AI Strategist | Advocate | Evangelist";
+  const fullText = "AI Strategist | Advocate | Evangelist | Researcher";
 
   useEffect(() => {
     let index = 0;
@@ -49,7 +49,6 @@ export const Hero = () => {
           </h1>
           <div className="text-xl md:text-2xl text-muted-foreground font-mono min-h-[2rem] mb-8">
             {displayText}
-            <span className="animate-pulse">|</span>
           </div>
         </div>
 
