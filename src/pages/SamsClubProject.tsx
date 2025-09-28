@@ -93,14 +93,6 @@ export default function SamsClubProject() {
       {/* Hero Section */}
       <section className={`${GRADIENTS.primary} relative overflow-hidden`}>
         <div className="absolute inset-0 bg-black/20" />
-        {/* Hero Background Image */}
-        <div className="absolute inset-0">
-          <img 
-            src={heroImage} 
-            alt="Sam's Club Club Pickup parking sign"
-            className="w-full h-full object-cover opacity-30"
-          />
-        </div>
         <div className="relative max-w-6xl mx-auto px-6 sm:px-8 py-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -171,6 +163,20 @@ export default function SamsClubProject() {
           </Card>
         </div>
       </Section>
+
+      {/* Hero Image Section */}
+      <section className="max-w-6xl mx-auto px-6 sm:px-8 py-12">
+        <div className="rounded-2xl overflow-hidden max-w-4xl mx-auto">
+          <img 
+            src={heroImage} 
+            alt="Sam's Club Club Pickup parking sign"
+            className="w-full h-auto"
+          />
+          <p className="text-sm text-muted-foreground mt-2 text-center">
+            Sam's Club Club Pickup parking sign and entrance
+          </p>
+        </div>
+      </section>
 
       {/* Problem */}
       <Section id="problem" title="Problem" kicker="Challenge">
