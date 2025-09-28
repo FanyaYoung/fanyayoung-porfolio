@@ -17,7 +17,7 @@ import journeyMap from "@/assets/samsclub-journey-map.jpg";
 
 // Constants for styling and content
 const GRADIENTS = {
-  primary: "bg-gradient-to-br from-teal-600 via-teal-700 to-blue-800",
+  primary: "bg-gradient-to-br from-cyan-400 via-teal-500 to-blue-600",
   accent: "bg-gradient-to-r from-teal-500 to-blue-600",
   subtle: "bg-gradient-to-br from-gray-50 to-gray-100",
 };
