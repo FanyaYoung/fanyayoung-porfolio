@@ -118,8 +118,8 @@ export default function SamsClubProject() {
               <div className="grid grid-cols-2 gap-4">
                 <Metric value="1.3K" label="Survey Recipients" />
                 <Metric value="1.2K+" label="Open Comments" />
-                <Metric value="2" label="User Groups" />
-                <Metric value="Multi-Store" label="Field Studies" />
+                <Metric value="8" label="Stores Visited" />
+                <Metric value="IL & IN" label="Illinois & Indiana" />
               </div>
             </div>
           </div>
@@ -510,9 +510,6 @@ export default function SamsClubProject() {
           <div>
             <p className="text-sm text-muted-foreground">© 2024 Fanya Young. All rights reserved.</p>
           </div>
-          <Button asChild className="bg-teal-600 hover:bg-teal-700">
-            <a href="mailto:e.fanya.young@gmail.com?subject=Sam's%20Club%20CPU%20Project">Get in touch</a>
-          </Button>
         </div>
       </footer>
     </div>
