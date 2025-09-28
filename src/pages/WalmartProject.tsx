@@ -118,32 +118,6 @@ export default function WalmartProject() {
             >
               A research-led service and communications model for orders fulfilled across multiple boxes.
             </motion.p>
-            
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex flex-wrap gap-4 justify-center"
-            >
-              <Button size="lg" className="gap-2" asChild>
-                <a href={LINKS.testPlan} target="_blank" rel="noopener noreferrer">
-                  <FileText className="w-4 h-4" />
-                  Test Plan
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" className="gap-2" asChild>
-                <a href={LINKS.studyReport} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="w-4 h-4" />
-                  Study Report
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" className="gap-2" asChild>
-                <a href={LINKS.email}>
-                  <Mail className="w-4 h-4" />
-                  Get in touch
-                </a>
-              </Button>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -213,8 +187,14 @@ export default function WalmartProject() {
                     </CardContent>
                   </Card>
                 </DialogTrigger>
-                <DialogContent className="max-w-4xl">
-                  <img src={image.src} alt={image.caption} className="w-full rounded-lg" />
+                <DialogContent className="max-w-5xl w-full h-[90vh] p-0 bg-black/90 border-white/20">
+                  <div className="flex items-center justify-center h-full p-4">
+                    <img 
+                      src={image.src} 
+                      alt={image.caption} 
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
                 </DialogContent>
               </Dialog>
             ))}
@@ -261,8 +241,14 @@ export default function WalmartProject() {
                     </CardContent>
                   </Card>
                 </DialogTrigger>
-                <DialogContent className="max-w-4xl">
-                  <img src={image.src} alt={image.caption} className="w-full rounded-lg" />
+                <DialogContent className="max-w-5xl w-full h-[90vh] p-0 bg-black/90 border-white/20">
+                  <div className="flex items-center justify-center h-full p-4">
+                    <img 
+                      src={image.src} 
+                      alt={image.caption} 
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
                 </DialogContent>
               </Dialog>
             ))}
@@ -295,8 +281,14 @@ export default function WalmartProject() {
                     </CardContent>
                   </Card>
                 </DialogTrigger>
-                <DialogContent className="max-w-4xl">
-                  <img src={image.src} alt={image.caption} className="w-full rounded-lg" />
+                <DialogContent className="max-w-5xl w-full h-[90vh] p-0 bg-black/90 border-white/20">
+                  <div className="flex items-center justify-center h-full p-4">
+                    <img 
+                      src={image.src} 
+                      alt={image.caption} 
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
                 </DialogContent>
               </Dialog>
             ))}
