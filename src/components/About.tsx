@@ -111,32 +111,10 @@ export const About = () => {
 
         {/* Navigation Options */}
         <div className="mt-8 text-center">
-          <h3 className="text-2xl font-semibold mb-8 text-gradient">Explore My Expertise</h3>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <Card className="group hover:border-primary/50 transition-colors cursor-pointer">
-              <CardContent className="p-8">
-                <Link to="/ai-strategy" className="block">
-                  <Brain className="w-16 h-16 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h4 className="text-xl font-semibold mb-3">AI Strategy & Innovation</h4>
-                  <p className="text-muted-foreground">
-                    Dive deep into my AI expertise, strategic frameworks, and innovative solutions that transform businesses through intelligent technology implementation.
-                  </p>
-                </Link>
-              </CardContent>
-            </Card>
-            
-            <Card className="group hover:border-primary/50 transition-colors cursor-pointer">
-              <CardContent className="p-8">
-                <Link to="/evangelist-jobs" className="block">
-                  <Users className="w-16 h-16 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h4 className="text-xl font-semibold mb-3">Product Evangelism</h4>
-                  <p className="text-muted-foreground">
-                    Learn about my approach to product evangelism, driving adoption across global teams, and building cultures that embrace technology innovation.
-                  </p>
-                </Link>
-              </CardContent>
-            </Card>
-          </div>
+          <h3 className="text-2xl font-semibold mb-8 text-gradient">My Work</h3>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Explore my portfolio of projects showcasing user research, AI strategy, and product development across various industries.
+          </p>
         </div>
       </div>
     </section>
