@@ -5,24 +5,24 @@ import { Link } from "react-router-dom";
 export const About = () => {
   const features = [
     {
-      icon: Brain,
-      title: "Prompt Engineering",
-      description: "AI model interaction logs, query rewriting, and user intent capture with evidence-based rationale"
+      icon: Users,
+      title: "Researcher",
+      description: "User research methodologies, behavioral analysis, and evidence-based insights to drive product decisions"
     },
     {
       icon: Code,
-      title: "Search Query Evaluation",
-      description: "Tool invocation review, search relevance testing, and rubric-based evaluation systems"
+      title: "AI Strategist", 
+      description: "Strategic AI implementation, transformation roadmaps, and intelligent solution architecture for business growth"
     },
     {
       icon: Zap,
-      title: "Data Annotation & Analysis",
-      description: "Annotation & labeling with computational statistics and information retrieval expertise"
+      title: "Advocate",
+      description: "Championing user needs, stakeholder alignment, and driving organizational change through compelling narratives"
     },
     {
-      icon: Users,
-      title: "AI Transformation",
-      description: "AI adaptation, legacy implementation, AI optimization, redesign SaaS, and create digital experiences"
+      icon: Brain,
+      title: "Evangelist",
+      description: "AI adoption leadership, cross-functional team enablement, and building cultures that embrace innovation"
     }
   ];
 
@@ -81,7 +81,7 @@ export const About = () => {
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
-              {["Python", "SQL", "Prompt Engineering", "Data Annotation Tools", "Information Retrieval", "AI/ML Integration"].map((tech) => (
+              {["Python", "SQL", "User Research", "Qualitative Analysis", "Information Retrieval", "AI/ML Integration"].map((tech) => (
                 <span 
                   key={tech}
                   className="px-4 py-2 bg-space-grey border border-primary/20 rounded-full text-sm font-medium text-primary"
