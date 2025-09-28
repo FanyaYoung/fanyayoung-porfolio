@@ -22,7 +22,7 @@ export const Skills = () => {
       { skill: "Survey Tracker Design", level: 89 },
       { skill: "Information Architecture", level: 91 }
     ],
-    "Core Expertise": [
+    "Strategy": [
       { skill: "Prompt Engineering", level: 95 },
       { skill: "Search Query Evaluation", level: 92 },
       { skill: "Tool Invocation Review", level: 90 },
@@ -30,12 +30,10 @@ export const Skills = () => {
       { skill: "Query Rewriting", level: 90 },
       { skill: "User Intent Capture", level: 93 }
     ],
-    "Technical Skills": [
+    "Operations": [
       { skill: "Python", level: 95 },
       { skill: "SQL", level: 90 },
       { skill: "Computational Statistics", level: 88 },
-      { skill: "Information Retrieval", level: 85 },
-      { skill: "Data Annotation Tools", level: 90 },
       { skill: "AI/ML Integration", level: 87 }
     ],
     "Evaluation & Quality": [
@@ -59,7 +57,7 @@ export const Skills = () => {
   const tools = [
     "ChatGPT", "Windsurf", "Gemini", "OpenAI APIs", "Google Cloud", "Supabase", "Stripe", 
     "Kaggle Datasets", "Statistica", "LLM Pipelines", "A/B Testing Tools", "Virtual Try-on SDK",
-    "Python", "SQL", "Data Annotation Tools", "Information Retrieval Systems", "AI/ML Integration", 
+    "Python", "SQL", "AI/ML Integration", 
     "Query Operators (AND/OR)", "Boolean Filters", "Search Relevance Testing", "Prompt Engineering Tools",
     "Content Safety Platforms", "Statistical Analysis", "Evidence-Based Evaluation", "User Intent Analysis"
   ];
@@ -90,7 +88,9 @@ export const Skills = () => {
                     onClick={() => setActiveCategory(category)}
                     className={`w-full text-left p-3 rounded-lg transition-all duration-300 ${
                       activeCategory === category
-                        ? "bg-primary/20 border border-primary text-primary"
+                        ? (["User Research", "Strategy", "Operations"].includes(category) 
+                           ? "bg-purple-500/20 border border-purple-500 text-purple-400"
+                           : "bg-primary/20 border border-primary text-primary")
                         : "hover:bg-space-grey border border-transparent text-muted-foreground hover:text-foreground"
                     }`}
                   >
