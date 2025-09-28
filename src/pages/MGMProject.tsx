@@ -32,10 +32,8 @@ const STORY_IMAGES = [
 
 // Research artifact gallery
 const GALLERY = [
-  { caption: "Research proposal presentation", src: "/lovable-uploads/mgm-proposal-1.jpg" },
   { caption: "Project methodology overview", src: "/lovable-uploads/mgm-proposal-2.jpg" },
   { caption: "Field research in Las Vegas", src: "/lovable-uploads/mgm-field-research.jpg" },
-  { caption: "Research findings and insights", src: "/lovable-uploads/mgm-findings.jpg" },
 ];
 
 const Pill = ({ children }) => (

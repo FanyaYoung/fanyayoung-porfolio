@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 // Import all slides
-import slide1 from "@/assets/mgm-findings-slide-1.jpg";
 import slide2 from "@/assets/mgm-findings-slide-2.jpg";
 import slide3 from "@/assets/mgm-findings-slide-3.jpg";
 import slide4 from "@/assets/mgm-findings-slide-4.jpg";
@@ -17,7 +16,6 @@ import slide9 from "@/assets/mgm-findings-slide-9.jpg";
 import slide10 from "@/assets/mgm-findings-slide-10.jpg";
 
 const SLIDES = [
-  { src: slide1, caption: "Research findings overview and strategic framework" },
   { src: slide2, caption: "Sustainability initiatives across MGM properties" },
   { src: slide3, caption: "Diversity and inclusion program analysis" },
   { src: slide4, caption: "Customer experience touchpoint mapping" },
