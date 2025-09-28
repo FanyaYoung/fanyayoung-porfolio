@@ -14,9 +14,9 @@ const LINKS = {
 };
 
 const GRADIENTS = {
-  walmart: "bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800",
+  walmart: "bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800",
   walmartGlow: "shadow-[0_0_40px_rgba(59,130,246,0.3)]",
-  pill: "bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30",
+  pill: "bg-gradient-to-r from-blue-500/20 to-blue-600/20 border border-blue-500/30",
   glass: "bg-white/5 backdrop-blur-sm border border-white/10"
 };
 
@@ -57,7 +57,7 @@ const Glass = ({ children, className = "" }: { children: React.ReactNode; classN
 
 const Metric = ({ value, label }: { value: string; label: string }) => (
   <Glass className="text-center">
-    <div className="text-3xl font-bold text-primary mb-2">{value}</div>
+    <div className="text-3xl font-bold text-blue-600 mb-2">{value}</div>
     <div className="text-sm text-muted-foreground">{label}</div>
   </Glass>
 );
@@ -87,7 +87,7 @@ export default function WalmartProject() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-transparent to-blue-600/5" />
         
         <div className="relative max-w-7xl mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
@@ -142,7 +142,7 @@ export default function WalmartProject() {
             <h2 className="text-3xl font-bold mb-6 text-center">Research Challenge</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold mb-4 text-primary">Problem</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-600">Problem</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Large or complex orders (e.g., furniture) are fulfilled in multiple boxes. Customers often receive partial updates 
                   (e.g., email for 1 box but silence on the others) and lack the identifiers needed to track or resolve issues for each box. 
@@ -150,7 +150,7 @@ export default function WalmartProject() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-4 text-secondary">Objectives</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-500">Objectives</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• Understand attitudes and expectations for multi-piece shipments (MPS)</li>
                   <li>• Define the type, channel, and cadence of notifications that reduce effort and anxiety</li>
@@ -315,32 +315,32 @@ export default function WalmartProject() {
             <h2 className="text-3xl font-bold mb-8 text-center">Proposed Communications Model</h2>
             
             <div className="space-y-8">
-              <div className="border-l-4 border-primary pl-6">
-                <h3 className="text-lg font-semibold text-primary mb-3">At Order & Kickoff (Email)</h3>
+              <div className="border-l-4 border-blue-600 pl-6">
+                <h3 className="text-lg font-semibold text-blue-600 mb-3">At Order & Kickoff (Email)</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• Order confirmation + MPS explainer (what to expect, warehouse/source, typical timelines)</li>
                   <li>• Per-box manifest (box count, items per box if known, carrier(s))</li>
                 </ul>
               </div>
 
-              <div className="border-l-4 border-secondary pl-6">
-                <h3 className="text-lg font-semibold text-secondary mb-3">When First Box Ships (Email)</h3>
+              <div className="border-l-4 border-blue-500 pl-6">
+                <h3 className="text-lg font-semibold text-blue-500 mb-3">When First Box Ships (Email)</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• Explicitly state: "1 of N boxes has shipped"</li>
                   <li>• Link to tracking hub that shows each box as a tile with its own carrier + tracking</li>
                 </ul>
               </div>
 
-              <div className="border-l-4 border-accent pl-6">
-                <h3 className="text-lg font-semibold text-accent mb-3">Subsequent Shipments (SMS preferred, Email fallback)</h3>
+              <div className="border-l-4 border-blue-400 pl-6">
+                <h3 className="text-lg font-semibold text-blue-400 mb-3">Subsequent Shipments (SMS preferred, Email fallback)</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• "Box X of N is out for delivery" → link to tracking hub</li>
                   <li>• "Box X of N delivered" → quick feedback affordance if something's wrong</li>
                 </ul>
               </div>
 
-              <div className="border-l-4 border-primary pl-6">
-                <h3 className="text-lg font-semibold text-primary mb-3">Completion (Email)</h3>
+              <div className="border-l-4 border-blue-600 pl-6">
+                <h3 className="text-lg font-semibold text-blue-600 mb-3">Completion (Email)</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• "All N boxes delivered" + proof-of-delivery pack</li>
                   <li>• One-click pathways for: report missing/damaged, contact retailer/carrier with prefilled IDs</li>
@@ -357,7 +357,7 @@ export default function WalmartProject() {
             
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div>
-                <h3 className="text-xl font-semibold mb-4 text-primary">Key Results</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-600">Key Results</h3>
                 <ul className="space-y-2 text-muted-foreground text-left">
                   <li>• 67% more likely to order with MPS model</li>
                   <li>• 73% trust SMS updates for day-of coordination</li>
@@ -366,7 +366,7 @@ export default function WalmartProject() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-4 text-secondary">Next Steps</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-500">Next Steps</h3>
                 <ul className="space-y-2 text-muted-foreground text-left">
                   <li>• Prototype tracking hub and validate with n=12–18</li>
                   <li>• A/B test email-first vs. SMS-first for mid-journey updates</li>
