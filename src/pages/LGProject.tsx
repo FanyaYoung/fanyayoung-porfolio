@@ -153,10 +153,10 @@ const LGProject = () => {
           <div className="mb-12 lg:mb-16">
             <motion.div 
               whileHover={{ scale: 1.02 }}
-              className="group max-w-4xl mx-auto"
+              className="group max-w-5xl mx-auto"
             >
               <div className="relative overflow-hidden rounded-3xl bg-white/10 backdrop-blur border border-white/20">
-                <div className="aspect-[21/9] overflow-hidden">
+                <div className="aspect-[24/7] overflow-hidden">
                   <img 
                     src={lgTeamPhoto} 
                     alt="LG cross-functional team" 
