@@ -84,11 +84,11 @@ const LGProject = () => {
               <div className="text-xs lg:text-sm text-white/70">Team Members</div>
             </div>
             <div className="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-4 lg:p-6 text-center">
-              <div className="text-2xl lg:text-4xl font-bold text-white mb-1">15+</div>
-              <div className="text-xs lg:text-sm text-white/70">Retail Locations</div>
+              <div className="text-2xl lg:text-4xl font-bold text-white mb-1">5</div>
+              <div className="text-xs lg:text-sm text-white/70">Gas Station Stores</div>
             </div>
             <div className="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-4 lg:p-6 text-center">
-              <div className="text-2xl lg:text-4xl font-bold text-white mb-1">8</div>
+              <div className="text-2xl lg:text-4xl font-bold text-white mb-1">6</div>
               <div className="text-xs lg:text-sm text-white/70">Week Timeline</div>
             </div>
             <div className="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-4 lg:p-6 text-center">
@@ -129,8 +129,12 @@ const LGProject = () => {
                 </div>
                 <div>
                   <div className="text-fuchsia-300 font-semibold mb-2">Process:</div>
-                  <p className="text-white/80 mb-2"><strong>Stand Alone Stores</strong> - Visited two cashier-less stores, Amazon Go, and three 7-11s, representing traditional convenience stores. Observed patrons, noted purchases, and timed entry to exit. Asked patrons about their motivation for visiting.</p>
-                  <p className="text-white/80"><strong>Gas Station Stores</strong> - Visited five different gas station stores across various geo-locations. Interviewed store managers to inquire about top pain points, customer demographics, and management perspectives.</p>
+                  <p className="text-white/80 mb-2"><strong>Stand Alone Stores</strong> - Visited two cashier-less stores, Amazon Go, and three 7-11s, representing traditional convenience stores. Observed patrons, noted purchases, and timed entry to exit. <strong className="text-white">Interviewed customers</strong> about their motivation for visiting.</p>
+                  <p className="text-white/80"><strong>Gas Station Stores</strong> - Visited five different gas station stores (Chevron, 76, Shell, Valero, Circle K) across various geo-locations in the San Francisco area. <strong className="text-white">Interviewed retailers and store managers</strong> to inquire about top pain points, customer demographics, and management perspectives.</p>
+                </div>
+                <div>
+                  <div className="text-fuchsia-300 font-semibold mb-2">Participants:</div>
+                  <p className="text-white/80"><strong className="text-white">Retailers • Customers • Store Managers</strong></p>
                 </div>
                 <div>
                   <div className="text-fuchsia-300 font-semibold mb-2">Conclusion:</div>
