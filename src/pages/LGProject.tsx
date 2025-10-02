@@ -110,34 +110,31 @@ const LGProject = () => {
               </h2>
               <div className="space-y-6 text-white/80 text-base lg:text-lg leading-relaxed">
                 <p>
-                  The Future Experience team had a mandate to <strong className="text-white">"disrupt the industry"</strong> with a new B2B product. But how do you bring real customers into the development process before you even know what to build?
+                  The Future Experience team (FX) had a mandate to <strong className="text-white">"disrupt the industry"</strong> with an idea for a new B2B product. The challenge? <strong className="text-white">How to bring "Users" into the "User Experience" before developing a new product...</strong>
                 </p>
                 <p>
-                  Too often we build products within a silo, losing sight of user needs, behaviors, and attitudes. I designed a workshop study that would help the team develop deep customer understanding through shared field experiences.
+                  Too often we build products within a silo, losing sight of user needs, behaviors, and attitudes of the customers. This study and workshop were designed to bring customers to the forefront. After this process, the team would have the tools to build a better product, one that customers would love.
                 </p>
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur border border-white/20 rounded-3xl p-6 lg:p-8">
               <div className="flex items-center gap-3 text-white mb-6">
                 <Users size={24} className="text-fuchsia-400" />
-                <h3 className="text-xl font-semibold">Project Overview</h3>
+                <h3 className="text-xl font-semibold">Research Summary</h3>
               </div>
-              <div className="grid grid-cols-2 gap-4 text-sm">
+              <div className="space-y-6 text-sm">
                 <div>
-                  <div className="text-white/60 mb-1">Role</div>
-                  <div className="font-semibold">Lead UX Researcher</div>
+                  <div className="text-fuchsia-300 font-semibold mb-2">Goal:</div>
+                  <p className="text-white/80">To validate hypotheses about cashier-less stores and gain insights on stand alone stores and stores serving gas station patrons.</p>
                 </div>
                 <div>
-                  <div className="text-white/60 mb-1">Timeline</div>
-                  <div className="font-semibold">8 weeks</div>
+                  <div className="text-fuchsia-300 font-semibold mb-2">Process:</div>
+                  <p className="text-white/80 mb-2"><strong>Stand Alone Stores</strong> - Visited two cashier-less stores, Amazon Go, and three 7-11s, representing traditional convenience stores. Observed patrons, noted purchases, and timed entry to exit. Asked patrons about their motivation for visiting.</p>
+                  <p className="text-white/80"><strong>Gas Station Stores</strong> - Visited five different gas station stores across various geo-locations. Interviewed store managers to inquire about top pain points, customer demographics, and management perspectives.</p>
                 </div>
                 <div>
-                  <div className="text-white/60 mb-1">Team</div>
-                  <div className="font-semibold">Engineers, PMs, Designers</div>
-                </div>
-                <div>
-                  <div className="text-white/60 mb-1">Focus</div>
-                  <div className="font-semibold">Retail/Convenience Stores</div>
+                  <div className="text-fuchsia-300 font-semibold mb-2">Conclusion:</div>
+                  <p className="text-white/80">One hypothesis was validated, while six were disproven. The following research slides provide details on the learnings from each hypothesis.</p>
                 </div>
               </div>
             </div>
@@ -157,32 +154,14 @@ const LGProject = () => {
               The Workshop Experience
             </h2>
             
-            {/* Context about why the workshop was needed */}
-            <div className="max-w-4xl mx-auto mb-12 text-left">
-              <div className="bg-white/10 backdrop-blur border border-white/20 rounded-3xl p-6 lg:p-8">
-                <h3 className="text-xl lg:text-2xl font-bold text-white mb-6">The Challenge: Lack of Shared Understanding</h3>
-                <div className="space-y-6 text-white/80 text-base lg:text-lg leading-relaxed">
-                  <p>
-                    The engineering team was creating a prototype, but wasn't building with users in mind. During meetings, I realized that anecdotes one person would bring up in discussion were met with looks of confusion.
-                  </p>
-                  <p>
-                    This was a diverse team representing many countries around the world. The questions arising from these discussions: Were these hardware developers referring to different shopping experiences without any common reference point? Were we operating under the assumption that everyone shared a common understanding of convenience store shopping?
-                  </p>
-                  <p>
-                    Based on intense debate and lack of consensus, I suspected everyone had differing experiences with shopping. After conducting informal interviews with team members, it became apparent: <strong className="text-white">We needed a shared understanding of convenience store shopping based on our target market—the United States.</strong>
-                  </p>
-                  <div className="bg-fuchsia-500/20 border border-fuchsia-500/30 rounded-2xl p-4 lg:p-6 mt-6">
-                    <p className="text-fuchsia-200 italic">
-                      "Assumptions about convenience store shopping experience, the business (clerk experience), and customers varied wildly among the engineers. There was a lack of common understanding when referring to the business or users. We needed to level-set understanding so all team members could share the same knowledge of user problems, needs, and goals."
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="max-w-4xl mx-auto space-y-6 text-white/80 text-base lg:text-lg leading-relaxed">
+              <p>
+                I created a workshop/research study for the LG engineers, PMs, and Designers. The research methodology was a <strong className="text-white">field observation study</strong> focused on retail.
+              </p>
+              <p>
+                The goal was simple: <strong className="text-white">bring customers to the forefront of product, engineering, and design.</strong> I wanted to help the team develop an understanding of the customer experience. Through a shared experience of exploring the physical space of our users, we would identify pain points, think of new ways to address the problem, and create a solution to delight our users.
+              </p>
             </div>
-            
-            <p className="text-white/80 text-base lg:text-lg max-w-3xl mx-auto leading-relaxed">
-              I approached senior management and proposed conducting in-field observation research with the engineering team. Teams divided into groups of 3 and visited convenience stores, gas stations, and retail locations to observe real customer behaviors.
-            </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
@@ -278,22 +257,27 @@ const LGProject = () => {
           </div>
 
           {/* Workshop Results */}
-          <div className="bg-white/10 backdrop-blur border border-white/20 rounded-3xl p-6 lg:p-8 mb-16">
+          <div className="bg-gradient-to-br from-fuchsia-500/20 to-indigo-500/20 backdrop-blur border border-white/20 rounded-3xl p-6 lg:p-8 mb-16">
             <h3 className="text-xl lg:text-2xl font-bold text-white mb-4">Workshop Success</h3>
-            <p className="text-white/80 leading-relaxed">
-              The workshop was a success! The team was engaged and produced many notes from their field observations. 
-              We created an empathy map, analyzed the data, and reached alignment on the customer experience. 
-              After this process, the team had the tools to build a better product, one that customers would love.
+            <p className="text-white/90 leading-relaxed text-lg">
+              The workshop was a success! The team was engaged and produced many notes from their earlier observations. We created an empathy map, analyzed the data, and reached alignment as to the customer experience.
+            </p>
+            <p className="text-white/90 leading-relaxed text-lg mt-4">
+              Too often we build products within a silo, losing sight of the user needs, behaviors, and attitudes of the customers. This study and workshop were designed to bring customers to the forefront. After this process, the team had the tools to build a better product, one that customers would love.
             </p>
           </div>
 
           {/* Before and After Insights */}
+          <div className="mb-8">
+            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-8 text-center">From Hypothesis to Validation</h3>
+          </div>
+          
           <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
             <motion.div 
               whileHover={{ scale: 1.02 }}
               className="group"
             >
-              <div className="relative overflow-hidden rounded-3xl bg-white/10 backdrop-blur border border-white/20">
+              <div className="relative overflow-hidden rounded-3xl bg-white/10 backdrop-blur border border-white/20 h-full">
                 <div className="aspect-[4/3] overflow-hidden">
                   <img 
                     src={lgBeforeHypothesis} 
@@ -301,8 +285,10 @@ const LGProject = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-4">
-                  <p className="text-sm text-white/80">BEFORE: Our hypotheses before the visit</p>
+                <div className="p-6">
+                  <div className="text-fuchsia-300 font-semibold mb-2 text-sm">BEFORE</div>
+                  <p className="text-white font-semibold mb-2">Our own hypothesis before the visit</p>
+                  <p className="text-sm text-white/80">Initial assumptions and theories about customer behavior and needs</p>
                 </div>
               </div>
             </motion.div>
@@ -311,7 +297,7 @@ const LGProject = () => {
               whileHover={{ scale: 1.02 }}
               className="group"
             >
-              <div className="relative overflow-hidden rounded-3xl bg-white/10 backdrop-blur border border-white/20">
+              <div className="relative overflow-hidden rounded-3xl bg-white/10 backdrop-blur border border-white/20 h-full">
                 <div className="aspect-[4/3] overflow-hidden">
                   <img 
                     src={lgTheUser} 
@@ -319,8 +305,10 @@ const LGProject = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-4">
-                  <p className="text-sm text-white/80">Understanding the environment and user context</p>
+                <div className="p-6">
+                  <div className="text-indigo-300 font-semibold mb-2 text-sm">THE USER</div>
+                  <p className="text-white font-semibold mb-2">Understanding real customer behavior</p>
+                  <p className="text-sm text-white/80">Direct observation revealed authentic user needs and pain points</p>
                 </div>
               </div>
             </motion.div>
@@ -329,7 +317,7 @@ const LGProject = () => {
               whileHover={{ scale: 1.02 }}
               className="group"
             >
-              <div className="relative overflow-hidden rounded-3xl bg-white/10 backdrop-blur border border-white/20">
+              <div className="relative overflow-hidden rounded-3xl bg-white/10 backdrop-blur border border-white/20 h-full">
                 <div className="aspect-[4/3] overflow-hidden">
                   <img 
                     src={lgAfterValidation} 
@@ -337,8 +325,10 @@ const LGProject = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-4">
-                  <p className="text-sm text-white/80">AFTER: Validation of what to do/not do/might do</p>
+                <div className="p-6">
+                  <div className="text-green-300 font-semibold mb-2 text-sm">AFTER</div>
+                  <p className="text-white font-semibold mb-2">Validation of What to Do/Not Do/Might Do</p>
+                  <p className="text-sm text-white/80">Data-driven insights shaped product direction and priorities</p>
                 </div>
               </div>
             </motion.div>
@@ -351,9 +341,12 @@ const LGProject = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <div className="inline-block px-4 py-2 bg-indigo-500/20 text-indigo-300 rounded-full text-sm font-medium mb-6">
-              PART TWO: MARKET RESEARCH
+              PART TWO: COMPETITIVE ANALYSIS
             </div>
-            <h2 className="text-2xl lg:text-4xl font-bold mb-4">B2B Market Analysis for Point-of-Sale Solutions</h2>
+            <h2 className="text-2xl lg:text-4xl font-bold mb-4">Market Research & Competitive Analysis</h2>
+            <p className="text-white/80 text-base lg:text-lg max-w-3xl mx-auto leading-relaxed">
+              Following the workshop, I was asked by Business to conduct a competitive analysis to confirm our findings and identify market opportunities.
+            </p>
             <p className="text-white/80 text-base lg:text-lg max-w-3xl mx-auto leading-relaxed">
               After the workshop, I conducted comprehensive market research to understand the convenience store industry 
               and identify opportunities for B2B point-of-sale transaction solutions. This research informed business strategy 
