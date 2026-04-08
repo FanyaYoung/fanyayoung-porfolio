@@ -5,24 +5,24 @@ import { Link } from "react-router-dom";
 export const About = () => {
   const features = [
     {
-      icon: Users,
-      title: "Researcher",
-      description: "User research methodologies, behavioral analysis, and evidence-based insights to drive product decisions"
+      icon: Brain,
+      title: "Innovation Attorney",
+      description: "Leading projects to optimize legal service delivery, streamline workflows, and integrate technology into the practice of law"
     },
     {
       icon: Code,
-      title: "AI Strategist", 
-      description: "Strategic AI implementation, transformation roadmaps, and intelligent solution architecture for business growth"
+      title: "Legal Technologist", 
+      description: "Vetting, piloting, and onboarding legal technology including generative AI—driving adoption, measuring ROI, and serving as product manager"
     },
     {
       icon: Zap,
-      title: "Advocate",
-      description: "Championing user needs, stakeholder alignment, and driving organizational change through compelling narratives"
+      title: "AI Strategist",
+      description: "Identifying AI and generative AI use cases for legal practice, developing training, and serving as a one-on-one resource for attorneys"
     },
     {
-      icon: Brain,
-      title: "Evangelist",
-      description: "AI adoption leadership, cross-functional team enablement, and building cultures that embrace innovation"
+      icon: Users,
+      title: "Client Solutions",
+      description: "Designing dashboards, workflow automation, client-facing platforms, and data-driven solutions to improve collaboration and reporting"
     }
   ];
 
@@ -34,8 +34,7 @@ export const About = () => {
             About Me
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Passionate about pushing the boundaries of technology and creating 
-            intelligent solutions that make a real impact.
+            Driving innovation at the intersection of law, technology, and business strategy.
           </p>
         </div>
 
@@ -46,42 +45,38 @@ export const About = () => {
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a UX Research Lead and AI Consultant. 
-              With my 11+ years of UX Research and AI consulting, I guide
-              companies like Toyota, Walmart, Expedia, and ServiceNow
-              to translate complex AI and product challenges into clear,
-              user-driven strategies.
+              I'm an Innovation Attorney and Legal Technologist with a J.D. and 
+              extensive experience in litigation. I lead projects to optimize 
+              legal service delivery, integrate generative AI into legal practice, 
+              and design client-facing solutions that drive measurable results.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Right now, I'm also pursuing my eMBA at Quantic,
-              where I'm sharpening my skills in strategy, marketing, 
-              data analytics, probability, and statistics.
+              I'm also pursuing my eMBA at Quantic, sharpening my skills in 
+              strategy, marketing, data analytics, and business execution.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              What makes me different?
-              My deep expertise in human-computer interaction,
-              hands-on AI product building and transformation work,
-              and complex problem solving skills. Also, my work as a 
-              trial attorney honed my skills of 
-              creating engaging presentations, 
-              compelling narratives, and 
-              influencing stakeholders.
+              What makes me different? I combine deep legal expertise with 
+              hands-on technology implementation. As a former trial attorney, 
+              I bring compelling storytelling, stakeholder influence, and 
+              rigorous analytical thinking to every project. Now I channel 
+              those skills into driving legal innovation—vetting and deploying 
+              AI tools, automating workflows, building knowledge libraries, 
+              and designing dashboards that transform how legal teams operate.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              My unique skills lets me bridge research, strategy,
-              and business execution—
-              so employers can accelerate AI adoption,
-              scale research across global teams,
-              and deliver measurable business impact.
+              My unique combination of legal practice and technology expertise 
+              lets me bridge the gap between attorneys and innovation—
+              helping firms accelerate AI adoption, improve efficiency, 
+              and deliver exceptional client service.
               If you're ready to unlock that advantage,
               let's connect. Email me directly at e.fanya.young@gmail.com
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
-              {["Python", "SQL", "User Research", "Qualitative Analysis", "Information Retrieval", "AI/ML Integration"].map((tech) => (
+              {["Legal Technology", "Generative AI", "Project Management", "Knowledge Management", "Workflow Automation", "Client Solutions"].map((tech) => (
                 <span 
                   key={tech}
                   className="px-4 py-2 bg-space-grey border border-primary/20 rounded-full text-sm font-medium text-primary"

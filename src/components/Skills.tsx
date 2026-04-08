@@ -3,63 +3,56 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 
 export const Skills = () => {
-  const [activeCategory, setActiveCategory] = useState("AI & Machine Learning");
+  const [activeCategory, setActiveCategory] = useState("Legal Technology");
 
   const skillCategories = {
-    "AI & Machine Learning": [
-      { skill: "LLM-based Recommendation Engines", level: 92 },
-      { skill: "A/B Testing & Optimization", level: 90 },
-      { skill: "Shade Matching Algorithms", level: 88 },
-      { skill: "AI-Generated Media Agents", level: 85 },
-      { skill: "Virtual Try-on Technology", level: 87 },
-      { skill: "Sensor Data Integration", level: 83 }
+    "Legal Technology": [
+      { skill: "Generative AI Integration", level: 95 },
+      { skill: "Legal Tech Vetting & Piloting", level: 93 },
+      { skill: "Technology Product Management", level: 90 },
+      { skill: "AI Use Case Development", level: 92 },
+      { skill: "ROI Measurement & Analytics", level: 88 },
+      { skill: "Technology Adoption & Training", level: 91 }
     ],
-    "User Research": [
-      { skill: "Interactive Prototyping", level: 93 },
-      { skill: "User Satisfaction Measurement", level: 90 },
-      { skill: "Conversion Optimization", level: 88 },
-      { skill: "Human Factors Principles", level: 92 },
-      { skill: "Survey Tracker Design", level: 89 },
-      { skill: "Information Architecture", level: 91 }
+    "Legal Practice": [
+      { skill: "Litigation Strategy", level: 95 },
+      { skill: "Legal Research & Analysis", level: 93 },
+      { skill: "Client Service Delivery", level: 92 },
+      { skill: "Matter Management", level: 90 },
+      { skill: "Compliance & Risk Assessment", level: 88 },
+      { skill: "Brief Writing & Advocacy", level: 94 }
     ],
-    "Strategy": [
-      { skill: "Prompt Engineering", level: 95 },
-      { skill: "Search Query Evaluation", level: 92 },
-      { skill: "Tool Invocation Review", level: 90 },
-      { skill: "AI Model Interaction Logs", level: 88 },
-      { skill: "Query Rewriting", level: 90 },
-      { skill: "User Intent Capture", level: 93 }
+    "Innovation & Strategy": [
+      { skill: "Workflow Automation", level: 93 },
+      { skill: "Process Optimization", level: 91 },
+      { skill: "Knowledge Management", level: 90 },
+      { skill: "Data Strategy & Analytics", level: 88 },
+      { skill: "Change Management", level: 87 },
+      { skill: "Benchmarking & Market Analysis", level: 85 }
     ],
-    "Operations": [
-      { skill: "Python", level: 95 },
-      { skill: "SQL", level: 90 },
-      { skill: "Computational Statistics", level: 88 },
-      { skill: "AI/ML Integration", level: 87 }
+    "Client Solutions": [
+      { skill: "Dashboard Design", level: 92 },
+      { skill: "Client Reporting & Metrics", level: 90 },
+      { skill: "Collaboration Platforms", level: 88 },
+      { skill: "Budget Tracking Solutions", level: 87 },
+      { skill: "Playbook & Precedent Libraries", level: 91 },
+      { skill: "Experience Data Capture", level: 89 }
     ],
-    "Evaluation & Quality": [
-      { skill: "Annotation & Labeling", level: 93 },
-      { skill: "Rubric-Based Evaluation", level: 90 },
-      { skill: "Edge Case Handling", level: 88 },
-      { skill: "Inter-Rater Agreement", level: 85 },
-      { skill: "Search Relevance Testing", level: 87 },
-      { skill: "Content Safety Review", level: 92 }
-    ],
-    "Soft Skills": [
-      { skill: "Attention to Detail", level: 98 },
-      { skill: "Clear Written Communication", level: 95 },
-      { skill: "Evidence-Based Rationale", level: 93 },
-      { skill: "Independent Work", level: 90 },
-      { skill: "Calibration & Consistency", level: 92 },
-      { skill: "Boolean Query Operators", level: 88 }
+    "Communication": [
+      { skill: "Stakeholder Presentations", level: 96 },
+      { skill: "Cross-functional Collaboration", level: 93 },
+      { skill: "Attorney Training & Enablement", level: 92 },
+      { skill: "Written Communication", level: 95 },
+      { skill: "Client Relations", level: 91 },
+      { skill: "Project Management", level: 90 }
     ]
   };
 
   const tools = [
-    "ChatGPT", "Windsurf", "Gemini", "OpenAI APIs", "Google Cloud", "Supabase", "Stripe", 
-    "Kaggle Datasets", "Statistica", "LLM Pipelines", "A/B Testing Tools", "Virtual Try-on SDK",
-    "Python", "SQL", "AI/ML Integration", 
-    "Query Operators (AND/OR)", "Boolean Filters", "Search Relevance Testing", "Prompt Engineering Tools",
-    "Content Safety Platforms", "Statistical Analysis", "Evidence-Based Evaluation", "User Intent Analysis"
+    "Generative AI Platforms", "Legal Analytics", "E-Discovery Tools", "Document Automation",
+    "Knowledge Management Systems", "CaseStream", "Dashboard Tools", "Python", "SQL",
+    "Workflow Automation", "Client Portals", "Data Visualization", "Legal Research Platforms",
+    "AI Prompt Engineering", "Project Management Tools", "Collaboration Platforms"
   ];
 
   return (
@@ -70,12 +63,11 @@ export const Skills = () => {
             Skills & Expertise
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A comprehensive toolkit for building intelligent, scalable, and performant applications.
+            A comprehensive toolkit for driving legal innovation, technology integration, and client service excellence.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          {/* Category Selection */}
           <div className="lg:col-span-1">
             <Card className="card-neon">
               <CardHeader>
@@ -88,9 +80,7 @@ export const Skills = () => {
                     onClick={() => setActiveCategory(category)}
                     className={`w-full text-left p-3 rounded-lg transition-all duration-300 ${
                       activeCategory === category
-                        ? (["User Research", "Strategy", "Operations"].includes(category) 
-                           ? "bg-purple-500/20 border border-purple-500 text-purple-400"
-                           : "bg-primary/20 border border-primary text-primary")
+                        ? "bg-primary/20 border border-primary text-primary"
                         : "hover:bg-space-grey border border-transparent text-muted-foreground hover:text-foreground"
                     }`}
                   >
@@ -101,7 +91,6 @@ export const Skills = () => {
             </Card>
           </div>
 
-          {/* Skills Display */}
           <div className="lg:col-span-2">
             <Card className="card-neon">
               <CardHeader>
@@ -125,7 +114,6 @@ export const Skills = () => {
           </div>
         </div>
 
-        {/* Tools & Technologies */}
         <Card className="card-neon">
           <CardHeader>
             <CardTitle className="text-gradient text-center">Tools & Technologies</CardTitle>
@@ -144,11 +132,10 @@ export const Skills = () => {
           </CardContent>
         </Card>
 
-        {/* Stats */}
         <div className="grid md:grid-cols-4 gap-6 mt-16">
           {[
-            { number: "50+", label: "Projects Completed" },
-            { number: "5+", label: "Years Experience" },
+            { number: "4+", label: "Years Litigation" },
+            { number: "50+", label: "Projects Led" },
             { number: "20+", label: "Technologies" },
             { number: "100%", label: "Client Satisfaction" }
           ].map((stat, index) => (
