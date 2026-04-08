@@ -5,7 +5,7 @@ import neuralHeroBg from "@/assets/neural-hero-bg.jpg";
 
 export const Hero = () => {
   const [displayText, setDisplayText] = useState("");
-  const fullText = "AI Strategist | Advocate | Evangelist | Researcher";
+  const fullText = "Innovation Attorney | Legal Technologist | AI Strategist";
 
   useEffect(() => {
     let index = 0;
@@ -53,8 +53,8 @@ export const Hero = () => {
         </div>
 
         <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-          Crafting intelligent solutions at the intersection of artificial intelligence, 
-          machine learning, and cutting-edge web technologies. Building the future, one algorithm at a time.
+          Optimizing legal service delivery through technology, generative AI, and innovation. 
+          Bridging the gap between legal practice and cutting-edge technology to drive efficiency and client value.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
