@@ -52,7 +52,7 @@ export const About = () => {
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm also pursuing my eMBA at Quantic, sharpening my skills in 
+              I also hold an eMBA from Quantic, with expertise in 
               strategy, marketing, data analytics, and business execution.
             </p>
             
