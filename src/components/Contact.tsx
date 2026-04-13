@@ -66,8 +66,8 @@ export const Contact = () => {
             Let's Connect
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to bring your next project to life? Let's discuss how we can create 
-            something amazing together.
+            Interested in legal innovation, AI strategy, or technology integration? 
+            Let's discuss how I can help drive efficiency and results.
           </p>
         </div>
 
