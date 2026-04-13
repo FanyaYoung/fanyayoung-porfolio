@@ -178,8 +178,8 @@ export const Contact = () => {
 
             <div className="text-center lg:text-left">
               <p className="text-muted-foreground mb-4">
-                Open to exciting opportunities and collaborations. 
-                Let's build the future together!
+                Open to opportunities in legal innovation, technology strategy, 
+                and AI-driven transformation.
               </p>
               <Button className="btn-cyber">
                 <Mail size={20} className="mr-2" />
