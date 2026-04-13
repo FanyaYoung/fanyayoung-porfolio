@@ -56,8 +56,7 @@ export default {
         "space-grey": "hsl(var(--space-grey))",
       },
       fontFamily: {
-        sans: ['Space Grotesk', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-neural': 'var(--gradient-neural)',

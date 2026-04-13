@@ -66,8 +66,8 @@ export const Contact = () => {
             Let's Connect
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to bring your next project to life? Let's discuss how we can create 
-            something amazing together.
+            Interested in legal innovation, AI strategy, or technology integration? 
+            Let's discuss how I can help drive efficiency and results.
           </p>
         </div>
 
@@ -178,8 +178,8 @@ export const Contact = () => {
 
             <div className="text-center lg:text-left">
               <p className="text-muted-foreground mb-4">
-                Open to exciting opportunities and collaborations. 
-                Let's build the future together!
+                Open to opportunities in legal innovation, technology strategy, 
+                and AI-driven transformation.
               </p>
               <Button className="btn-cyber">
                 <Mail size={20} className="mr-2" />

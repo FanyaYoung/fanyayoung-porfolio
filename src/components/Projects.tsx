@@ -10,49 +10,49 @@ export const Projects = () => {
   const projects = [
     {
       title: "Sam's Club — Club Pick Up (CPU) & Quick Pick",
-      description: "A two‑sided research program that aligned Member check‑in behavior with Associate operations to speed pickups and raise satisfaction, involving 1.3K survey recipients and field studies.",
+      description: "Led a cross-functional initiative to streamline the pickup workflow, aligning operational processes with customer expectations to improve speed and satisfaction across 1.3K touchpoints.",
       image: "/lovable-uploads/samsclub-title-slide.jpg",
-      technologies: ["UX Research", "Service Design", "Usability Testing", "Journey Mapping"],
+      technologies: ["Process Optimization", "Service Design", "Workflow Automation", "Stakeholder Alignment"],
       liveUrl: "/projects/samsclub",
       featured: true,
     },
     {
       title: "Walmart International: Multi‑Piece Shipping",
-      description: "Research-led service and communications model for orders fulfilled across multiple boxes, improving customer experience and reducing support inquiries by 40%.",
+      description: "Developed and implemented a streamlined service and communications model for multi-box fulfillment, reducing support inquiries by 40% and improving the end-to-end customer experience.",
       image: "/lovable-uploads/walmart-slide1.jpg",
-      technologies: ["User Research", "Service Design", "Communications", "Customer Experience"],
+      technologies: ["Process Improvement", "Service Design", "Communications Strategy", "Client Experience"],
       liveUrl: "/projects/walmart",
       featured: true,
     },
     {
-      title: "MGM - Social Impact & Sustainability Research",
-      description: "Comprehensive research report analyzing MGM Resorts' social impact and sustainability initiatives. Strategic research framework for hospitality industry sustainability practices, community engagement, and environmental stewardship programs.",
+      title: "MGM — Social Impact & Sustainability Strategy",
+      description: "Delivered a strategic analysis of MGM Resorts' sustainability and social impact programs, producing an actionable framework for community engagement, environmental stewardship, and ESG reporting.",
       image: "/lovable-uploads/mgm-hero.png",
-      technologies: ["Sustainability Research", "Social Impact Analysis", "Hospitality Research", "Environmental Strategy", "Community Engagement", "ESG Framework"],
+      technologies: ["Strategic Analysis", "ESG Framework", "Stakeholder Engagement", "Environmental Strategy", "Community Impact", "Reporting"],
       liveUrl: "/projects/mgm",
       featured: true
     },
     {
-      title: "LG - Convenient Stores Market Research",
-      description: "Comprehensive market research study focusing on convenient stores and retail consumer behavior. Customer-centered design research bringing insights to product development and strategic positioning.",
+      title: "LG — Convenience Store Market Strategy",
+      description: "Conducted comprehensive market analysis of convenience store retail to inform product positioning and strategic growth, translating consumer behavior insights into actionable business recommendations.",
       image: "/lovable-uploads/lg-title-slide.jpg",
-      technologies: ["Market Research", "Consumer Behavior Analysis", "User Experience Research", "Customer Journey Mapping", "Retail Strategy", "Ethnographic Studies"],
+      technologies: ["Market Analysis", "Consumer Insights", "Strategic Planning", "Retail Strategy", "Business Development"],
       liveUrl: "/projects/lg",
       featured: true
     },
     {
-      title: "User Research & Design Strategy",
-      description: "Comprehensive user research methodology framework incorporating ethnographic studies, usability testing, survey design, and behavioral analysis to drive data-informed design decisions and product strategy.",
+      title: "Legal Technology Integration",
+      description: "Vetting, piloting, and onboarding legal technology platforms including generative AI tools—driving adoption, measuring ROI, and serving as product manager to optimize legal service delivery.",
       image: projectShowcase,
-      technologies: ["User Research", "Usability Testing", "Survey Design", "Behavioral Analysis", "Design Strategy", "Ethnographic Studies"],
+      technologies: ["Legal Tech", "AI Integration", "Product Management", "ROI Analysis", "Change Management"],
       liveUrl: "#",
       featured: false
     },
     {
-      title: "AI Strategy & Implementation Consulting",
-      description: "Strategic AI consulting services for enterprise transformation, including AI readiness assessments, implementation roadmaps, model selection guidance, and organizational change management for successful AI adoption.",
+      title: "AI Strategy & Implementation",
+      description: "Identifying generative AI use cases for legal practice, developing training programs, building knowledge libraries, and serving as a strategic resource to accelerate firm-wide AI adoption.",
       image: projectShowcase,
-      technologies: ["AI Strategy", "Machine Learning", "Enterprise Consulting", "Change Management", "AI Governance", "Implementation Planning"],
+      technologies: ["AI Strategy", "Generative AI", "Training & Enablement", "Knowledge Management", "Implementation Planning"],
       liveUrl: "#",
       featured: false
     }
@@ -66,7 +66,7 @@ export const Projects = () => {
             Featured Projects
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A showcase of my latest work in AI/ML, full-stack development, and innovative tech solutions.
+            Projects showcasing legal innovation, technology integration, and client service optimization.
           </p>
         </div>
 

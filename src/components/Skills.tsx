@@ -101,7 +101,7 @@ export const Skills = () => {
                   <div key={index} className="space-y-2">
                     <div className="flex justify-between items-center">
                       <span className="text-foreground font-medium">{item.skill}</span>
-                      <span className="text-primary font-mono text-sm">{item.level}%</span>
+                      <span className="text-primary text-sm">{item.level}%</span>
                     </div>
                     <Progress 
                       value={item.level} 
