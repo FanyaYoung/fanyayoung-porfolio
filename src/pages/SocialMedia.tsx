@@ -127,12 +127,22 @@ const SocialMedia = () => {
   const filteredMedia = media.filter((m) => m.category === activeTab);
 
   return (
-    <div className="min-h-screen bg-background">
-      <header className="border-b border-border bg-background/80 backdrop-blur-md sticky top-0 z-50">
+    <div className="min-h-screen relative">
+      {/* Ambient gradient backdrop */}
+      <div
+        className="fixed inset-0 -z-10 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse at top, hsl(270 100% 70% / 0.12) 0%, hsl(230 20% 5%) 55%)",
+        }}
+      />
+
+      <header className="border-b border-border/50 bg-background/60 backdrop-blur-xl sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4 flex items-center gap-4">
           <button
             onClick={() => navigate("/")}
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            className="text-muted-foreground hover:text-primary transition-colors"
+            aria-label="Back to home"
           >
             <ArrowLeft size={20} />
           </button>
@@ -142,16 +152,28 @@ const SocialMedia = () => {
         </div>
       </header>
 
-      <main className="container mx-auto px-6 py-10">
+      <main className="container mx-auto px-6 py-16">
         <div className="max-w-5xl mx-auto">
-          <p className="text-muted-foreground mb-8">
-            A collection of video content across platforms.
-          </p>
+          <div className="mb-12">
+            <span className="inline-block text-xs uppercase tracking-[0.2em] text-primary/80 font-medium mb-4">
+              Media Library
+            </span>
+            <h2 className="text-4xl sm:text-5xl font-semibold text-foreground tracking-tight mb-4">
+              Behind the scenes.
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl">
+              A curated collection of full-length video content across platforms and pursuits.
+            </p>
+          </div>
 
           <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <TabsList className="mb-8 flex-wrap h-auto gap-1">
+            <TabsList className="mb-10 flex-wrap h-auto gap-1 bg-card/50 backdrop-blur-sm border border-border/50">
               {categories.map((cat) => (
-                <TabsTrigger key={cat.value} value={cat.value} className="text-sm">
+                <TabsTrigger
+                  key={cat.value}
+                  value={cat.value}
+                  className="text-sm data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
+                >
                   {cat.label}
                 </TabsTrigger>
               ))}
@@ -160,8 +182,8 @@ const SocialMedia = () => {
             {categories.map((cat) => (
               <TabsContent key={cat.value} value={cat.value}>
                 {loading ? (
-                  <div className="flex justify-center py-16">
-                    <Loader2 className="animate-spin text-muted-foreground" size={24} />
+                  <div className="flex justify-center py-20">
+                    <Loader2 className="animate-spin text-primary" size={28} />
                   </div>
                 ) : filteredMedia.length > 0 ? (
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -170,34 +192,47 @@ const SocialMedia = () => {
                     ))}
                   </div>
                 ) : (
-                  <p className="text-muted-foreground text-center py-16">
-                    No videos yet in this category.
-                  </p>
+                  <div className="card-neon text-center py-20">
+                    <p className="text-muted-foreground">
+                      No videos yet in this category.
+                    </p>
+                  </div>
                 )}
               </TabsContent>
             ))}
           </Tabs>
 
           {/* Upload Section */}
-          <div className="mt-16 border-t border-border pt-10">
-            <h2 className="text-lg font-semibold text-foreground mb-6">Upload Media</h2>
+          <div className="mt-20 card-neon">
+            <div className="mb-6">
+              <span className="inline-block text-xs uppercase tracking-[0.2em] text-primary/80 font-medium mb-2">
+                Add Content
+              </span>
+              <h2 className="text-2xl font-semibold text-foreground tracking-tight">
+                Upload Media
+              </h2>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-end">
               <div className="flex flex-col gap-1.5 w-full sm:w-auto">
-                <label className="text-sm text-muted-foreground">Title (optional)</label>
+                <label className="text-xs uppercase tracking-wider text-muted-foreground font-medium">
+                  Title
+                </label>
                 <input
                   type="text"
                   value={uploadTitle}
                   onChange={(e) => setUploadTitle(e.target.value)}
-                  placeholder="Video title"
-                  className="h-10 rounded-md border border-input bg-background px-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring w-full sm:w-64"
+                  placeholder="Optional"
+                  className="h-11 rounded-md border border-border bg-background/50 backdrop-blur-sm px-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-colors w-full sm:w-64"
                 />
               </div>
               <div className="flex flex-col gap-1.5 w-full sm:w-auto">
-                <label className="text-sm text-muted-foreground">Category</label>
+                <label className="text-xs uppercase tracking-wider text-muted-foreground font-medium">
+                  Category
+                </label>
                 <select
                   value={uploadCategory}
                   onChange={(e) => setUploadCategory(e.target.value)}
-                  className="h-10 rounded-md border border-input bg-background px-3 text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-ring"
+                  className="h-11 rounded-md border border-border bg-background/50 backdrop-blur-sm px-3 text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-colors"
                 >
                   {categories.map((cat) => (
                     <option key={cat.value} value={cat.value}>
@@ -218,7 +253,7 @@ const SocialMedia = () => {
                 <button
                   onClick={() => fileInputRef.current?.click()}
                   disabled={uploading}
-                  className="inline-flex items-center gap-2 h-10 px-5 rounded-md bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
+                  className="btn-cyber inline-flex items-center gap-2 h-11 disabled:opacity-50"
                 >
                   {uploading ? (
                     <Loader2 size={16} className="animate-spin" />
