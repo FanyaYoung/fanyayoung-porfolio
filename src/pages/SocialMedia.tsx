@@ -190,19 +190,37 @@ const SocialMedia = () => {
     }
 
     setImporting(true);
-    const title = uploadTitle.trim() || getHostname(trimmed);
+
+    // Try to fetch OG metadata; soft-fail if unavailable
+    let og: { title?: string; description?: string; image?: string; siteName?: string } = {};
+    try {
+      const { data, error } = await supabase.functions.invoke("fetch-og-metadata", {
+        body: { url: trimmed },
+      });
+      if (!error && data && !data.error) og = data;
+    } catch (err) {
+      console.warn("OG fetch failed:", err);
+    }
+
+    const title = uploadTitle.trim() || og.title || og.siteName || getHostname(trimmed);
 
     const { error } = await supabase.from("social_media").insert({
       title,
       category: uploadCategory,
       file_path: trimmed,
       file_type: "link",
+      thumbnail_url: og.image ?? null,
+      description: og.description ?? null,
+      source_title: og.title ?? null,
     });
 
     if (error) {
       toast({ title: "Import failed", description: error.message, variant: "destructive" });
     } else {
-      toast({ title: "Post imported" });
+      toast({
+        title: "Post imported",
+        description: og.image ? "Preview loaded successfully." : "No preview image available.",
+      });
       setImportUrl("");
       setUploadTitle("");
       fetchMedia();
