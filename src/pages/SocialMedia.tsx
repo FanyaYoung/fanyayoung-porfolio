@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { ArrowLeft, Upload, X, Loader2 } from "lucide-react";
+import { ArrowLeft, Upload, X, Loader2, Link as LinkIcon, ExternalLink } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { supabase } from "@/integrations/supabase/client";
@@ -27,14 +27,38 @@ const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
 const getPublicUrl = (filePath: string) =>
   `${SUPABASE_URL}/storage/v1/object/public/social-media/${filePath}`;
 
+const getHostname = (url: string) => {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
+};
+
 const VideoCard = ({ item, onDelete }: { item: MediaItem; onDelete: (id: string, path: string) => void }) => {
-  const url = getPublicUrl(item.file_path);
+  const isLink = item.file_type === "link";
   const isVideo = item.file_type.startsWith("video/");
+  const url = isLink ? item.file_path : getPublicUrl(item.file_path);
 
   return (
     <div className="card-neon p-0 overflow-hidden group relative">
-      <div className="aspect-video bg-muted">
-        {isVideo ? (
+      <div className="aspect-video bg-muted relative">
+        {isLink ? (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full h-full flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-primary/10 to-background hover:from-primary/20 transition-colors p-6 text-center"
+          >
+            <ExternalLink className="text-primary" size={32} />
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-primary/80 font-medium mb-1">
+                {getHostname(url)}
+              </p>
+              <p className="text-sm text-muted-foreground truncate max-w-full">View original post</p>
+            </div>
+          </a>
+        ) : isVideo ? (
           <video src={url} controls className="w-full h-full object-cover" />
         ) : (
           <img src={url} alt={item.title} className="w-full h-full object-cover" />
@@ -65,6 +89,8 @@ const SocialMedia = () => {
   const [uploading, setUploading] = useState(false);
   const [uploadCategory, setUploadCategory] = useState("rowing");
   const [uploadTitle, setUploadTitle] = useState("");
+  const [importUrl, setImportUrl] = useState("");
+  const [importing, setImporting] = useState(false);
 
   const fetchMedia = async () => {
     const { data, error } = await supabase
@@ -118,8 +144,43 @@ const SocialMedia = () => {
     if (fileInputRef.current) fileInputRef.current.value = "";
   };
 
+  const handleImportUrl = async () => {
+    const trimmed = importUrl.trim();
+    if (!trimmed) return;
+
+    try {
+      new URL(trimmed);
+    } catch {
+      toast({ title: "Invalid URL", description: "Please enter a valid URL.", variant: "destructive" });
+      return;
+    }
+
+    setImporting(true);
+    const title = uploadTitle.trim() || getHostname(trimmed);
+
+    const { error } = await supabase.from("social_media").insert({
+      title,
+      category: uploadCategory,
+      file_path: trimmed,
+      file_type: "link",
+    });
+
+    if (error) {
+      toast({ title: "Import failed", description: error.message, variant: "destructive" });
+    } else {
+      toast({ title: "Post imported" });
+      setImportUrl("");
+      setUploadTitle("");
+      fetchMedia();
+    }
+    setImporting(false);
+  };
+
   const handleDelete = async (id: string, filePath: string) => {
-    await supabase.storage.from("social-media").remove([filePath]);
+    const item = media.find((m) => m.id === id);
+    if (item && item.file_type !== "link") {
+      await supabase.storage.from("social-media").remove([filePath]);
+    }
     await supabase.from("social_media").delete().eq("id", id);
     setMedia((prev) => prev.filter((m) => m.id !== id));
     toast({ title: "Deleted" });
@@ -264,6 +325,47 @@ const SocialMedia = () => {
                   {uploading ? "Uploading…" : "Choose File"}
                 </button>
               </div>
+            </div>
+
+            {/* URL Import */}
+            <div className="mt-8 pt-8 border-t border-border/50">
+              <div className="mb-4">
+                <span className="inline-block text-xs uppercase tracking-[0.2em] text-primary/80 font-medium mb-2">
+                  Or Import by URL
+                </span>
+                <p className="text-sm text-muted-foreground">
+                  Paste a link to a TikTok, Instagram, Facebook, or other social post.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-end">
+                <div className="flex flex-col gap-1.5 flex-1">
+                  <label className="text-xs uppercase tracking-wider text-muted-foreground font-medium">
+                    Post URL
+                  </label>
+                  <input
+                    type="url"
+                    value={importUrl}
+                    onChange={(e) => setImportUrl(e.target.value)}
+                    placeholder="https://www.tiktok.com/@user/video/..."
+                    className="h-11 rounded-md border border-border bg-background/50 backdrop-blur-sm px-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-colors w-full"
+                  />
+                </div>
+                <button
+                  onClick={handleImportUrl}
+                  disabled={importing || !importUrl.trim()}
+                  className="btn-cyber inline-flex items-center gap-2 h-11 disabled:opacity-50"
+                >
+                  {importing ? (
+                    <Loader2 size={16} className="animate-spin" />
+                  ) : (
+                    <LinkIcon size={16} />
+                  )}
+                  {importing ? "Importing…" : "Import"}
+                </button>
+              </div>
+              <p className="text-xs text-muted-foreground/70 mt-2">
+                Uses the Title and Category selected above.
+              </p>
             </div>
           </div>
         </div>
