@@ -16,6 +16,7 @@ interface MediaItem {
 
 const categories = [
   { value: "rowing", label: "Embarcadero Rowing Club" },
+  { value: "good-life", label: "The Good Life" },
   { value: "tiktok", label: "TikTok" },
   { value: "facebook", label: "Facebook" },
   { value: "instagram", label: "Instagram" },
