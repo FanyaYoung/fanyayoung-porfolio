@@ -287,7 +287,8 @@ const SocialMedia = () => {
             ))}
           </Tabs>
 
-          {/* Upload Section */}
+          {/* Upload Section — admins only */}
+          {isAdmin && (
           <div className="mt-20 card-neon">
             <div className="mb-6">
               <span className="inline-block text-xs uppercase tracking-[0.2em] text-primary/80 font-medium mb-2">
@@ -391,6 +392,7 @@ const SocialMedia = () => {
               </p>
             </div>
           </div>
+          )}
         </div>
       </main>
     </div>
