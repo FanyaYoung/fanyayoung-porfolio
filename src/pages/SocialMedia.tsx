@@ -36,7 +36,7 @@ const getHostname = (url: string) => {
   }
 };
 
-const VideoCard = ({ item, onDelete }: { item: MediaItem; onDelete: (id: string, path: string) => void }) => {
+const VideoCard = ({ item, onDelete, canDelete }: { item: MediaItem; onDelete: (id: string, path: string) => void; canDelete: boolean }) => {
   const isLink = item.file_type === "link";
   const isVideo = item.file_type.startsWith("video/");
   const url = isLink ? item.file_path : getPublicUrl(item.file_path);
