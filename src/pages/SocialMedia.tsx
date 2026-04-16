@@ -82,6 +82,7 @@ const VideoCard = ({ item, onDelete }: { item: MediaItem; onDelete: (id: string,
 const SocialMedia = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
+  const { isAdmin, user, signOut } = useAuth();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const [activeTab, setActiveTab] = useState("rowing");
