@@ -18,25 +18,34 @@ export type Database = {
         Row: {
           category: string
           created_at: string | null
+          description: string | null
           file_path: string
           file_type: string
           id: string
+          source_title: string | null
+          thumbnail_url: string | null
           title: string
         }
         Insert: {
           category: string
           created_at?: string | null
+          description?: string | null
           file_path: string
           file_type: string
           id?: string
+          source_title?: string | null
+          thumbnail_url?: string | null
           title: string
         }
         Update: {
           category?: string
           created_at?: string | null
+          description?: string | null
           file_path?: string
           file_type?: string
           id?: string
+          source_title?: string | null
+          thumbnail_url?: string | null
           title?: string
         }
         Relationships: []

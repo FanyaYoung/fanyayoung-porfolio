@@ -13,6 +13,9 @@ interface MediaItem {
   file_path: string;
   file_type: string;
   created_at: string;
+  thumbnail_url?: string | null;
+  description?: string | null;
+  source_title?: string | null;
 }
 
 const categories = [
@@ -49,15 +52,35 @@ const VideoCard = ({ item, onDelete, canDelete }: { item: MediaItem; onDelete: (
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full h-full flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-primary/10 to-background hover:from-primary/20 transition-colors p-6 text-center"
+            className="block w-full h-full relative group/link"
           >
-            <ExternalLink className="text-primary" size={32} />
-            <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-primary/80 font-medium mb-1">
-                {getHostname(url)}
-              </p>
-              <p className="text-sm text-muted-foreground truncate max-w-full">View original post</p>
-            </div>
+            {item.thumbnail_url ? (
+              <>
+                <img
+                  src={item.thumbnail_url}
+                  alt={item.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover/link:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent" />
+                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-2">
+                  <span className="text-xs uppercase tracking-[0.2em] text-primary font-medium truncate">
+                    {getHostname(url)}
+                  </span>
+                  <ExternalLink className="text-primary shrink-0" size={16} />
+                </div>
+              </>
+            ) : (
+              <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-primary/10 to-background hover:from-primary/20 transition-colors p-6 text-center">
+                <ExternalLink className="text-primary" size={32} />
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-primary/80 font-medium mb-1">
+                    {getHostname(url)}
+                  </p>
+                  <p className="text-sm text-muted-foreground truncate max-w-full">View original post</p>
+                </div>
+              </div>
+            )}
           </a>
         ) : isVideo ? (
           <video src={url} controls className="w-full h-full object-cover" />
@@ -65,16 +88,23 @@ const VideoCard = ({ item, onDelete, canDelete }: { item: MediaItem; onDelete: (
           <img src={url} alt={item.title} className="w-full h-full object-cover" />
         )}
       </div>
-      <div className="p-4 flex items-center justify-between">
-        <h3 className="text-foreground font-medium text-sm truncate">{item.title}</h3>
-        {canDelete && (
-          <button
-            onClick={() => onDelete(item.id, item.file_path)}
-            className="text-muted-foreground hover:text-destructive transition-colors ml-2 shrink-0 opacity-0 group-hover:opacity-100"
-            aria-label="Delete"
-          >
-            <X size={16} />
-          </button>
+      <div className="p-4">
+        <div className="flex items-center justify-between gap-2">
+          <h3 className="text-foreground font-medium text-sm truncate">{item.title}</h3>
+          {canDelete && (
+            <button
+              onClick={() => onDelete(item.id, item.file_path)}
+              className="text-muted-foreground hover:text-destructive transition-colors ml-2 shrink-0 opacity-0 group-hover:opacity-100"
+              aria-label="Delete"
+            >
+              <X size={16} />
+            </button>
+          )}
+        </div>
+        {isLink && item.description && (
+          <p className="text-xs text-muted-foreground mt-1.5 line-clamp-2">
+            {item.description}
+          </p>
         )}
       </div>
     </div>
@@ -160,19 +190,37 @@ const SocialMedia = () => {
     }
 
     setImporting(true);
-    const title = uploadTitle.trim() || getHostname(trimmed);
+
+    // Try to fetch OG metadata; soft-fail if unavailable
+    let og: { title?: string; description?: string; image?: string; siteName?: string } = {};
+    try {
+      const { data, error } = await supabase.functions.invoke("fetch-og-metadata", {
+        body: { url: trimmed },
+      });
+      if (!error && data && !data.error) og = data;
+    } catch (err) {
+      console.warn("OG fetch failed:", err);
+    }
+
+    const title = uploadTitle.trim() || og.title || og.siteName || getHostname(trimmed);
 
     const { error } = await supabase.from("social_media").insert({
       title,
       category: uploadCategory,
       file_path: trimmed,
       file_type: "link",
+      thumbnail_url: og.image ?? null,
+      description: og.description ?? null,
+      source_title: og.title ?? null,
     });
 
     if (error) {
       toast({ title: "Import failed", description: error.message, variant: "destructive" });
     } else {
-      toast({ title: "Post imported" });
+      toast({
+        title: "Post imported",
+        description: og.image ? "Preview loaded successfully." : "No preview image available.",
+      });
       setImportUrl("");
       setUploadTitle("");
       fetchMedia();
