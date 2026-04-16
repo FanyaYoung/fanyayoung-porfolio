@@ -26,6 +26,7 @@ const App = () => (
           {isSocialMediaDomain ? (
             <>
               <Route path="/" element={<SocialMedia />} />
+              <Route path="/auth" element={<Auth />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </>
           ) : (
@@ -36,6 +37,7 @@ const App = () => (
               <Route path="/projects/walmart" element={<WalmartProject />} />
               <Route path="/projects/samsclub" element={<SamsClubProject />} />
               <Route path="/social-media" element={<SocialMedia />} />
+              <Route path="/auth" element={<Auth />} />
               <Route path="*" element={<NotFound />} />
             </>
           )}
