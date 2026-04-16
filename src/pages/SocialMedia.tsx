@@ -13,6 +13,9 @@ interface MediaItem {
   file_path: string;
   file_type: string;
   created_at: string;
+  thumbnail_url?: string | null;
+  description?: string | null;
+  source_title?: string | null;
 }
 
 const categories = [
