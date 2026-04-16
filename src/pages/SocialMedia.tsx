@@ -31,7 +31,7 @@ const VideoCard = ({ item, onDelete }: { item: MediaItem; onDelete: (id: string,
   const isVideo = item.file_type.startsWith("video/");
 
   return (
-    <div className="rounded-lg border border-border bg-card overflow-hidden group relative">
+    <div className="card-neon p-0 overflow-hidden group relative">
       <div className="aspect-video bg-muted">
         {isVideo ? (
           <video src={url} controls className="w-full h-full object-cover" />
@@ -43,7 +43,8 @@ const VideoCard = ({ item, onDelete }: { item: MediaItem; onDelete: (id: string,
         <h3 className="text-foreground font-medium text-sm truncate">{item.title}</h3>
         <button
           onClick={() => onDelete(item.id, item.file_path)}
-          className="text-muted-foreground hover:text-destructive transition-colors ml-2 shrink-0"
+          className="text-muted-foreground hover:text-destructive transition-colors ml-2 shrink-0 opacity-0 group-hover:opacity-100"
+          aria-label="Delete"
         >
           <X size={16} />
         </button>
