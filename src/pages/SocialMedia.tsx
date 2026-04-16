@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import { ArrowLeft, Upload, X, Loader2, Link as LinkIcon, ExternalLink } from "lucide-react";
+import { ArrowLeft, Upload, X, Loader2, Link as LinkIcon, ExternalLink, LogOut, LogIn } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
 
 interface MediaItem {
   id: string;
@@ -35,7 +36,7 @@ const getHostname = (url: string) => {
   }
 };
 
-const VideoCard = ({ item, onDelete }: { item: MediaItem; onDelete: (id: string, path: string) => void }) => {
+const VideoCard = ({ item, onDelete, canDelete }: { item: MediaItem; onDelete: (id: string, path: string) => void; canDelete: boolean }) => {
   const isLink = item.file_type === "link";
   const isVideo = item.file_type.startsWith("video/");
   const url = isLink ? item.file_path : getPublicUrl(item.file_path);
@@ -66,13 +67,15 @@ const VideoCard = ({ item, onDelete }: { item: MediaItem; onDelete: (id: string,
       </div>
       <div className="p-4 flex items-center justify-between">
         <h3 className="text-foreground font-medium text-sm truncate">{item.title}</h3>
-        <button
-          onClick={() => onDelete(item.id, item.file_path)}
-          className="text-muted-foreground hover:text-destructive transition-colors ml-2 shrink-0 opacity-0 group-hover:opacity-100"
-          aria-label="Delete"
-        >
-          <X size={16} />
-        </button>
+        {canDelete && (
+          <button
+            onClick={() => onDelete(item.id, item.file_path)}
+            className="text-muted-foreground hover:text-destructive transition-colors ml-2 shrink-0 opacity-0 group-hover:opacity-100"
+            aria-label="Delete"
+          >
+            <X size={16} />
+          </button>
+        )}
       </div>
     </div>
   );
@@ -81,6 +84,7 @@ const VideoCard = ({ item, onDelete }: { item: MediaItem; onDelete: (id: string,
 const SocialMedia = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
+  const { isAdmin, user, signOut } = useAuth();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const [activeTab, setActiveTab] = useState("rowing");
@@ -208,9 +212,28 @@ const SocialMedia = () => {
           >
             <ArrowLeft size={20} />
           </button>
-          <h1 className="text-xl font-semibold text-foreground tracking-tight">
+          <h1 className="text-xl font-semibold text-foreground tracking-tight flex-1">
             Social Media
           </h1>
+          {user ? (
+            <button
+              onClick={signOut}
+              className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2 text-sm"
+              aria-label="Sign out"
+            >
+              <LogOut size={16} />
+              <span className="hidden sm:inline">Sign out</span>
+            </button>
+          ) : (
+            <button
+              onClick={() => navigate("/auth")}
+              className="text-muted-foreground/40 hover:text-primary transition-colors"
+              aria-label="Admin sign in"
+              title="Admin"
+            >
+              <LogIn size={16} />
+            </button>
+          )}
         </div>
       </header>
 
@@ -250,7 +273,7 @@ const SocialMedia = () => {
                 ) : filteredMedia.length > 0 ? (
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredMedia.map((item) => (
-                      <VideoCard key={item.id} item={item} onDelete={handleDelete} />
+                      <VideoCard key={item.id} item={item} onDelete={handleDelete} canDelete={isAdmin} />
                     ))}
                   </div>
                 ) : (
@@ -264,7 +287,8 @@ const SocialMedia = () => {
             ))}
           </Tabs>
 
-          {/* Upload Section */}
+          {/* Upload Section — admins only */}
+          {isAdmin && (
           <div className="mt-20 card-neon">
             <div className="mb-6">
               <span className="inline-block text-xs uppercase tracking-[0.2em] text-primary/80 font-medium mb-2">
@@ -368,6 +392,7 @@ const SocialMedia = () => {
               </p>
             </div>
           </div>
+          )}
         </div>
       </main>
     </div>
