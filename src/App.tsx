@@ -8,6 +8,7 @@ import LGProject from "./pages/LGProject";
 import MGMProject from "./pages/MGMProject";
 import WalmartProject from "./pages/WalmartProject";
 import SamsClubProject from "./pages/SamsClubProject";
+import SocialMedia from "./pages/SocialMedia";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/projects/mgm" element={<MGMProject />} />
           <Route path="/projects/walmart" element={<WalmartProject />} />
           <Route path="/projects/samsclub" element={<SamsClubProject />} />
+          <Route path="/social-media" element={<SocialMedia />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
