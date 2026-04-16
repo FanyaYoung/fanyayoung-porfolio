@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import { ArrowLeft, Upload, X, Loader2, Link as LinkIcon, ExternalLink } from "lucide-react";
+import { ArrowLeft, Upload, X, Loader2, Link as LinkIcon, ExternalLink, LogOut, LogIn } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
 
 interface MediaItem {
   id: string;
