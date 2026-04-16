@@ -8,6 +8,7 @@ import LGProject from "./pages/LGProject";
 import MGMProject from "./pages/MGMProject";
 import WalmartProject from "./pages/WalmartProject";
 import SamsClubProject from "./pages/SamsClubProject";
+import SocialMedia from "./pages/SocialMedia";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
