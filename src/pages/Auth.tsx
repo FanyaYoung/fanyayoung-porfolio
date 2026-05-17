@@ -36,6 +36,7 @@ const Auth = () => {
     if (error) {
       toast({ title: "Couldn't send reset email", description: error.message, variant: "destructive" });
     } else {
+      setResetSent(true);
       toast({ title: "Check your email", description: "A password reset link has been sent." });
     }
   };
