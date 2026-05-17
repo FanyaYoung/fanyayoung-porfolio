@@ -10,6 +10,7 @@ import WalmartProject from "./pages/WalmartProject";
 import SamsClubProject from "./pages/SamsClubProject";
 import SocialMedia from "./pages/SocialMedia";
 import Auth from "./pages/Auth";
+import ResetPassword from "./pages/ResetPassword";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
             <>
               <Route path="/" element={<SocialMedia />} />
               <Route path="/auth" element={<Auth />} />
+              <Route path="/reset-password" element={<ResetPassword />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </>
           ) : (
@@ -38,6 +40,7 @@ const App = () => (
               <Route path="/projects/samsclub" element={<SamsClubProject />} />
               <Route path="/social-media" element={<SocialMedia />} />
               <Route path="/auth" element={<Auth />} />
+              <Route path="/reset-password" element={<ResetPassword />} />
               <Route path="*" element={<NotFound />} />
             </>
           )}

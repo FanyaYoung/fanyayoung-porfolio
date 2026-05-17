@@ -19,6 +19,25 @@ const Auth = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const [resetting, setResetting] = useState(false);
+
+  const handleForgotPassword = async () => {
+    const emailParsed = z.string().trim().email().safeParse(email);
+    if (!emailParsed.success) {
+      toast({ title: "Enter your email", description: "Type your email above first, then click Forgot password.", variant: "destructive" });
+      return;
+    }
+    setResetting(true);
+    const { error } = await supabase.auth.resetPasswordForEmail(emailParsed.data, {
+      redirectTo: `${window.location.origin}/reset-password`,
+    });
+    setResetting(false);
+    if (error) {
+      toast({ title: "Couldn't send reset email", description: error.message, variant: "destructive" });
+    } else {
+      toast({ title: "Check your email", description: "A password reset link has been sent." });
+    }
+  };
 
   useEffect(() => {
     if (!authLoading && session) navigate("/", { replace: true });
@@ -92,6 +111,15 @@ const Auth = () => {
           >
             {submitting && <Loader2 size={16} className="animate-spin" />}
             Sign in
+          </button>
+          <button
+            type="button"
+            onClick={handleForgotPassword}
+            disabled={resetting}
+            className="w-full text-xs text-muted-foreground hover:text-primary transition-colors inline-flex items-center justify-center gap-2 disabled:opacity-50"
+          >
+            {resetting && <Loader2 size={12} className="animate-spin" />}
+            Forgot password?
           </button>
         </form>
       </div>
