@@ -20,6 +20,7 @@ const Auth = () => {
   const [password, setPassword] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [resetting, setResetting] = useState(false);
+  const [resetSent, setResetSent] = useState(false);
 
   const handleForgotPassword = async () => {
     const emailParsed = z.string().trim().email().safeParse(email);
@@ -35,6 +36,7 @@ const Auth = () => {
     if (error) {
       toast({ title: "Couldn't send reset email", description: error.message, variant: "destructive" });
     } else {
+      setResetSent(true);
       toast({ title: "Check your email", description: "A password reset link has been sent." });
     }
   };
@@ -119,8 +121,13 @@ const Auth = () => {
             className="w-full text-xs text-muted-foreground hover:text-primary transition-colors inline-flex items-center justify-center gap-2 disabled:opacity-50"
           >
             {resetting && <Loader2 size={12} className="animate-spin" />}
-            Forgot password?
+            {resetSent ? "Resend reset email" : "Forgot password?"}
           </button>
+          {resetSent && (
+            <p className="text-xs text-muted-foreground text-center">
+              Didn't get it? Check spam, or click resend above.
+            </p>
+          )}
         </form>
       </div>
     </div>
