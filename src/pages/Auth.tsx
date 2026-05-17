@@ -121,8 +121,13 @@ const Auth = () => {
             className="w-full text-xs text-muted-foreground hover:text-primary transition-colors inline-flex items-center justify-center gap-2 disabled:opacity-50"
           >
             {resetting && <Loader2 size={12} className="animate-spin" />}
-            Forgot password?
+            {resetSent ? "Resend reset email" : "Forgot password?"}
           </button>
+          {resetSent && (
+            <p className="text-xs text-muted-foreground text-center">
+              Didn't get it? Check spam, or click resend above.
+            </p>
+          )}
         </form>
       </div>
     </div>
