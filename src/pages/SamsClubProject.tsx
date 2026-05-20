@@ -91,6 +91,11 @@ export default function SamsClubProject() {
           mainEntityOfPage: "https://fanyayoung-porfolio.lovable.app/projects/samsclub",
         }}
       />
+      {/* Navigation */}
+      <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 py-4">
+          <Button
+            variant="ghost"
             variant="ghost" 
             onClick={() => navigate('/')}
             className="hover:bg-teal-600/10"
