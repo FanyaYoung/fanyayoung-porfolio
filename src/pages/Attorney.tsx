@@ -18,9 +18,9 @@ const palette = {
 
 const Attorney = () => {
   useEffect(() => {
-    document.title = "Fanya Young — Innovation Attorney & Board Director";
+    document.title = "Fanya Young — Innovation Attorney & General Counsel";
     const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Fanya Young — Innovation Attorney, In-House Counsel, and Risk & Governance Advisor. Modern legal counsel for forward-thinking organizations.");
+    if (meta) meta.setAttribute("content", "Fanya Young — California-licensed attorney with 17 years of practice. General Counsel, AI Governance Advisor, and Innovation Attorney bridging law, technology, and operations.");
     // Load editorial fonts
     const link = document.createElement("link");
     link.rel = "stylesheet";
