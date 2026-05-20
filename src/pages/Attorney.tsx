@@ -151,11 +151,11 @@ const Attorney = () => {
               </a>
             </div>
           </div>
-          <div className="lg:col-span-5">
-            <div className="relative">
-              <div className="absolute -top-6 -left-6 w-32 h-32" style={{ background: palette.brass, opacity: 0.15 }} />
+          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-xs">
+              <div className="absolute -top-4 -left-4 w-20 h-20" style={{ background: palette.brass, opacity: 0.15 }} />
               <img src={headshot} alt="Fanya Young, Innovation Attorney" className="relative w-full object-cover aspect-[4/5]" />
-              <div className="absolute -bottom-6 -right-6 w-40 h-1" style={{ background: palette.brass }} />
+              <div className="absolute -bottom-4 -right-4 w-24 h-1" style={{ background: palette.brass }} />
             </div>
           </div>
         </div>
@@ -176,8 +176,8 @@ const Attorney = () => {
       {/* ABOUT */}
       <section id="about" className="max-w-7xl mx-auto px-6 lg:px-12 py-28">
         <div className="grid lg:grid-cols-12 gap-16 items-start">
-          <div className="lg:col-span-5">
-            <img src={columns} alt="Architectural columns" className="w-full object-cover aspect-[4/5] grayscale" />
+          <div className="lg:col-span-5 flex justify-center lg:justify-start">
+            <img src={columns} alt="Architectural columns" className="w-full max-w-xs object-cover aspect-[4/5] grayscale" />
           </div>
           <div className="lg:col-span-7 lg:pt-10">
             <div className="text-xs uppercase tracking-[0.3em] mb-6" style={{ color: palette.brass }}>About</div>
@@ -297,8 +297,8 @@ const Attorney = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-5 lg:sticky lg:top-12">
-            <img src={desk} alt="Executive workspace overlooking the city" className="w-full object-cover aspect-[4/5]" />
+          <div className="lg:col-span-5 lg:sticky lg:top-12 flex flex-col items-center lg:items-start">
+            <img src={desk} alt="Executive workspace overlooking the city" className="w-full max-w-xs object-cover aspect-[4/5]" />
             <p className="mt-6 text-xs uppercase tracking-[0.2em]" style={{ color: palette.muted }}>
               Counsel grounded in perspective.
             </p>
