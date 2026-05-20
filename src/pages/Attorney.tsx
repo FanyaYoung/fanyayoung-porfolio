@@ -18,9 +18,9 @@ const palette = {
 
 const Attorney = () => {
   useEffect(() => {
-    document.title = "Fanya Young — Innovation Attorney & Board Director";
+    document.title = "Fanya Young — Innovation Attorney & General Counsel";
     const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Fanya Young — Innovation Attorney, In-House Counsel, and Risk & Governance Advisor. Modern legal counsel for forward-thinking organizations.");
+    if (meta) meta.setAttribute("content", "Fanya Young — California-licensed attorney with 17 years of practice. General Counsel, AI Governance Advisor, and Innovation Attorney bridging law, technology, and operations.");
     // Load editorial fonts
     const link = document.createElement("link");
     link.rel = "stylesheet";
@@ -58,7 +58,7 @@ const Attorney = () => {
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7">
             <div className="text-xs uppercase tracking-[0.3em] mb-8" style={{ color: palette.brass }}>
-              Innovation Attorney · Board Director
+              General Counsel · Innovation Attorney · AI Governance
             </div>
             <h1 style={serif} className="text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.05] font-light tracking-tight">
               Modern counsel<br />
@@ -66,9 +66,10 @@ const Attorney = () => {
               <em style={{ color: palette.navy }}>accelerated change.</em>
             </h1>
             <p className="mt-10 text-lg leading-relaxed max-w-xl" style={{ color: palette.muted }}>
-              Fanya Young advises executives and boards at the intersection of law,
-              technology, and governance—pairing trial-tested judgment with
-              fluency in emerging AI and operational design.
+              California-licensed attorney with 17 years of legal practice and 11 years
+              partnering with product, operations, and technology teams. Fanya Young
+              pairs trial-tested judgment with fluency in AI, governance, and
+              operational design—helping executives navigate complexity with clarity.
             </p>
             <div className="mt-12 flex flex-wrap gap-4">
               <a href="#expertise" className="px-8 py-4 text-xs uppercase tracking-[0.25em] text-white transition-opacity hover:opacity-90"
@@ -95,11 +96,11 @@ const Attorney = () => {
       <div className="border-y py-6" style={{ borderColor: `${palette.ink}1A`, background: palette.stone }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-wrap gap-x-12 gap-y-3 text-xs uppercase tracking-[0.3em]" style={{ color: palette.muted }}>
           <span>AI Governance</span><span>·</span>
-          <span>In-House Counsel</span><span>·</span>
-          <span>Board Advisory</span><span>·</span>
+          <span>General Counsel</span><span>·</span>
+          <span>Commercial Contracts</span><span>·</span>
           <span>Risk Management</span><span>·</span>
           <span>Legal Operations</span><span>·</span>
-          <span>Innovation Strategy</span>
+          <span>Litigation</span>
         </div>
       </div>
 
@@ -117,24 +118,28 @@ const Attorney = () => {
             </h2>
             <div className="space-y-6 text-base leading-loose" style={{ color: palette.charcoal }}>
               <p>
-                Fanya Young is an Innovation Attorney and Legal Technologist whose work bridges
-                the long-standing traditions of legal practice with the demands of a digital,
-                AI-accelerated economy. She holds a J.D. and an eMBA, and spent her early career
-                in litigation—an experience that informs the precision and persuasive clarity she
-                brings to every engagement.
+                Fanya Young is a California-licensed attorney with 17 years of legal
+                practice and 11 years partnering with product, operations, and
+                technology teams. She currently serves as General Counsel for VRP Labs
+                (Valley Research Park), a shared life-science lab platform, where she
+                advises executive leadership on legal, operational, and business-risk
+                matters across a multi-tenant environment.
               </p>
               <p>
-                Today, her counsel reaches beyond the courtroom. She advises executives on AI
-                adoption and governance, designs operational frameworks for in-house teams, and
-                serves on boards where her unique combination of legal acumen and technological
-                fluency creates lasting strategic value.
+                A former trial attorney with approximately 150 jury cases to verdict,
+                Fanya brings litigation rigor, executive advising, and AI-enabled
+                workflow design to every engagement. She drafts and negotiates
+                commercial agreements, builds playbooks and precedent libraries, and
+                leads adoption of generative AI and legal technology—translating
+                complex requirements into usable guidance and decision-ready
+                recommendations.
               </p>
             </div>
             <div className="mt-12 grid grid-cols-3 gap-6 pt-10 border-t" style={{ borderColor: `${palette.ink}1A` }}>
               {[
-                { n: "J.D.", l: "Juris Doctor" },
-                { n: "eMBA", l: "Quantic" },
-                { n: "4+", l: "Years Litigation" },
+                { n: "17", l: "Years of Practice" },
+                { n: "~150", l: "Jury Trials" },
+                { n: "J.D. · eMBA", l: "UC Law SF · Quantic" },
               ].map((s) => (
                 <div key={s.l}>
                   <div style={serif} className="text-4xl md:text-5xl font-light" >{s.n}</div>
@@ -168,18 +173,18 @@ const Attorney = () => {
             {[
               {
                 n: "01",
-                t: "Innovation Attorney",
-                d: "Empowering clients to embrace emerging technologies while ensuring legal compliance. Proactive counsel on AI adoption, governance frameworks, and risk mitigation for forward-thinking organizations.",
+                t: "General Counsel & Commercial Contracts",
+                d: "Currently General Counsel at VRP Labs. Drafts and negotiates licenses, MSAs, SOWs, NDAs, vendor and service agreements, and operational policies for complex multi-tenant and technology-driven environments.",
               },
               {
                 n: "02",
-                t: "In-House Counsel Solutions",
-                d: "Redefining the in-house function as a strategic partner—streamlining processes, enhancing legal operations, and embedding legal insight into business and product decisions.",
+                t: "Innovation, AI & Legal Operations",
+                d: "Designs scalable legal-service workflows, precedent libraries, playbooks, and intake processes. Leads adoption of generative AI and legal technology with measurable improvements in cycle time, consistency, and defensibility.",
               },
               {
                 n: "03",
-                t: "Risk & Governance Advisory",
-                d: "Comprehensive risk management and governance frameworks that elevate accountability and ethical standards, rooted in deep legal principle and a culture of transparency.",
+                t: "Litigation & Risk Advisory",
+                d: "Former trial attorney with ~150 jury cases to verdict. Brings litigation rigor to dispute readiness, risk assessment, governance frameworks, and executive-level decision support.",
               },
             ].map((e) => (
               <div key={e.n} className="p-10 lg:p-12" style={{ background: palette.ink }}>
@@ -198,15 +203,17 @@ const Attorney = () => {
           <div className="lg:col-span-7">
             <div className="text-xs uppercase tracking-[0.3em] mb-6" style={{ color: palette.brass }}>Leadership</div>
             <h2 style={serif} className="text-4xl md:text-5xl font-light leading-tight mb-14">
-              Milestones in <em style={{ color: palette.navy }}>board service</em> and innovation.
+              Milestones in <em style={{ color: palette.navy }}>leadership</em>, governance, and innovation.
             </h2>
 
             <div className="space-y-10">
               {[
-                { y: "First Appointment", t: "Nonprofit Board Director", d: "Joined the board of a mission-driven nonprofit, driving change through governance reform and stakeholder alignment." },
-                { y: "Strategic Initiative", t: "Governance Framework", d: "Led the development of a governance framework enhancing oversight, accountability, and ethical standards across operations." },
-                { y: "Innovative Project", t: "AI for Legal Operations", d: "Implemented generative AI tools that improved legal operations efficiency and unlocked new analytical capabilities." },
-                { y: "Board Chair", t: "Sustainable Growth", d: "Elected Chair, focusing the board's agenda on sustainable growth, operational excellence, and long-term impact." },
+                { y: "2026 – Present", t: "General Counsel · VRP Labs", d: "Advise executive leadership on legal, operational, and business-risk issues for a shared life-science lab platform serving multiple tenant companies in Mountain View, CA." },
+                { y: "2026 – Present", t: "Board Member · Embarcadero Rowing Club", d: "Support fiduciary oversight, governance, and stakeholder communication for a member-serving nonprofit organization in San Francisco." },
+                { y: "2025 – Present", t: "Board Director · Hot House", d: "Provide governance oversight on strategy, KPIs, multi-year planning, and organizational risk posture for a San Francisco nonprofit arts organization." },
+                { y: "2019 – Present", t: "Founder & General Counsel", d: "Principal legal and operational advisor for founder-led technology products including Make Me Up.App, 4Us-App, and BulkSmartFoods—aligning product, privacy, licensing, and governance." },
+                { y: "2011 – 2017", t: "City Director · Women Who Code SF", d: "Secured $1.2M in sponsorships, negotiated partnership terms, and led chapter strategy and operations across multi-city programming." },
+                { y: "2007 – 2014", t: "Litigation Attorney · State of California", d: "Tried approximately 150 jury cases to verdict across criminal and civil dockets—developing the written advocacy, judgment under pressure, and stakeholder diplomacy that anchor today's practice." },
               ].map((m, i) => (
                 <div key={i} className="grid grid-cols-12 gap-6 pb-10 border-b" style={{ borderColor: `${palette.ink}15` }}>
                   <div className="col-span-12 md:col-span-4">
