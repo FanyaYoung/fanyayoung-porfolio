@@ -96,7 +96,6 @@ export default function SamsClubProject() {
         <div className="max-w-6xl mx-auto px-6 sm:px-8 py-4">
           <Button
             variant="ghost"
-            variant="ghost" 
             onClick={() => navigate('/')}
             className="hover:bg-teal-600/10"
           >
