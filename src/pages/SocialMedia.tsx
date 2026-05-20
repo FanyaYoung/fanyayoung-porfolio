@@ -5,6 +5,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
+import { SEO } from "@/components/SEO";
 
 interface MediaItem {
   id: string;
@@ -242,6 +243,11 @@ const SocialMedia = () => {
 
   return (
     <div className="min-h-screen relative">
+      <SEO
+        title="Social Media Portfolio — Fanya Young"
+        description="Curated social and editorial work by Fanya Young, spanning Embarcadero Rowing Club, The Good Life, TikTok, Facebook, and Instagram."
+        path="/social-media"
+      />
       {/* Ambient gradient backdrop */}
       <div
         className="fixed inset-0 -z-10 pointer-events-none"

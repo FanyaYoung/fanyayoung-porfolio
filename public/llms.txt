@@ -1,0 +1,19 @@
+# Fanya Young
+
+> Innovation Attorney, AI Governance Counsel, and Legal Technologist. California-licensed attorney with 17+ years of practice bridging law, technology, and operations.
+
+This site presents Fanya Young's professional portfolio: legal practice (AI governance, general counsel, commercial contracts, legal operations, litigation) and a body of service-design and AI research case studies from leading enterprises.
+
+## Pages
+
+- [Portfolio Home](/): Overview of Fanya Young's work across legal practice and service-design research.
+- [Attorney Practice](/attorney): Innovation Attorney, AI Governance Counsel, and General Counsel services.
+- [Articles](/attorney/articles): Essays on AI law, governance, and legal innovation.
+- [LG Project](/projects/lg): Service-design and process-optimization case study.
+- [MGM Project](/projects/mgm): Strategic research and service-design case study.
+- [Walmart Project](/projects/walmart): Multiple-shipment delivery research case study.
+- [Sam's Club Project](/projects/samsclub): Member-experience optimization case study.
+
+## Optional
+
+- [Social Media](/social-media): Curated social and editorial work.

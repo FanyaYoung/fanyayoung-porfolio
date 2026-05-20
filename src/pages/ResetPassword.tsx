@@ -4,6 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, ArrowLeft } from "lucide-react";
 import { z } from "zod";
+import { Helmet } from "react-helmet-async";
 
 const passwordSchema = z.string().min(6, { message: "Password must be at least 6 characters" }).max(128);
 
@@ -50,6 +51,10 @@ const ResetPassword = () => {
 
   return (
     <div className="min-h-screen relative flex items-center justify-center px-6">
+      <Helmet>
+        <title>Reset Password — Fanya Young</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <div
         className="fixed inset-0 -z-10 pointer-events-none"
         style={{

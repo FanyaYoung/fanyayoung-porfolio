@@ -4,6 +4,7 @@ import { Mail, ArrowLeft, Users, Target, BarChart3, FlaskConical } from "lucide-
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { LGSlideshow } from "@/components/LGSlideshow";
+import { SEO } from "@/components/SEO";
 
 // Import workshop images
 import lgTeamPhoto from "@/assets/lg-team-photo.jpg";
@@ -20,6 +21,20 @@ const LGProject = () => {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
+      <SEO
+        title="LG Service Design Case Study — Fanya Young"
+        description="LG service-design and process-optimization workshop case study by Fanya Young: empathy mapping, hypothesis validation, and team alignment."
+        path="/projects/lg"
+        type="article"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "LG Service Design Case Study",
+          description: "Service-design and process-optimization workshop with LG.",
+          author: { "@type": "Person", name: "Fanya Young" },
+          mainEntityOfPage: "https://fanyayoung-porfolio.lovable.app/projects/lg",
+        }}
+      />
       {/* Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
         <Button 

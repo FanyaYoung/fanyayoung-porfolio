@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { SEO } from "@/components/SEO";
 
 const LINKS = {
   email: "mailto:fanya.young@walmart.com",
@@ -71,6 +72,20 @@ export default function WalmartProject() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-background/95 to-background">
+      <SEO
+        title="Walmart Multi-Shipment Research — Fanya Young"
+        description="Walmart multiple-shipment delivery research case study by Fanya Young: testing high-value item flows, customer confidence, and guarantee design."
+        path="/projects/walmart"
+        type="article"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "Walmart Multi-Shipment Delivery Research",
+          description: "Research on multiple-shipment delivery for high-value items.",
+          author: { "@type": "Person", name: "Fanya Young" },
+          mainEntityOfPage: "https://fanyayoung-porfolio.lovable.app/projects/walmart",
+        }}
+      />
       {/* Navigation */}
       <nav className="border-b border-border/50 backdrop-blur-sm bg-background/80 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4">

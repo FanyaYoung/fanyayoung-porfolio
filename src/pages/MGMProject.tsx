@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { useNavigate } from "react-router-dom";
 import { ResearchSlideshow } from "@/components/ResearchSlideshow";
+import { SEO } from "@/components/SEO";
 
 /**
  * SI&S Case Study — Infused with MGM deck blue tones + Real Artifacts & Photos
@@ -59,6 +60,20 @@ const MGMProject = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+      <SEO
+        title="MGM Strategic Research Case Study — Fanya Young"
+        description="MGM strategic research and service-design case study by Fanya Young: planning, roadmap, and insights for a high-stakes hospitality program."
+        path="/projects/mgm"
+        type="article"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "MGM Strategic Research Case Study",
+          description: "Strategic research and service-design for MGM.",
+          author: { "@type": "Person", name: "Fanya Young" },
+          mainEntityOfPage: "https://fanyayoung-porfolio.lovable.app/projects/mgm",
+        }}
+      />
       {/* Navigation */}
       <div className="relative max-w-6xl mx-auto px-6 pt-6">
         <Button 

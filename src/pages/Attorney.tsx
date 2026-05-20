@@ -50,14 +50,26 @@ const profServiceJsonLd = {
   "@type": "LegalService",
   name: "Fanya Young — Innovation Attorney",
   url: ATTORNEY_ORIGIN,
-  areaServed: "US",
+  email: "mailto:e.fanya.young@gmail.com",
+  areaServed: { "@type": "AdministrativeArea", name: "California, United States" },
   serviceType: [
     "AI Governance Counsel",
     "Fractional General Counsel",
     "Commercial Contracts",
     "Legal Operations Advisory",
   ],
-  provider: { "@type": "Person", name: "Fanya Young" },
+  provider: {
+    "@type": "Person",
+    name: "Fanya Young",
+    email: "mailto:e.fanya.young@gmail.com",
+    sameAs: ["https://www.linkedin.com/in/fanyayoung/"],
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "Legal Inquiries",
+    email: "e.fanya.young@gmail.com",
+    availableLanguage: ["English"],
+  },
 };
 
 const Attorney = () => {
@@ -75,16 +87,17 @@ const Attorney = () => {
   return (
     <div style={{ background: palette.ivory, color: palette.ink, ...sans }} className="min-h-screen">
       <Helmet>
-        <title>Fanya Young — Innovation Attorney, AI Governance Counsel & General Counsel</title>
-        <meta name="description" content="California-licensed Innovation Attorney with 17+ years of practice. General Counsel at VRP Labs, AI Governance Advisor, and Legal Technologist serving founders, boards, and executives." />
+        <title>Fanya Young — Innovation Attorney & AI Counsel</title>
+        <meta name="description" content="Innovation Attorney with 17+ years of practice. General Counsel, AI Governance Advisor, and Legal Technologist serving founders and boards." />
         <meta name="keywords" content="innovation attorney, AI attorney, AI governance counsel, fractional general counsel, legal operations, California attorney, AI compliance, Fanya Young" />
         <link rel="canonical" href={`${ATTORNEY_ORIGIN}/`} />
         <meta property="og:type" content="profile" />
-        <meta property="og:title" content="Fanya Young — Innovation Attorney & AI Governance Counsel" />
+        <meta property="og:title" content="Fanya Young — Innovation Attorney & AI Counsel" />
         <meta property="og:description" content="General Counsel · AI Governance · Commercial Contracts · Legal Operations. 17+ years of practice." />
         <meta property="og:url" content={`${ATTORNEY_ORIGIN}/`} />
+        <meta property="og:image" content="https://fanyayoung-porfolio.lovable.app/landing-page-preview.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Fanya Young — Innovation Attorney & AI Governance Counsel" />
+        <meta name="twitter:title" content="Fanya Young — Innovation Attorney & AI Counsel" />
         <meta name="twitter:description" content="General Counsel · AI Governance · Commercial Contracts · Legal Operations." />
         <script type="application/ld+json">{JSON.stringify(personJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(profServiceJsonLd)}</script>

@@ -1,15 +1,13 @@
 // Runs before `vite dev` and `vite build`; writes public/sitemap.xml.
-// Multi-host sitemap covering primary portfolio + attorney subdomain.
 
 import { writeFileSync } from "fs";
 import { resolve } from "path";
 import { articles } from "../src/data/articles";
 
-const PRIMARY = "https://fanyayoung-porfolio.lovable.app";
-const ATTORNEY = "https://attorney.fanyayoung.com";
+const BASE = "https://fanyayoung-porfolio.lovable.app";
 
 interface Entry {
-  loc: string;
+  path: string;
   changefreq?: string;
   priority?: string;
   lastmod?: string;
@@ -18,33 +16,21 @@ interface Entry {
 const today = new Date().toISOString().slice(0, 10);
 
 const entries: Entry[] = [
-  // Primary portfolio
-  { loc: `${PRIMARY}/`, changefreq: "weekly", priority: "1.0", lastmod: today },
-  { loc: `${PRIMARY}/attorney`, changefreq: "weekly", priority: "0.9", lastmod: today },
-  { loc: `${PRIMARY}/attorney/articles`, changefreq: "weekly", priority: "0.8", lastmod: today },
-  { loc: `${PRIMARY}/projects/lg`, changefreq: "monthly", priority: "0.6" },
-  { loc: `${PRIMARY}/projects/mgm`, changefreq: "monthly", priority: "0.6" },
-  { loc: `${PRIMARY}/projects/walmart`, changefreq: "monthly", priority: "0.6" },
-  { loc: `${PRIMARY}/projects/samsclub`, changefreq: "monthly", priority: "0.6" },
-  { loc: `${PRIMARY}/social-media`, changefreq: "monthly", priority: "0.5" },
-
-  // Attorney subdomain (canonical home for legal practice)
-  { loc: `${ATTORNEY}/`, changefreq: "weekly", priority: "1.0", lastmod: today },
-  { loc: `${ATTORNEY}/articles`, changefreq: "weekly", priority: "0.9", lastmod: today },
+  { path: "/", changefreq: "weekly", priority: "1.0", lastmod: today },
+  { path: "/attorney", changefreq: "weekly", priority: "0.9", lastmod: today },
+  { path: "/attorney/articles", changefreq: "weekly", priority: "0.8", lastmod: today },
+  { path: "/projects/lg", changefreq: "monthly", priority: "0.7" },
+  { path: "/projects/mgm", changefreq: "monthly", priority: "0.7" },
+  { path: "/projects/walmart", changefreq: "monthly", priority: "0.7" },
+  { path: "/projects/samsclub", changefreq: "monthly", priority: "0.7" },
+  { path: "/social-media", changefreq: "monthly", priority: "0.5" },
 ];
 
-// Article pages on attorney subdomain (canonical) AND on primary domain
 for (const a of articles) {
   entries.push({
-    loc: `${ATTORNEY}/articles/${a.slug}`,
+    path: `/attorney/articles/${a.slug}`,
     changefreq: "monthly",
     priority: "0.8",
-    lastmod: a.published,
-  });
-  entries.push({
-    loc: `${PRIMARY}/attorney/articles/${a.slug}`,
-    changefreq: "monthly",
-    priority: "0.6",
     lastmod: a.published,
   });
 }
@@ -55,7 +41,7 @@ const xml = [
   ...entries.map((e) =>
     [
       `  <url>`,
-      `    <loc>${e.loc}</loc>`,
+      `    <loc>${BASE}${e.path}</loc>`,
       e.lastmod ? `    <lastmod>${e.lastmod}</lastmod>` : null,
       e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
       e.priority ? `    <priority>${e.priority}</priority>` : null,
