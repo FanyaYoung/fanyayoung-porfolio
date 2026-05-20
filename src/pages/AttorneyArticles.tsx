@@ -47,14 +47,15 @@ const AttorneyArticles = () => {
   return (
     <div style={{ background: palette.ivory, color: palette.ink, ...sans }} className="min-h-screen">
       <Helmet>
-        <title>Articles on AI Law, Governance & Legal Innovation — Fanya Young</title>
-        <meta name="description" content="Essays by Fanya Young on AI governance, AI regulation, legal innovation, and the operational design choices shaping modern in-house and advisory practice." />
+        <title>Articles on AI Law & Governance — Fanya Young</title>
+        <meta name="description" content="Essays by Fanya Young on AI governance, AI regulation, legal innovation, and the operational design shaping modern in-house practice." />
         <meta name="keywords" content="AI law, AI governance, AI attorney articles, legal innovation, legal operations, Fanya Young" />
         <link rel="canonical" href={canonical} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Articles on AI Law & Governance — Fanya Young" />
         <meta property="og:description" content="Essays on AI governance, regulation, and legal innovation." />
         <meta property="og:url" content={canonical} />
+        <meta property="og:image" content="https://fanyayoung-porfolio.lovable.app/landing-page-preview.png" />
         <script type="application/ld+json">{JSON.stringify(itemListJsonLd)}</script>
       </Helmet>
       {/* Top Bar */}
