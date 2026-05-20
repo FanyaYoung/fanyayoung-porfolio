@@ -298,7 +298,7 @@ const Attorney = () => {
           </div>
 
           <div className="lg:col-span-5 lg:sticky lg:top-12 flex flex-col items-center lg:items-start">
-            <img src={desk} alt="Executive workspace overlooking the city" className="w-full max-w-xs object-cover aspect-[4/5]" />
+            <img src={desk} alt="Executive workspace overlooking the city" className="w-full max-w-md object-cover aspect-[4/5]" />
             <p className="mt-6 text-xs uppercase tracking-[0.2em]" style={{ color: palette.muted }}>
               Counsel grounded in perspective.
             </p>
