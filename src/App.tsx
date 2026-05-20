@@ -11,11 +11,13 @@ import SamsClubProject from "./pages/SamsClubProject";
 import SocialMedia from "./pages/SocialMedia";
 import Auth from "./pages/Auth";
 import ResetPassword from "./pages/ResetPassword";
+import Attorney from "./pages/Attorney";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
 const isSocialMediaDomain = window.location.hostname === "socialmedia.fanyayoung.com";
+const isAttorneyDomain = window.location.hostname === "attorney.fanyayoung.com";
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -31,9 +33,15 @@ const App = () => (
               <Route path="/reset-password" element={<ResetPassword />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </>
+          ) : isAttorneyDomain ? (
+            <>
+              <Route path="/" element={<Attorney />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </>
           ) : (
             <>
               <Route path="/" element={<Index />} />
+              <Route path="/attorney" element={<Attorney />} />
               <Route path="/projects/lg" element={<LGProject />} />
               <Route path="/projects/mgm" element={<MGMProject />} />
               <Route path="/projects/walmart" element={<WalmartProject />} />
