@@ -176,8 +176,8 @@ const Attorney = () => {
       {/* ABOUT */}
       <section id="about" className="max-w-7xl mx-auto px-6 lg:px-12 py-28">
         <div className="grid lg:grid-cols-12 gap-16 items-start">
-          <div className="lg:col-span-5">
-            <img src={columns} alt="Architectural columns" className="w-full object-cover aspect-[4/5] grayscale" />
+          <div className="lg:col-span-5 flex justify-center lg:justify-start">
+            <img src={columns} alt="Architectural columns" className="w-full max-w-xs object-cover aspect-[4/5] grayscale" />
           </div>
           <div className="lg:col-span-7 lg:pt-10">
             <div className="text-xs uppercase tracking-[0.3em] mb-6" style={{ color: palette.brass }}>About</div>
