@@ -96,11 +96,11 @@ const Attorney = () => {
       <div className="border-y py-6" style={{ borderColor: `${palette.ink}1A`, background: palette.stone }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-wrap gap-x-12 gap-y-3 text-xs uppercase tracking-[0.3em]" style={{ color: palette.muted }}>
           <span>AI Governance</span><span>·</span>
-          <span>In-House Counsel</span><span>·</span>
-          <span>Board Advisory</span><span>·</span>
+          <span>General Counsel</span><span>·</span>
+          <span>Commercial Contracts</span><span>·</span>
           <span>Risk Management</span><span>·</span>
           <span>Legal Operations</span><span>·</span>
-          <span>Innovation Strategy</span>
+          <span>Litigation</span>
         </div>
       </div>
 
@@ -118,24 +118,28 @@ const Attorney = () => {
             </h2>
             <div className="space-y-6 text-base leading-loose" style={{ color: palette.charcoal }}>
               <p>
-                Fanya Young is an Innovation Attorney and Legal Technologist whose work bridges
-                the long-standing traditions of legal practice with the demands of a digital,
-                AI-accelerated economy. She holds a J.D. and an eMBA, and spent her early career
-                in litigation—an experience that informs the precision and persuasive clarity she
-                brings to every engagement.
+                Fanya Young is a California-licensed attorney with 17 years of legal
+                practice and 11 years partnering with product, operations, and
+                technology teams. She currently serves as General Counsel for VRP Labs
+                (Valley Research Park), a shared life-science lab platform, where she
+                advises executive leadership on legal, operational, and business-risk
+                matters across a multi-tenant environment.
               </p>
               <p>
-                Today, her counsel reaches beyond the courtroom. She advises executives on AI
-                adoption and governance, designs operational frameworks for in-house teams, and
-                serves on boards where her unique combination of legal acumen and technological
-                fluency creates lasting strategic value.
+                A former trial attorney with approximately 150 jury cases to verdict,
+                Fanya brings litigation rigor, executive advising, and AI-enabled
+                workflow design to every engagement. She drafts and negotiates
+                commercial agreements, builds playbooks and precedent libraries, and
+                leads adoption of generative AI and legal technology—translating
+                complex requirements into usable guidance and decision-ready
+                recommendations.
               </p>
             </div>
             <div className="mt-12 grid grid-cols-3 gap-6 pt-10 border-t" style={{ borderColor: `${palette.ink}1A` }}>
               {[
-                { n: "J.D.", l: "Juris Doctor" },
-                { n: "eMBA", l: "Quantic" },
-                { n: "4+", l: "Years Litigation" },
+                { n: "17", l: "Years of Practice" },
+                { n: "~150", l: "Jury Trials" },
+                { n: "J.D. · eMBA", l: "UC Law SF · Quantic" },
               ].map((s) => (
                 <div key={s.l}>
                   <div style={serif} className="text-4xl md:text-5xl font-light" >{s.n}</div>
