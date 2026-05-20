@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import { articles } from "@/data/articles";
 
 // Warm Editorial Premium — matches /attorney
 const palette = {
@@ -12,30 +14,10 @@ const palette = {
   muted: "#6B6357",
 };
 
-const articles = [
-  {
-    title: "Why Every Company Needs an Artificial Intelligence (AI) Attorney in the Age of Regulation",
-    excerpt:
-      "Business requires AI, and AI is becoming embedded across business operations and organizations. As AI expands, so does the growing set of legal, regulatory, and governance obligations that follow it.",
-    read: "5 min read",
-    topic: "AI Governance",
-    href: "https://www.linkedin.com/in/fanyayoung/recent-activity/articles/",
-  },
-  {
-    title: "You Can Optimize Tech with AI Research, But You Can't Maximize Revenue without UX Research",
-    excerpt:
-      "We are currently living through an obsession with model capability. Companies are pouring millions into AI research, asking 'can the model do it?'—but value comes from understanding whether users actually want it.",
-    read: "2 min read",
-    topic: "AI & Service Design",
-    href: "https://www.linkedin.com/in/fanyayoung/recent-activity/articles/",
-  },
-];
+const ATTORNEY_ORIGIN = "https://attorney.fanyayoung.com";
 
 const AttorneyArticles = () => {
   useEffect(() => {
-    document.title = "Articles — Fanya Young, Innovation Attorney";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Essays and articles by Fanya Young on AI governance, legal innovation, and the intersection of law, technology, and operations.");
     const link = document.createElement("link");
     link.rel = "stylesheet";
     link.href = "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap";
@@ -47,9 +29,34 @@ const AttorneyArticles = () => {
   const sans = { fontFamily: "'Inter', -apple-system, sans-serif" };
   const isAttorneyDomain = typeof window !== "undefined" && window.location.hostname === "attorney.fanyayoung.com";
   const homePath = isAttorneyDomain ? "/" : "/attorney";
+  const articleBase = isAttorneyDomain ? "/articles" : "/attorney/articles";
+  const canonical = "https://attorney.fanyayoung.com/articles";
+
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: articles.map((a, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `https://attorney.fanyayoung.com/articles/${a.slug}`,
+      name: a.title,
+    })),
+  };
+
 
   return (
     <div style={{ background: palette.ivory, color: palette.ink, ...sans }} className="min-h-screen">
+      <Helmet>
+        <title>Articles on AI Law, Governance & Legal Innovation — Fanya Young</title>
+        <meta name="description" content="Essays by Fanya Young on AI governance, AI regulation, legal innovation, and the operational design choices shaping modern in-house and advisory practice." />
+        <meta name="keywords" content="AI law, AI governance, AI attorney articles, legal innovation, legal operations, Fanya Young" />
+        <link rel="canonical" href={canonical} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Articles on AI Law & Governance — Fanya Young" />
+        <meta property="og:description" content="Essays on AI governance, regulation, and legal innovation." />
+        <meta property="og:url" content={canonical} />
+        <script type="application/ld+json">{JSON.stringify(itemListJsonLd)}</script>
+      </Helmet>
       {/* Top Bar */}
       <header className="border-b" style={{ borderColor: `${palette.ink}1A` }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 flex items-center justify-between">
@@ -89,12 +96,10 @@ const AttorneyArticles = () => {
       {/* ARTICLES */}
       <section className="max-w-5xl mx-auto px-6 lg:px-12 pb-32">
         <div className="border-t" style={{ borderColor: `${palette.ink}1A` }}>
-          {articles.map((a, i) => (
-            <a
-              key={i}
-              href={a.href}
-              target="_blank"
-              rel="noreferrer"
+          {articles.map((a) => (
+            <Link
+              key={a.slug}
+              to={`${articleBase}/${a.slug}`}
               className="group grid lg:grid-cols-12 gap-8 py-14 border-b transition-colors hover:bg-stone-100/40"
               style={{ borderColor: `${palette.ink}1A` }}
             >
@@ -107,8 +112,7 @@ const AttorneyArticles = () => {
                 </div>
               </div>
               <div className="lg:col-span-9">
-                <h2 style={serif} className="text-3xl md:text-4xl font-light leading-snug mb-5 transition-colors"
-                    >
+                <h2 style={serif} className="text-3xl md:text-4xl font-light leading-snug mb-5 transition-colors">
                   {a.title}
                 </h2>
                 <p className="text-base leading-relaxed mb-6" style={{ color: palette.charcoal }}>
@@ -116,11 +120,11 @@ const AttorneyArticles = () => {
                 </p>
                 <div className="text-xs uppercase tracking-[0.25em] inline-flex items-center gap-3"
                      style={{ color: palette.navy }}>
-                  Read on LinkedIn
+                  Read Article
                   <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 

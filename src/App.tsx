@@ -13,6 +13,7 @@ import Auth from "./pages/Auth";
 import ResetPassword from "./pages/ResetPassword";
 import Attorney from "./pages/Attorney";
 import AttorneyArticles from "./pages/AttorneyArticles";
+import AttorneyArticle from "./pages/AttorneyArticle";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +39,7 @@ const App = () => (
             <>
               <Route path="/" element={<Attorney />} />
               <Route path="/articles" element={<AttorneyArticles />} />
+              <Route path="/articles/:slug" element={<AttorneyArticle />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </>
           ) : (
@@ -45,6 +47,7 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/attorney" element={<Attorney />} />
               <Route path="/attorney/articles" element={<AttorneyArticles />} />
+              <Route path="/attorney/articles/:slug" element={<AttorneyArticle />} />
               <Route path="/projects/lg" element={<LGProject />} />
               <Route path="/projects/mgm" element={<MGMProject />} />
               <Route path="/projects/walmart" element={<WalmartProject />} />
