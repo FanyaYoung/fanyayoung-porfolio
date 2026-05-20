@@ -151,11 +151,11 @@ const Attorney = () => {
               </a>
             </div>
           </div>
-          <div className="lg:col-span-5">
-            <div className="relative">
-              <div className="absolute -top-6 -left-6 w-32 h-32" style={{ background: palette.brass, opacity: 0.15 }} />
+          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-xs">
+              <div className="absolute -top-4 -left-4 w-20 h-20" style={{ background: palette.brass, opacity: 0.15 }} />
               <img src={headshot} alt="Fanya Young, Innovation Attorney" className="relative w-full object-cover aspect-[4/5]" />
-              <div className="absolute -bottom-6 -right-6 w-40 h-1" style={{ background: palette.brass }} />
+              <div className="absolute -bottom-4 -right-4 w-24 h-1" style={{ background: palette.brass }} />
             </div>
           </div>
         </div>
