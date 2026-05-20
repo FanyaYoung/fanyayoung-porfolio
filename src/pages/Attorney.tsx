@@ -44,6 +44,7 @@ const Attorney = () => {
             <a href="#about" className="hover:text-[color:var(--ink)]" style={{ ['--ink' as any]: palette.ink }}>About</a>
             <a href="#expertise">Expertise</a>
             <a href="#leadership">Leadership</a>
+            <a href={typeof window !== "undefined" && window.location.hostname === "attorney.fanyayoung.com" ? "/articles" : "/attorney/articles"}>Articles</a>
             <a href="#contact">Contact</a>
           </nav>
           <a href="#contact" className="hidden md:inline-block text-xs uppercase tracking-[0.2em] border px-5 py-2.5 transition-colors"
