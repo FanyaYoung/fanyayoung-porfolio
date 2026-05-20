@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import { articles } from "@/data/articles";
 
 // Warm Editorial Premium — matches /attorney
 const palette = {
@@ -12,24 +14,7 @@ const palette = {
   muted: "#6B6357",
 };
 
-const articles = [
-  {
-    title: "Why Every Company Needs an Artificial Intelligence (AI) Attorney in the Age of Regulation",
-    excerpt:
-      "Business requires AI, and AI is becoming embedded across business operations and organizations. As AI expands, so does the growing set of legal, regulatory, and governance obligations that follow it.",
-    read: "5 min read",
-    topic: "AI Governance",
-    href: "https://www.linkedin.com/in/fanyayoung/recent-activity/articles/",
-  },
-  {
-    title: "You Can Optimize Tech with AI Research, But You Can't Maximize Revenue without UX Research",
-    excerpt:
-      "We are currently living through an obsession with model capability. Companies are pouring millions into AI research, asking 'can the model do it?'—but value comes from understanding whether users actually want it.",
-    read: "2 min read",
-    topic: "AI & Service Design",
-    href: "https://www.linkedin.com/in/fanyayoung/recent-activity/articles/",
-  },
-];
+const ATTORNEY_ORIGIN = "https://attorney.fanyayoung.com";
 
 const AttorneyArticles = () => {
   useEffect(() => {

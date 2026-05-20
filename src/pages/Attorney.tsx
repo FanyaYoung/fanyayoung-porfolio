@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import headshot from "@/assets/attorney-headshot.png";
 import columns from "@/assets/attorney-columns.png";
 import desk from "@/assets/attorney-desk.png";
@@ -16,12 +17,51 @@ const palette = {
   muted: "#6B6357",
 };
 
+const ATTORNEY_ORIGIN = "https://attorney.fanyayoung.com";
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Fanya Young",
+  jobTitle: "Innovation Attorney & General Counsel",
+  description:
+    "California-licensed attorney with 17+ years of practice. General Counsel at VRP Labs, AI Governance Advisor, and Legal Technologist.",
+  url: ATTORNEY_ORIGIN,
+  email: "mailto:e.fanya.young@gmail.com",
+  sameAs: ["https://www.linkedin.com/in/fanyayoung/"],
+  alumniOf: [
+    { "@type": "CollegeOrUniversity", name: "UC Law SF" },
+    { "@type": "CollegeOrUniversity", name: "Quantic School of Business and Technology" },
+  ],
+  knowsAbout: [
+    "AI Governance",
+    "Artificial Intelligence Law",
+    "General Counsel",
+    "Commercial Contracts",
+    "Legal Operations",
+    "Risk Management",
+    "Litigation",
+  ],
+  worksFor: { "@type": "Organization", name: "VRP Labs" },
+};
+
+const profServiceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  name: "Fanya Young — Innovation Attorney",
+  url: ATTORNEY_ORIGIN,
+  areaServed: "US",
+  serviceType: [
+    "AI Governance Counsel",
+    "Fractional General Counsel",
+    "Commercial Contracts",
+    "Legal Operations Advisory",
+  ],
+  provider: { "@type": "Person", name: "Fanya Young" },
+};
+
 const Attorney = () => {
   useEffect(() => {
-    document.title = "Fanya Young — Innovation Attorney & General Counsel";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Fanya Young — California-licensed attorney with 17 years of practice. General Counsel, AI Governance Advisor, and Innovation Attorney bridging law, technology, and operations.");
-    // Load editorial fonts
     const link = document.createElement("link");
     link.rel = "stylesheet";
     link.href = "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap";
@@ -34,6 +74,21 @@ const Attorney = () => {
 
   return (
     <div style={{ background: palette.ivory, color: palette.ink, ...sans }} className="min-h-screen">
+      <Helmet>
+        <title>Fanya Young — Innovation Attorney, AI Governance Counsel & General Counsel</title>
+        <meta name="description" content="California-licensed Innovation Attorney with 17+ years of practice. General Counsel at VRP Labs, AI Governance Advisor, and Legal Technologist serving founders, boards, and executives." />
+        <meta name="keywords" content="innovation attorney, AI attorney, AI governance counsel, fractional general counsel, legal operations, California attorney, AI compliance, Fanya Young" />
+        <link rel="canonical" href={`${ATTORNEY_ORIGIN}/`} />
+        <meta property="og:type" content="profile" />
+        <meta property="og:title" content="Fanya Young — Innovation Attorney & AI Governance Counsel" />
+        <meta property="og:description" content="General Counsel · AI Governance · Commercial Contracts · Legal Operations. 17+ years of practice." />
+        <meta property="og:url" content={`${ATTORNEY_ORIGIN}/`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Fanya Young — Innovation Attorney & AI Governance Counsel" />
+        <meta name="twitter:description" content="General Counsel · AI Governance · Commercial Contracts · Legal Operations." />
+        <script type="application/ld+json">{JSON.stringify(personJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(profServiceJsonLd)}</script>
+      </Helmet>
       {/* Top Bar */}
       <header className="border-b" style={{ borderColor: `${palette.ink}1A` }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 flex items-center justify-between">
