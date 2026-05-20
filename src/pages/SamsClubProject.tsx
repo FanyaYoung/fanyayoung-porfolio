@@ -5,6 +5,7 @@ import { ArrowLeft, Users, Calendar, MapPin, Target, ClipboardList, LinkIcon } f
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { SEO } from "@/components/SEO";
 
 // Import images
 import heroImage from "@/assets/samsclub-hero.png";
@@ -76,10 +77,20 @@ export default function SamsClubProject() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 py-4">
-          <Button 
+      <SEO
+        title="Sam's Club Member Experience — Fanya Young"
+        description="Sam's Club member-experience optimization case study by Fanya Young: curbside check-in, outdoor kiosks, and journey-map insights."
+        path="/projects/samsclub"
+        type="article"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "Sam's Club Member Experience Case Study",
+          description: "Member-experience optimization for Sam's Club curbside flow.",
+          author: { "@type": "Person", name: "Fanya Young" },
+          mainEntityOfPage: "https://fanyayoung-porfolio.lovable.app/projects/samsclub",
+        }}
+      />
             variant="ghost" 
             onClick={() => navigate('/')}
             className="hover:bg-teal-600/10"
