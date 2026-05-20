@@ -6,6 +6,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { Loader2, ArrowLeft } from "lucide-react";
 import { z } from "zod";
+import { Helmet } from "react-helmet-async";
 
 const credentialsSchema = z.object({
   email: z.string().trim().email({ message: "Invalid email" }).max(255),
@@ -66,6 +67,10 @@ const Auth = () => {
 
   return (
     <div className="min-h-screen relative flex items-center justify-center px-6">
+      <Helmet>
+        <title>Sign In — Fanya Young</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <div
         className="fixed inset-0 -z-10 pointer-events-none"
         style={{
