@@ -203,15 +203,17 @@ const Attorney = () => {
           <div className="lg:col-span-7">
             <div className="text-xs uppercase tracking-[0.3em] mb-6" style={{ color: palette.brass }}>Leadership</div>
             <h2 style={serif} className="text-4xl md:text-5xl font-light leading-tight mb-14">
-              Milestones in <em style={{ color: palette.navy }}>board service</em> and innovation.
+              Milestones in <em style={{ color: palette.navy }}>leadership</em>, governance, and innovation.
             </h2>
 
             <div className="space-y-10">
               {[
-                { y: "First Appointment", t: "Nonprofit Board Director", d: "Joined the board of a mission-driven nonprofit, driving change through governance reform and stakeholder alignment." },
-                { y: "Strategic Initiative", t: "Governance Framework", d: "Led the development of a governance framework enhancing oversight, accountability, and ethical standards across operations." },
-                { y: "Innovative Project", t: "AI for Legal Operations", d: "Implemented generative AI tools that improved legal operations efficiency and unlocked new analytical capabilities." },
-                { y: "Board Chair", t: "Sustainable Growth", d: "Elected Chair, focusing the board's agenda on sustainable growth, operational excellence, and long-term impact." },
+                { y: "2026 – Present", t: "General Counsel · VRP Labs", d: "Advise executive leadership on legal, operational, and business-risk issues for a shared life-science lab platform serving multiple tenant companies in Mountain View, CA." },
+                { y: "2026 – Present", t: "Board Member · Embarcadero Rowing Club", d: "Support fiduciary oversight, governance, and stakeholder communication for a member-serving nonprofit organization in San Francisco." },
+                { y: "2025 – Present", t: "Board Director · Hot House", d: "Provide governance oversight on strategy, KPIs, multi-year planning, and organizational risk posture for a San Francisco nonprofit arts organization." },
+                { y: "2019 – Present", t: "Founder & General Counsel", d: "Principal legal and operational advisor for founder-led technology products including Make Me Up.App, 4Us-App, and BulkSmartFoods—aligning product, privacy, licensing, and governance." },
+                { y: "2011 – 2017", t: "City Director · Women Who Code SF", d: "Secured $1.2M in sponsorships, negotiated partnership terms, and led chapter strategy and operations across multi-city programming." },
+                { y: "2007 – 2014", t: "Litigation Attorney · State of California", d: "Tried approximately 150 jury cases to verdict across criminal and civil dockets—developing the written advocacy, judgment under pressure, and stakeholder diplomacy that anchor today's practice." },
               ].map((m, i) => (
                 <div key={i} className="grid grid-cols-12 gap-6 pb-10 border-b" style={{ borderColor: `${palette.ink}15` }}>
                   <div className="col-span-12 md:col-span-4">
