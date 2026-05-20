@@ -12,6 +12,7 @@ import SocialMedia from "./pages/SocialMedia";
 import Auth from "./pages/Auth";
 import ResetPassword from "./pages/ResetPassword";
 import Attorney from "./pages/Attorney";
+import AttorneyArticles from "./pages/AttorneyArticles";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,12 +37,14 @@ const App = () => (
           ) : isAttorneyDomain ? (
             <>
               <Route path="/" element={<Attorney />} />
+              <Route path="/articles" element={<AttorneyArticles />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </>
           ) : (
             <>
               <Route path="/" element={<Index />} />
               <Route path="/attorney" element={<Attorney />} />
+              <Route path="/attorney/articles" element={<AttorneyArticles />} />
               <Route path="/projects/lg" element={<LGProject />} />
               <Route path="/projects/mgm" element={<MGMProject />} />
               <Route path="/projects/walmart" element={<WalmartProject />} />
