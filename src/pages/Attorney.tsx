@@ -58,7 +58,7 @@ const Attorney = () => {
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7">
             <div className="text-xs uppercase tracking-[0.3em] mb-8" style={{ color: palette.brass }}>
-              Innovation Attorney · Board Director
+              General Counsel · Innovation Attorney · AI Governance
             </div>
             <h1 style={serif} className="text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.05] font-light tracking-tight">
               Modern counsel<br />
@@ -66,9 +66,10 @@ const Attorney = () => {
               <em style={{ color: palette.navy }}>accelerated change.</em>
             </h1>
             <p className="mt-10 text-lg leading-relaxed max-w-xl" style={{ color: palette.muted }}>
-              Fanya Young advises executives and boards at the intersection of law,
-              technology, and governance—pairing trial-tested judgment with
-              fluency in emerging AI and operational design.
+              California-licensed attorney with 17 years of legal practice and 11 years
+              partnering with product, operations, and technology teams. Fanya Young
+              pairs trial-tested judgment with fluency in AI, governance, and
+              operational design—helping executives navigate complexity with clarity.
             </p>
             <div className="mt-12 flex flex-wrap gap-4">
               <a href="#expertise" className="px-8 py-4 text-xs uppercase tracking-[0.25em] text-white transition-opacity hover:opacity-90"
