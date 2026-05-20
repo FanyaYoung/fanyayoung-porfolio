@@ -173,18 +173,18 @@ const Attorney = () => {
             {[
               {
                 n: "01",
-                t: "Innovation Attorney",
-                d: "Empowering clients to embrace emerging technologies while ensuring legal compliance. Proactive counsel on AI adoption, governance frameworks, and risk mitigation for forward-thinking organizations.",
+                t: "General Counsel & Commercial Contracts",
+                d: "Currently General Counsel at VRP Labs. Drafts and negotiates licenses, MSAs, SOWs, NDAs, vendor and service agreements, and operational policies for complex multi-tenant and technology-driven environments.",
               },
               {
                 n: "02",
-                t: "In-House Counsel Solutions",
-                d: "Redefining the in-house function as a strategic partner—streamlining processes, enhancing legal operations, and embedding legal insight into business and product decisions.",
+                t: "Innovation, AI & Legal Operations",
+                d: "Designs scalable legal-service workflows, precedent libraries, playbooks, and intake processes. Leads adoption of generative AI and legal technology with measurable improvements in cycle time, consistency, and defensibility.",
               },
               {
                 n: "03",
-                t: "Risk & Governance Advisory",
-                d: "Comprehensive risk management and governance frameworks that elevate accountability and ethical standards, rooted in deep legal principle and a culture of transparency.",
+                t: "Litigation & Risk Advisory",
+                d: "Former trial attorney with ~150 jury cases to verdict. Brings litigation rigor to dispute readiness, risk assessment, governance frameworks, and executive-level decision support.",
               },
             ].map((e) => (
               <div key={e.n} className="p-10 lg:p-12" style={{ background: palette.ink }}>
